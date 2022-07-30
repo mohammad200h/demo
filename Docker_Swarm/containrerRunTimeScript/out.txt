@@ -1,0 +1,270 @@
+CORES::1
+EXP_FOLDER::exp2_noAW_state_1
+runing::cd ~/hand_RL_ws
+/home/mamad/hand_RL_ws
+runing::source ./devel/setup.bash
+runing::cd ~/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/ppo_presets/
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/ppo_presets
+runing:: coach -p  ./kuka_hand_ppo.py -n 1
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+WARNING:tensorflow:From ./kuka_hand_ppo.py:20: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+pybullet build time: Dec 23 2020 01:46:51
+Matplotlib created a temporary config/cache directory at /tmp/matplotlib-liuqnuaz because the default path (/home/mamad/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+OLD_EXP_FOLDER:: exp_baseline
+env_variable_exists:: exp2_noAW_state_1
+EXP_FOLDER:: exp2_noAW_state_1
+EXPIREMENT_FOLDER:: exp2_noAW_state_1
+[30;46mCreating graph - name: BasicRLGraphManager[0m
+current_dir=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs
+
+
+
+modelGenerator::path: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/ppo_presets
+ resource_filename(__name__) /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka
+
+
+
+current_dir=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka
+current_dir=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/hand
+current_dir=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs
+current_dir=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs
+current_dir=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs
+Kuka_HandlitGymEnv::env_setting_path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting
+path succesfully created at:  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting
+src::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/initial_env_setting
+Kuka_HandlitGymEnv::self.env_dir_manager.path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting
+WARNING: Package name "AW_hand_service" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+WARNING: Package name "handGhostws" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+WARNING: Package name "Trainingreplay" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+WARNING: Package name "kukaAgent" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+WARNING: Package name "phaseSpace" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+WARNING: Package name "moveit_default_IK" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+Generating Model ..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+expected a world element, continuing without it.b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frameb3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+lbr_iiwa_link_eeGenerating Model ..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+expected a world element, continuing without it.b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frameb3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+lbr_iiwa_link_eeGenerating Model ..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+expected a world element, continuing without it.b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frameb3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+lbr_iiwa_link_eeGenerating Model ..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+expected a world element, continuing without it.b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frameb3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+lbr_iiwa_link_eeGenerating Model ..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+expected a world element, continuing without it.b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frameb3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+lbr_iiwa_link_eeGenerating Model ..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+expected a world element, continuing without it.b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frameb3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+lbr_iiwa_link_eeGenerating Model ..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+expected a world element, continuing without it.b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frameb3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+lbr_iiwa_link_eeGymEnv::AW1::set_AW_mode()
+GymEnv::AW1::set_AW_mode()::AW_setting::  {'obs_mode': 'palm', 'initial_r': [0.3, 0.4]}
+main::env_setting_path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting
+kuka::env_setting_path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting
+env_setting_path:: ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting
+self.config_path:: ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/adaptiveActionRepeat/kuka/adaptiveActionRepeat.yml
+path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting
+Doing it..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka
+sdf_path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/adaptiveActionRepeat/kuka/model.sdf
+path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting
+Doing it..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka
+sdf_path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/adaptiveActionRepeat/kuka/model.sdf
+path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting
+Doing it..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka
+sdf_path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/adaptiveActionRepeat/kuka/model.sdf
+path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting
+Doing it..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka
+sdf_path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/adaptiveActionRepeat/kuka/model.sdf
+path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting
+Doing it..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka
+sdf_path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/adaptiveActionRepeat/kuka/model.sdf
+path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting
+Doing it..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka
+sdf_path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/adaptiveActionRepeat/kuka/model.sdf
+path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting
+Doing it..
+./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/kuka
+sdf_path::  ./../Expirements/exp2_noAW_state_1/PPO/gym_env_setting/adaptiveActionRepeat/kuka/model.sdf
+[91mFailed to instantiate Gym environment class <class 'kuka_handlit.envs.kuka_handlitGymEnv.Kuka_HandlitGymEnv'> with arguments {'renders': False, 'adaptive_action_reperate': False, 'AW_mode': None, 'reward_function_choice': 1, 'reward_obs_mode': 'palm_world', 'AW_setting': {'obs_mode': 'palm', 'initial_r': [0.3, 0.4]}, 'AW_progress_path': './../Expirements/exp2_noAW_state_1/PPO/AW_progress', 'obs_mode': 'palm_world_xyz', 'env_setting_path': './../Expirements/exp2_noAW_state_1/PPO/gym_env_setting', 'expirement_path': '/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/ppo_presets/./../Expirements/exp2_noAW_state_1/PPO/', 'record_training': False, 'training': True, 'action_mode': 'jointControl', '_max_episode_steps': 1000, 'actionRepeat': 1}[0m
+dev::  False
+type:: <class 'bool'>
+flag::  True
+loading state machine::called
+_intialize_job::called
+intializing expirement_folder
+_initalize_expirement_folder::called
+env_variable_list::  ['exp1_noAW_state','exp2_noAW_state']
+
+
+
+exp_list::  ['exp1_noAW_state', 'exp2_noAW_state']
+exp_list::type::  <class 'list'>
+
+
+
+copy_folder_and_give_new_name::called
+stdout::  b''
+stderr::  b''
+expirments_to_run::  ['exp2_noAW_state_1']
+get_ownership_of_folder::called
+b''
+cleaning jobList::called
+adding exps to job list
+get_ownership_of_folder::called
+b''
+run::called
+data:: <class 'dict'>
+runing the script
+command::  bash /home/mamad/hand_RL_ws/Docker_Swarm/containrerRunTimeScript/run_exp.sh 1 exp2_noAW_state_1
+Traceback (most recent call last):
+  File "run_exp.py", line 379, in <module>
+    exp_runner.run()
+  File "run_exp.py", line 240, in run
+    p1=subprocess.run(command,shell=True)
+  File "/usr/lib/python3.6/subprocess.py", line 425, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 855, in communicate
+    self.wait()
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/usr/local/bin/coach", line 33, in <module>
+    sys.exit(load_entry_point('rl-coach', 'console_scripts', 'coach')())
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/coach/rl_coach/coach.py", line 777, in main
+    launcher.launch()
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/coach/rl_coach/coach.py", line 224, in launch
+    args = self.get_config_args(parser)
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/coach/rl_coach/coach.py", line 401, in get_config_args
+    args.preset = self.expand_preset(args.preset)
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/coach/rl_coach/coach.py", line 314, in expand_preset
+    short_dynamic_import(preset, ignore_module_case=True)
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/coach/rl_coach/utils.py", line 348, in short_dynamic_import
+    ignore_module_case=ignore_module_case)
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/coach/rl_coach/utils.py", line 384, in dynamic_import_from_full_path
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./kuka_hand_ppo.py", line 219, in <module>
+    graph_manager.create_graph(task_parameters1)
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/coach/rl_coach/graph_managers/graph_manager.py", line 148, in create_graph
+    self.level_managers, self.environments = self._create_graph(task_parameters)
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/coach/rl_coach/graph_managers/basic_rl_graph_manager.py", line 64, in _create_graph
+    visualization_parameters=self.visualization_parameters)
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/coach/rl_coach/environments/gym_environment.py", line 279, in __init__
+    self.env = env_class(**self.additional_simulator_parameters)
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlitGymEnv.py", line 2764, in __init__
+    send_msg_every =  send_msg_every
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlitGymEnv.py", line 1308, in __init__
+    "velocityGain":1
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/robotAdaptiveActionRepeat.py", line 29, in __init__
+    self.kuka_AAR = KUKA_AAR(redner,sim_step,env_setting_path,generate_file,control_setting["kuka"])
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/adaptiveActionRepeat.py", line 37, in __init__
+    RecordAdaptiveRepeat(redner,sim_step,env_setting_path,control_setting)()
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/adaptiveActionRepeat.py", line 239, in __call__
+    self.setMotors(Robot,RobotId, command)
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/adaptiveActionRepeat.py", line 356, in setMotors
+    jointInfo = JointInfo()
+  File "/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/mamad_util.py", line 31, in __init__
+    self.jointType = {"revolute":0,"prismatic":1,"spherical":2,"planar":3,"fixed":4}
+KeyboardInterrupt
+... logging to /home/mamad/.ros/log/77c24406-e747-11eb-a224-f8b156b35cf4/roslaunch-mamad-nv137-1472.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;roscore
+[1mstarted roslaunch server http://mamad-nv137:36247/[0m
+ros_comm version 1.12.17
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.17
+
+NODES
+
+auto-starting new master
+[1mprocess[master]: started with pid [1482][0m
+[1mROS_MASTER_URI=http://mamad-nv137:11311/[0m
+]2;roscore http://mamad-nv137:11311/
+[1msetting /run_id to 77c24406-e747-11eb-a224-f8b156b35cf4[0m
+[1mprocess[rosout-1]: started with pid [1495][0m
+started core service [/rosout]
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

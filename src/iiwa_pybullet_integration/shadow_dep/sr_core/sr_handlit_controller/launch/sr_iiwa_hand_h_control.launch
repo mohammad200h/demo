@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- LAUNCH INTERFACE -->
+  <arg name="hardware_interface" default="PositionJointInterface"/>
+  
+  <arg name="robot_name" default="sr_iiwa"/>
+  <arg name="robot_description" default="$(find sat_iiwa_description)/urdf/sat_iiwa_hand_h.urdf.xacro" />
+  <arg name="previous_robot_description" default="$(find sat_iiwa_description)/urdf/sat_iiwa_no_hand.urdf.xacro" />
+  <arg name="hostname" default="192.170.11.3"/>
+  <arg name="port" default="30201"/>
+  <arg name="sim" default="true"/>
+  <arg name="initial_z" default="0.01"/>
+  
+  <arg name="grasp_controller" default="false"/>
+  <arg name="debug" default="false"/>
+  
+  <!-- Real -->
+  <group unless="$(arg sim)">
+    <!-- iiwa Stuff -->
+    <remap from="/sr_iiwa/joint_states" to="/joint_states"/>
+    <arg name="controllers" default="$(arg hardware_interface)_trajectory_controller"/>
+
+    <group ns="$(arg robot_name)">
+        <rosparam command="load" file="$(find sat_iiwa_control)/config/sr_iiwa_joint_names.yaml" />
+        <rosparam file="$(find sat_iiwa_control)/config/sr_iiwa_controller.yaml" command="load" />
+    </group>
+    
+    <include file="$(find iiwa_fri_ros)/launch/iiwa_hardware.launch">
+        <arg name="name" value="$(arg robot_name)"/>
+        <arg name="hardware_interface" value="$(arg hardware_interface)"/>
+        <arg name="hostname" value="$(arg hostname)"/>
+        <arg name="port" value="$(arg port)"/>
+        <arg name="controllers" value="joint_state_controller $(arg controllers)"/>
+        <arg name="streamer" value="false"/>
+    </include>
+    
+    <!-- Hand H Stuff -->
+    <param name="previous_robot_description" type="str" command="xacro --inorder '$(arg previous_robot_description)' hardware_interface:=$(arg hardware_interface) robot_name:=$(arg robot_name) initial_z:=$(arg initial_z)"/>
+    <node name="urdf_loader" pkg="fh_description" type="urdf_loader.py"/>
+    <param name="robot_description" type="str" command="xacro --inorder '$(arg robot_description)' hardware_interface:=$(arg hardware_interface) robot_name:=$(arg robot_name) initial_z:=$(arg initial_z)"/>
+    
+    <rosparam command="load" file="$(find fh_config)/hardware/hand_H_hardware.yaml"/>
+    
+    <rosparam command="load" file="$(find fh_config)/controller/finger_unit_fh_robot_trajectory_controller.yaml" unless="$(arg grasp_controller)"/>
+    <rosparam command="load" file="$(find fh_config)/controller/finger_unit_fh_robot_pwm_controller.yaml" unless="$(arg grasp_controller)"/>
+    <rosparam command="load" file="$(find fh_config)/controller/finger_unit_fh_robot_grasp_controller.yaml" if="$(arg grasp_controller)"/>
+            
+    <include file="$(find ros_ethercat_model)/launch/joint_state_publisher.launch"/>
+    
+    <group if="$(arg debug)">
+      <node name="robot_hw" pkg="ros_control_robot" type="ros_control_robot" args="" output="screen" launch-prefix="gdb -ex run -args">
+        <param name="initial_controller" type="str" value="torque"/>
+      </node>
+    </group>
+
+    <group unless="$(arg debug)">
+      <node name="robot_hw" pkg="ros_control_robot" type="ros_control_robot" args="" output="screen" launch-prefix="ethercat_grant">
+        <param name="initial_controller" type="str" value="torque"/>
+      </node>
+    </group>
+    
+    <node unless="$(arg grasp_controller)" name="spawn_hand_controller"
+      pkg="controller_manager" type="spawner" respawn="false" output="screen"
+      args="--shutdown-timeout=1.0 H1_trajectory_controller"/>
+      
+    <node if="$(arg grasp_controller)" name="spawn_hand_controller"
+      pkg="controller_manager" type="spawner" respawn="false" output="screen"
+      args="--shutdown-timeout=1.0 H1_grasp_controller"/>
+  </group>
+  
+  <!-- Simulated -->
+  <group if="$(arg sim)">
+    <arg name="controllers" default="$(arg robot_name)/$(arg hardware_interface)_trajectory_controller"/>
+    <group ns="$(arg robot_name)">
+        <rosparam command="load" file="$(find sat_iiwa_control)/config/sr_iiwa_joint_names.yaml" />
+        <rosparam file="$(find sat_iiwa_control)/config/sr_iiwa_controller.yaml" command="load" />
+    </group>
+        
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+      output="screen" args="$(arg controllers) --shutdown-timeout 2" />
+  
+    <!-- HAND -->
+    <rosparam command="load" file="$(find fh_config)/gazebo/hand_H_v2_gazebo_trajectory.yaml" unless="$(arg grasp_controller)"/>
+    <rosparam command="load" file="$(find fh_config)/gazebo/hand_H_v2_grasp_controller.yaml" if="$(arg grasp_controller)"/>
+    <rosparam command="load" file="$(find fh_robot_launch)/config/fh2_sim_config.yaml" />
+
+    
+    <node unless="$(arg grasp_controller)" name="spawn_hand_controller" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="--shutdown-timeout=1.0 H1_trajectory_controller"/>
+    
+    <node if="$(arg grasp_controller)" name="spawn_hand_controller" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="--shutdown-timeout=1.0 H1_grasp_controller"/>
+    
+    <include file="$(find ros_ethercat_model)/launch/joint_state_publisher.launch" />
+    
+    <!-- Robot state publisher -->
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="200.0" />
+      <param name="tf_prefix" type="string" value="" />
+    </node>
+  </group>
+  
+</launch>

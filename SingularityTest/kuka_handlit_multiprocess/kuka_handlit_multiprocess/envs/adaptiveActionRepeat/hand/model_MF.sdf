@@ -1,0 +1,411 @@
+<?xml version="1.0" ?>
+
+
+
+<sdf version='1.6'>
+  <model name="handlit">
+    <!--KUKA-->
+    <link name = "world">
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0 0.0 0 0 0</pose>
+            <mass>0.0</mass>
+            <inertia>
+                <ixx>0.</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.</iyy>
+                <iyz>0</iyz>
+                <izz>0.</izz>
+            </inertia>
+        </inertial>
+    </link>
+
+
+    <joint name="forearm_world" type="fixed">
+        <child>forearm</child>
+        <parent>world</parent>
+    </joint>
+
+    <link name ="forearm" >
+        <pose frame=''>0 0 0 0 0 1.5707963267948966</pose>
+        <inertial>
+            <pose frame=''>0 0 0.09 0 0 0</pose>
+            <mass>1.8</mass>
+            <inertia>
+                <ixx>0.108</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.108</iyy>
+                <iyz>0</iyz>
+                <izz>0.054</izz>
+            </inertia>
+        </inertial>
+
+        <visual name='visual_forearm_link'>
+
+            <geometry>
+                <mesh>
+                    <scale>1 1 1</scale>
+                    <uri>./meshes/forearm_lite.dae</uri>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>0.8402620938276867 0.13447352304620996 0.19298892445962745 1</ambient>
+                <diffuse>0.8452879596387205 0.10755465250200302 0.8887835262631231 1</diffuse>
+                <specular>0.7466598901054836 0.37870787828630137 0.2895577036202822 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+        </visual>
+
+    </link>
+
+    <link name = "palm">
+        <pose frame=''>0 -0.015 0.149 -0.6981317007977318 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0 0.035 0 0 0</pose>
+            <mass>0.3</mass>
+            <inertia>
+                <ixx>0.0003581</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.0005287</iyy>
+                <iyz>0</iyz>
+                <izz>0.000191</izz>
+            </inertia>
+        </inertial>
+        
+        <visual name='visual_palm_link'>
+
+            <geometry>
+                <mesh>
+                    <scale>-0.001 0.001 0.001</scale>
+                    <uri>./meshes/palm2.dae</uri>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>0.7102376520266666 0.6372645066965877 0.26636529542647913 1</ambient>
+                <diffuse>0.5107477788731031 0.833371056885784 0.2618576189311024 1</diffuse>
+                <specular>0.0998271826282705 0.08241819538903805 0.44170677831742944 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+        </visual>
+ 
+
+
+        
+    </link>
+    <joint name="palm_forearm" type="fixed">
+        <child>palm</child>
+        <parent>forearm</parent>
+        <axis>
+
+            <xyz>0 -1 0</xyz>
+         </axis>
+    </joint>  
+
+    
+    <link name = "palm_fake">
+
+        <pose frame=''>-0.01 0.020909000000000004 0.1889 -0.6981317007977318 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0 0.0 0 0 0</pose>
+            <mass>1.0e-85</mass>
+            <inertia>
+                <ixx>0.0</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.0</iyy>
+                <iyz>0</iyz>
+                <izz>0.0</izz>
+            </inertia>
+        </inertial>
+            <visual name='visual_palm_fake'>
+                <geometry>
+                    <sphere>
+                    <radius>0.01</radius>
+                    </sphere>
+                </geometry>
+                <material>
+                    <ambient>0.5672216218105076 0.531815859282997 0.5801439037594547 1</ambient>
+                    <diffuse>0.5464167892541046 0.6932951350253517 0.22253023363722557 1</diffuse>
+                    <specular>0.9022550019258972 0.9029306286118689 0.5969458319897258 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+    </link>
+
+    <joint name="palm_palm_fake" type="fixed">
+        <child>palm_fake</child>
+        <parent>palm</parent>
+        <axis>
+
+            <xyz>0 -1 0</xyz>
+         </axis>
+    </joint>  
+    
+
+    
+    
+
+        <link name = "knuckle_MF">
+
+            <pose frame=''>-0.011000000000000003 0.048636 0.22483799999999998 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0 0 0 0</pose>
+                <mass>0.008</mass>
+                <inertia>
+                    <ixx>2.6e-07</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>2.6e-07</iyy>
+                    <iyz>0</iyz>
+                    <izz>3.2e-07</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_knuckle_link_MF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>./meshes/knuckle.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.8422434512746552 0.2590233093763735 0.34713709089801814 1</ambient>
+                    <diffuse>0.6482454915404539 0.6189225387178434 0.8800817460906694 1</diffuse>
+                    <specular>0.37634539436519543 0.5837060057714808 0.9490939611796527 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_knuckle_link_MF'>
+                <geometry>
+                <mesh>
+                    <scale>0.00050 0.00050 0.00050</scale>
+                    <uri>./meshes/knuckle.dae</uri>
+                </mesh>
+            </geometry>
+            </collision>
+        </link>
+        <link name = "proximal_MF">
+            <pose frame=''>-0.011000000000000003 0.048636 0.22483799999999998 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0.0225 0 0 0</pose>
+                <mass>0.03</mass>
+                <inertia>
+                    <ixx>9.8e-06</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>1.0e-05</iyy>
+                    <iyz>0</iyz>
+                    <izz>1.8e-06</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_proximal_link_MF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>./meshes/F3.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.9992101375237287 0.38714744771964815 0.5303758893660296 1</ambient>
+                    <diffuse>0.7526790792187231 0.6758315575854466 0.31263462561159805 1</diffuse>
+                    <specular>0.07971920373735164 0.13491287204445457 0.21621330144725082 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_proximal_link_MF'>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>./meshes/F3_c.dae</uri>
+                </mesh>
+            </geometry>
+            </collision>
+        </link>
+        <link name = "middle_MF">
+            <pose frame=''>-0.011000000000000003 0.077526 0.259314 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0.0125 0 0 0</pose>
+                <mass>0.017</mass>
+                <inertia>
+                    <ixx>2.6e-06</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>2.7e-06</iyy>
+                    <iyz>0</iyz>
+                    <izz>8.7e-07</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_middle_link_MF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>./meshes/F2.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.8070174964999299 0.3610881831734233 0.2674581244649672 1</ambient>
+                    <diffuse>0.9651079235391686 0.9198055493362979 0.7121975853428971 1</diffuse>
+                    <specular>0.6337431817189619 0.028262874304247232 0.5466975305236405 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_middle_link_MF'>
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>./meshes/F2_c.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name =  "distal_MF">
+            <pose frame=''>-0.011000000000000003 0.093596 0.27846499999999996 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0.012 0 0 0</pose>
+                <mass>0.012</mass>
+                <inertia>
+                    <ixx>9.4e-07</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>1.1e-06</iyy>
+                    <iyz>0</iyz>
+                    <izz>5.3e-07</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_distal_link_MF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>./meshes/F1.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.4022344929646736 0.7041889219348835 0.6536935276759371 1</ambient>
+                    <diffuse>0.35998684955745763 0.7460823147935711 0.028088741274175932 1</diffuse>
+                    <specular>0.769007631193253 0.623841536218999 0.013213702315503673 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_distal_link_MF'>
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>./meshes/F1.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+
+        
+            
+            <joint name="J3_MF" type="revolute">
+                <child>proximal_MF</child>
+                <parent>knuckle_MF</parent>
+
+                <axis>
+                    <xyz>1 0 0</xyz>
+                    <limit>
+                        <lower>0 </lower>
+                        <upper>1.5708 </upper>
+                        <effort>6.0 </effort>
+                        <velocity>0.8 </velocity>
+                    </limit>
+                    <dynamics>
+                        <damping>0.1</damping>
+                        <friction>0</friction>
+                        <spring_reference>0</spring_reference>
+                        <spring_stiffness>0</spring_stiffness>
+                    </dynamics>
+                </axis>
+            </joint>
+        
+            
+            <joint name="J2_MF" type="revolute">
+                <child>middle_MF</child>
+                <parent>proximal_MF</parent>
+
+                <axis>
+                    <xyz>1 0 0</xyz>
+                    <limit>
+                        <lower>0 </lower>
+                        <upper>1.5708 </upper>
+                        <effort>6.0 </effort>
+                        <velocity>0.8 </velocity>
+                    </limit>
+                    <dynamics>
+                        <damping>0.1</damping>
+                        <friction>0</friction>
+                        <spring_reference>0</spring_reference>
+                        <spring_stiffness>0</spring_stiffness>
+                    </dynamics>
+                </axis>
+            </joint>
+        
+            
+            <joint name="J1_MF" type="revolute">
+                <child>distal_MF</child>
+                <parent>middle_MF</parent>
+
+                <axis>
+                    <xyz>1 0 0</xyz>
+                    <limit>
+                        <lower>0 </lower>
+                        <upper>1.5708 </upper>
+                        <effort>6.0 </effort>
+                        <velocity>0.8 </velocity>
+                    </limit>
+                    <dynamics>
+                        <damping>0.1</damping>
+                        <friction>0</friction>
+                        <spring_reference>0</spring_reference>
+                        <spring_stiffness>0</spring_stiffness>
+                    </dynamics>
+                </axis>
+            </joint>
+        
+        <joint name='J4_MF' type="revolute">
+            <child>knuckle_MF</child>
+            <parent>palm</parent>
+
+            <axis>
+                <xyz>0 0.766044 -0.642788</xyz>
+                <limit>
+                    <lower>-0.349066 </lower>
+                    <upper>0.349066 </upper>
+                    <effort>6.0 </effort>
+                    <velocity>0.8 </velocity>
+                </limit>
+                <dynamics>
+                    <damping>0.1</damping>
+                    <friction>0</friction>
+                    <spring_reference>0</spring_reference>
+                    <spring_stiffness>0</spring_stiffness>
+                </dynamics>
+            </axis>
+        </joint>
+
+    
+    
+
+    
+
+
+
+
+
+
+ 
+   
+  </model>
+
+</sdf>

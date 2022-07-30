@@ -1,0 +1,8 @@
+24May2020
+I am going to add functionality from 19May20 to this 22feb20 and see what is cusing the error
+--------------------------------------------
+First:
+I am gonna add functionality to be able to disable slack functionalities
+what happend:
+
+

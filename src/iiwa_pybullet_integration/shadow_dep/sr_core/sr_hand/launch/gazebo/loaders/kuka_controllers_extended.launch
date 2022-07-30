@@ -1,0 +1,8 @@
+<launch>
+  <rosparam file="$(find iiwa_control)/config/iiwa_control.yaml"
+  command="load" />
+  <node name="spawn_gazebo_kuka_controllers"
+  pkg="controller_manager" type="spawner" respawn="false"
+  output="screen"
+  args="--shutdown-timeout=1.0 PositionJointInterface_trajectory_controller" />
+</launch>

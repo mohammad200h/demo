@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/devel
+
+Name: gazebo_dev
+Description: Description of gazebo_dev
+Version: 2.5.15
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/devel
+
+Name: ros_ethercat_eml
+Description: Description of ros_ethercat_eml
+Version: 0.3.0
+Cflags: -I/home/mamad/Demo/demo/src/iiwa_pybullet_integration/shadow_dep/ros_ethercat/ros_ethercat_eml/include
+Libs: -L${prefix}/lib -lros_ethercat_eml
+Requires: roscpp

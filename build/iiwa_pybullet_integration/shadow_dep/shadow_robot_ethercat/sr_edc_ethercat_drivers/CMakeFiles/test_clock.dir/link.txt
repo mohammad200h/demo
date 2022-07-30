@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/test_clock.dir/test/test_clock_resolution.cpp.o  -o /home/mamad/Demo/demo/devel/lib/sr_edc_ethercat_drivers/test_clock -rdynamic -lboost_system -lboost_thread -lboost_chrono -lboost_date_time -lboost_atomic -lpthread -lrt 

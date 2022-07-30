@@ -1,0 +1,7 @@
+set(sr_moveit_planner_benchmarking_SETUP_PY_SETUP_MODULE "distutils.core")
+set(sr_moveit_planner_benchmarking_SETUP_PY_VERSION "0.0.1")
+set(sr_moveit_planner_benchmarking_SETUP_PY_SCRIPTS "")
+set(sr_moveit_planner_benchmarking_SETUP_PY_PACKAGES "sr_moveit_planner_benchmarking")
+set(sr_moveit_planner_benchmarking_SETUP_PY_PACKAGE_DIRS "src/sr_moveit_planner_benchmarking")
+set(sr_moveit_planner_benchmarking_SETUP_PY_MODULES "")
+set(sr_moveit_planner_benchmarking_SETUP_PY_MODULE_DIRS "")

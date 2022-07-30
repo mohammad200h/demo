@@ -1,0 +1,51 @@
+<?xml version='1.0'?>
+<%
+# This is where ruby code goes
+M_PI = 3.14
+#Mesh path for Ros
+
+#Mesh path for pybullet
+    pyb_forearm_lite_path_v = "model://forearm/forearm_lite.dae"
+#Current path
+    forearm_lite_path_v = pyb_forearm_lite_path_v
+%>
+<sdf version='1.6'>
+  <model name='forearm'>
+    <link name = "foreaem">
+        <pose frame=''>0 0 0 0 0 <%=M_PI/2%></pose>
+        <inertial>
+            <pose frame=''>0 0 0.09 0 0 0</pose>
+            <mass>1.8</mass>
+            <inertia>
+                <ixx>0.108</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.108</iyy>
+                <iyz>0</iyz>
+                <izz>0.054</izz>
+            </inertia>
+        </inertial>
+	  
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>1 1 1</scale>
+                    <uri><%= forearm_lite_path_v %></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <mesh>
+                    <scale>1 1 1</scale>
+                    <uri><%= forearm_lite_path_v %></uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+  </model>
+</sdf>

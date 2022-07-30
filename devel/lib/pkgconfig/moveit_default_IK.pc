@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/devel
+
+Name: moveit_default_IK
+Description: Description of moveit_default_IK
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,15 @@
+exp1_state
+exp3_state
+exp6_state
+exp7_state
+exp2_action
+exp6_reward
+exp1_reward
+exp1_randomStart
+exp2_randomStart
+exp3_randomStart
+exp1_AW
+exp3_AW
+exp1_AAR
+exp2_AAR
+

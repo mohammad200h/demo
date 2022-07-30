@@ -1,0 +1,1716 @@
+<?xml version="1.0" ?>
+
+
+
+<sdf version='1.6'>
+  <model name="kuka_handlit">
+    <!--KUKA-->
+    <link name = "world">
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0 0.0 0 0 0</pose>
+            <mass>0.0</mass>
+            <inertia>
+                <ixx>0.</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.</iyy>
+                <iyz>0</iyz>
+                <izz>0.</izz>
+            </inertia>
+        </inertial>
+    </link>
+    <joint name="world" type="fixed">
+        <child>lbr_iiwa_link_0</child>
+        <parent>world</parent>
+    </joint>
+    
+      <link name="lbr_iiwa_link_0">
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <inertial>
+            <pose frame=''>-0.1 0 0.07 0 0 0</pose>
+            <mass>5</mass>
+            <inertia>
+                <ixx>0.05</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.06</iyy>
+                <iyz>0</iyz>
+                <izz>0.03</izz>
+            </inertia>
+        </inertial>
+        <collision name='lbr_iiwa_link_0_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/collision/link_0.stl</uri>
+              
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='lbr_iiwa_link_0_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/visual/link_0.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8046501764201474 0.8753427104074419 0.07965515517436494 1</ambient>
+            <diffuse>0.9560740769419985 0.695291380864362 0.2884378030687792 1</diffuse>
+            <specular>0.49712513413730286 0.17177835047107304 0.07467424344412321 1</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+      </link>
+    
+      <link name="lbr_iiwa_link_1">
+        <pose frame=''>0 0 0.1575 0 0 0</pose>
+        <inertial>
+            <pose frame=''>0 -0.03 0.12 0 0 0</pose>
+            <mass>3.4525</mass>
+            <inertia>
+                <ixx>0.02183</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.007703</iyy>
+                <iyz>-0.003887</iyz>
+                <izz>0.02083</izz>
+            </inertia>
+        </inertial>
+        <collision name='lbr_iiwa_link_1_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/collision/link_1.stl</uri>
+              
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='lbr_iiwa_link_1_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/visual/link_1.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.4114546688511631 0.8498903844573291 0.6916824036304688 1</ambient>
+            <diffuse>0.2371489745870603 0.4191792434108088 0.7868205038026203 1</diffuse>
+            <specular>0.423401420820096 0.7792136665643686 0.6365222467197389 1</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+      </link>
+    
+      <link name="lbr_iiwa_link_2">
+        <pose frame=''>0 0 0.34 1.5708 0 -3.14159</pose>
+        <inertial>
+            <pose frame=''>0.0003 0.059 0.042 0 0 0</pose>
+            <mass>3.4821</mass>
+            <inertia>
+                <ixx>0.02076</ixx>
+                <ixy>0</ixy>
+                <ixz>0.003626</ixz>
+                <iyy>0.02179</iyy>
+                <iyz>0</iyz>
+                <izz>0.00779</izz>
+            </inertia>
+        </inertial>
+        <collision name='lbr_iiwa_link_2_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/collision/link_2.stl</uri>
+              
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='lbr_iiwa_link_2_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/visual/link_2.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.14217200339760372 0.5837929426181439 0.8261030405753247 1</ambient>
+            <diffuse>0.5831849884396032 0.8826122807989042 0.42020897584056405 1</diffuse>
+            <specular>0.9813369465273909 0.6489584021942422 0.01592595524868734 1</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+      </link>
+    
+      <link name="lbr_iiwa_link_3">
+        <pose frame=''>0 0 0.524 0 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0.03 0.13 0 0 0</pose>
+            <mass>4.05623</mass>
+            <inertia>
+                <ixx>0.03204</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.00972</iyy>
+                <iyz>0.006227</iyz>
+                <izz>0.03042</izz>
+            </inertia>
+        </inertial>
+        <collision name='lbr_iiwa_link_3_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/collision/link_3.stl</uri>
+              
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='lbr_iiwa_link_3_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/visual/link_3.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.006878431259162543 0.4447462770171887 0.8602755488349506 1</ambient>
+            <diffuse>0.9137384384946917 0.07681270825961894 0.08536345653098942 1</diffuse>
+            <specular>0.9027038951543211 0.5692819735296046 0.4489026853830719 1</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+      </link>
+    
+      <link name="lbr_iiwa_link_4">
+        <pose frame=''>0 0 0.74 1.5708 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0.067 0.034 0 0 0</pose>
+            <mass>3.4822</mass>
+            <inertia>
+                <ixx>0.02178</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.02075</iyy>
+                <iyz>-0.003625</iyz>
+                <izz>0.007785</izz>
+            </inertia>
+        </inertial>
+        <collision name='lbr_iiwa_link_4_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/collision/link_4.stl</uri>
+              
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='lbr_iiwa_link_4_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/visual/link_4.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.831839684213144 0.6979436972888394 0.00574819332623111 1</ambient>
+            <diffuse>0.44382156658217475 0.027137306371452286 0.5338423430339597 1</diffuse>
+            <specular>0.2016507150033957 0.0653883424416114 0.8960662793894419 1</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+      </link>
+    
+      <link name="lbr_iiwa_link_5">
+        <pose frame=''>0 0 0.9239999999999999 0 0 -3.14159</pose>
+        <inertial>
+            <pose frame=''>0.0001 0.021 0.076 0 0 0</pose>
+            <mass>2.1633</mass>
+            <inertia>
+                <ixx>0.01287</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.005708</iyy>
+                <iyz>-0.003946</iyz>
+                <izz>0.01112</izz>
+            </inertia>
+        </inertial>
+        <collision name='lbr_iiwa_link_5_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/collision/link_5.stl</uri>
+              
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='lbr_iiwa_link_5_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/visual/link_5.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.2936359073368371 0.32315885751622 0.52289294380787 1</ambient>
+            <diffuse>0.10418074340073458 0.21339196252046633 0.8892103659044414 1</diffuse>
+            <specular>0.9552006320822395 0.09955287489898867 0.9045211985627358 1</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+      </link>
+    
+      <link name="lbr_iiwa_link_6">
+        <pose frame=''>0 -0.0607 1.14 1.5708 0 -3.14159</pose>
+        <inertial>
+            <pose frame=''>0 0.0006 0.0004 0 0 0</pose>
+            <mass>2.3466</mass>
+            <inertia>
+                <ixx>0.006509</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.006259</iyy>
+                <iyz>0.00031891</iyz>
+                <izz>0.004527</izz>
+            </inertia>
+        </inertial>
+        <collision name='lbr_iiwa_link_6_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/collision/link_6.stl</uri>
+              
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='lbr_iiwa_link_6_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/visual/link_6.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.4438532750820088 0.2083866436268661 0.7817162864457892 1</ambient>
+            <diffuse>0.7667652045496592 0.7583797312082283 0.26091056122971423 1</diffuse>
+            <specular>0.9299331321209982 0.4737508450352439 0.7375458057821973 1</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+      </link>
+    
+      <link name="lbr_iiwa_link_7">
+        <pose frame=''>0 0 1.2205000000000001 0 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0.00043 0.071108 0 0 0</pose>
+            <mass>3.129</mass>
+            <inertia>
+                <ixx>0.145258</ixx>
+                <ixy>0.0005912</ixy>
+                <ixz>0</ixz>
+                <iyy>0.145283</iyy>
+                <iyz>-0.000503009</iyz>
+                <izz>0.0572184</izz>
+            </inertia>
+        </inertial>
+        <collision name='lbr_iiwa_link_7_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/collision/link_7.stl</uri>
+              
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='lbr_iiwa_link_7_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/kuka/visual/link_7.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.21454570111520388 0.8828385536893738 0.183925386947436 1</ambient>
+            <diffuse>0.5327399020093445 0.4354575443834544 0.8964704988185092 1</diffuse>
+            <specular>0.7319961048927474 0.7679111402323815 0.4907120278175976 1</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+      </link>
+    
+   
+    
+      <joint name="J0" type="revolute">
+        <child>lbr_iiwa_link_1</child>
+        <parent>lbr_iiwa_link_0</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.96706</lower>
+            <upper>2.96706</upper>
+            <effort>300</effort>
+            <velocity>10</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.5</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+    
+      <joint name="J1" type="revolute">
+        <child>lbr_iiwa_link_2</child>
+        <parent>lbr_iiwa_link_1</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.0944</lower>
+            <upper>2.0944</upper>
+            <effort>300</effort>
+            <velocity>10</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.5</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+    
+      <joint name="J2" type="revolute">
+        <child>lbr_iiwa_link_3</child>
+        <parent>lbr_iiwa_link_2</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.96706</lower>
+            <upper>2.96706</upper>
+            <effort>300</effort>
+            <velocity>10</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.5</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+    
+      <joint name="J3" type="revolute">
+        <child>lbr_iiwa_link_4</child>
+        <parent>lbr_iiwa_link_3</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.0944</lower>
+            <upper>2.0944</upper>
+            <effort>300</effort>
+            <velocity>10</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.5</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+    
+      <joint name="J4" type="revolute">
+        <child>lbr_iiwa_link_5</child>
+        <parent>lbr_iiwa_link_4</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.96706</lower>
+            <upper>2.96706</upper>
+            <effort>300</effort>
+            <velocity>10</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.5</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+    
+      <joint name="J5" type="revolute">
+        <child>lbr_iiwa_link_6</child>
+        <parent>lbr_iiwa_link_5</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.0944</lower>
+            <upper>2.0944</upper>
+            <effort>300</effort>
+            <velocity>10</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.5</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+    
+      <joint name="J6" type="revolute">
+        <child>lbr_iiwa_link_7</child>
+        <parent>lbr_iiwa_link_6</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-3.05433</lower>
+            <upper>3.05433</upper>
+            <effort>300</effort>
+            <velocity>10</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.5</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+    
+
+    <link name = "lbr_iiwa_link_ee">
+
+        <pose frame=''>0 0 1.2655 0 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0.00043 0.071108 0 0 0</pose>
+            <mass>1.0e-22</mass>
+            <inertia>
+                <ixx>0.145258</ixx>
+                <ixy>0.0005912</ixy>
+                <ixz>0</ixz>
+                <iyy>0.145283</iyy>
+                <iyz>-0.000503009</iyz>
+                <izz>0.0572184</izz>
+            </inertia>
+        </inertial>
+            <visual name='visual_lbr_iiwa_link_ee'>
+                <geometry>
+                    <sphere>
+                    <radius>0.01</radius>
+                    </sphere>
+                </geometry>
+                <material>
+                    <ambient>0.5672216218105076 0.531815859282997 0.5801439037594547 1</ambient>
+                    <diffuse>0.5464167892541046 0.6932951350253517 0.22253023363722557 1</diffuse>
+                    <specular>0.9022550019258972 0.9029306286118689 0.5969458319897258 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+    </link>
+    
+    <joint name="J7" type="fixed">
+        <child>lbr_iiwa_link_ee</child>
+        <parent>lbr_iiwa_link_7</parent>
+        <axis>
+
+            <xyz>0 -1 0</xyz>
+         </axis>
+    </joint>  
+    <!--Hand-->
+
+    <joint name="forearm_world" type="fixed">
+        <child>forearm</child>
+        <parent>lbr_iiwa_link_ee</parent>
+    </joint>
+
+    <link name ="forearm" >
+        <pose frame=''>0 0 1.2655 0 0 1.5707963267948966</pose>
+        <inertial>
+            <pose frame=''>0 0 0.09 0 0 0</pose>
+            <mass>1.8</mass>
+            <inertia>
+                <ixx>0.108</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.108</iyy>
+                <iyz>0</iyz>
+                <izz>0.054</izz>
+            </inertia>
+        </inertial>
+
+        <visual name='visual_forearm_link'>
+
+            <geometry>
+                <mesh>
+                    <scale>1 1 1</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/forearm_lite.dae</uri>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>0.33352028752001883 0.5989760304862916 0.6672713422126373 1</ambient>
+                <diffuse>0.41563669108200885 0.5357298564077332 0.19416748340054735 1</diffuse>
+                <specular>0.8944357721287586 0.5215973182764093 0.597976195778028 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+        </visual>
+        <collision name='collision_forearm_link'>
+        
+            <geometry>
+                <mesh>
+                    <scale>1 1 1</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/forearm_lite.dae</uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name = "palm">
+        <pose frame=''>0 -0.015 1.4145 -0.6981317007977318 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0 0.035 0 0 0</pose>
+            <mass>0.3</mass>
+            <inertia>
+                <ixx>0.0003581</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.0005287</iyy>
+                <iyz>0</iyz>
+                <izz>0.000191</izz>
+            </inertia>
+        </inertial>
+        
+        <visual name='visual_palm_link'>
+
+            <geometry>
+                <mesh>
+                    <scale>-0.001 0.001 0.001</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/palm2.dae</uri>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>0.8339926480847039 0.7547231531640695 0.2814062457737736 1</ambient>
+                <diffuse>0.32138173274042137 0.734974410811741 0.8108473042643339 1</diffuse>
+                <specular>0.3469518235846972 0.3455093949907766 0.671016810038499 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+        </visual>
+        <collision name="collision_palm_link">
+
+            <geometry>
+                <mesh>
+                    <scale>-0.001 0.001 0.001</scale>
+                <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/palm2_c.dae</uri>
+            </mesh>
+            </geometry>
+        </collision>
+
+
+        
+    </link>
+    <joint name="palm_forearm" type="fixed">
+        <child>palm</child>
+        <parent>forearm</parent>
+        <axis>
+
+            <xyz>0 -1 0</xyz>
+         </axis>
+    </joint>  
+
+    
+    <link name = "palm_fake">
+
+        <pose frame=''>-0.01 0.020909000000000004 1.4544000000000001 -0.6981317007977318 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0 0.0 0 0 0</pose>
+            <mass>0.0</mass>
+            <inertia>
+                <ixx>0.0</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.0</iyy>
+                <iyz>0</iyz>
+                <izz>0.0</izz>
+            </inertia>
+        </inertial>
+            <visual name='visual_palm_fake'>
+                <geometry>
+                    <sphere>
+                    <radius>0.01</radius>
+                    </sphere>
+                </geometry>
+                <material>
+                    <ambient>0.5672216218105076 0.531815859282997 0.5801439037594547 1</ambient>
+                    <diffuse>0.5464167892541046 0.6932951350253517 0.22253023363722557 1</diffuse>
+                    <specular>0.9022550019258972 0.9029306286118689 0.5969458319897258 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+    </link>
+
+    <joint name="palm_palm_fake" type="fixed">
+        <child>palm_fake</child>
+        <parent>palm</parent>
+        <axis>
+
+            <xyz>0 -1 0</xyz>
+         </axis>
+    </joint>  
+
+    
+
+        <link name = "knuckle_FF">
+
+            <pose frame=''>-0.033 0.0461 1.48727 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0 0 0 0</pose>
+                <mass>0.008</mass>
+                <inertia>
+                    <ixx>2.6e-07</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>2.6e-07</iyy>
+                    <iyz>0</iyz>
+                    <izz>3.2e-07</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_knuckle_link_FF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/knuckle.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.010360841119737008 0.042906506213421514 0.762244363364689 1</ambient>
+                    <diffuse>0.8838774807147625 0.674475840036518 0.6936729630173307 1</diffuse>
+                    <specular>0.7503103010094587 0.45786778533567474 0.04281371689859659 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_knuckle_link_FF'>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/knuckle.dae</uri>
+                </mesh>
+            </geometry>
+            </collision>
+        </link>
+        <link name = "proximal_FF">
+            <pose frame=''>-0.033 0.0461 1.48727 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0.0225 0 0 0</pose>
+                <mass>0.03</mass>
+                <inertia>
+                    <ixx>9.8e-06</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>1.0e-05</iyy>
+                    <iyz>0</iyz>
+                    <izz>1.8e-06</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_proximal_link_FF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F3.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.22740397448769112 0.5153950735667128 0.8098583757237268 1</ambient>
+                    <diffuse>0.35760433328102614 0.7577555851123456 0.23810917392335007 1</diffuse>
+                    <specular>0.20511662127626928 0.004047319356643708 0.6569489005577274 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_proximal_link_FF'>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F3_c.dae</uri>
+                </mesh>
+            </geometry>
+            </collision>
+        </link>
+        <link name = "middle_FF">
+            <pose frame=''>-0.033 0.07499 1.521746 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0.0125 0 0 0</pose>
+                <mass>0.017</mass>
+                <inertia>
+                    <ixx>2.6e-06</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>2.7e-06</iyy>
+                    <iyz>0</iyz>
+                    <izz>8.7e-07</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_middle_link_FF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F2.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.45708209886428475 0.5018247783289127 0.9240543308804519 1</ambient>
+                    <diffuse>0.8297088994111032 0.10402983132911936 0.6534294366857567 1</diffuse>
+                    <specular>0.8598542976036913 0.8259058558589372 0.1612105153142016 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_middle_link_FF'>
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F2_c.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name =  "distal_FF">
+            <pose frame=''>-0.033 0.09106 1.540897 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0.012 0 0 0</pose>
+                <mass>0.012</mass>
+                <inertia>
+                    <ixx>9.4e-07</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>1.1e-06</iyy>
+                    <iyz>0</iyz>
+                    <izz>5.3e-07</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_distal_link_FF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F1.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.9303882201687977 0.2721665364691067 0.7312960824825581 1</ambient>
+                    <diffuse>0.863993094311998 0.37569357632363354 0.7234549641134074 1</diffuse>
+                    <specular>0.8292324874542155 0.8905369887102724 0.5425428771637295 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_distal_link_FF'>
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F1.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+
+        
+            
+            <joint name="J3_FF" type="revolute">
+                <child>proximal_FF</child>
+                <parent>knuckle_FF</parent>
+
+                <axis>
+                    <xyz>1 0 0</xyz>
+                    <limit>
+                        <lower>0 </lower>
+                        <upper>1.5708 </upper>
+                        <effort>2.0 </effort>
+                        <velocity>2.0 </velocity>
+                    </limit>
+                    <dynamics>
+                        <damping>0.1</damping>
+                        <friction>0</friction>
+                        <spring_reference>0</spring_reference>
+                        <spring_stiffness>0</spring_stiffness>
+                    </dynamics>
+                </axis>
+            </joint>
+        
+            
+            <joint name="J2_FF" type="revolute">
+                <child>middle_FF</child>
+                <parent>proximal_FF</parent>
+
+                <axis>
+                    <xyz>1 0 0</xyz>
+                    <limit>
+                        <lower>0 </lower>
+                        <upper>1.5708 </upper>
+                        <effort>2.0 </effort>
+                        <velocity>2.0 </velocity>
+                    </limit>
+                    <dynamics>
+                        <damping>0.1</damping>
+                        <friction>0</friction>
+                        <spring_reference>0</spring_reference>
+                        <spring_stiffness>0</spring_stiffness>
+                    </dynamics>
+                </axis>
+            </joint>
+        
+            
+            <joint name="J1_FF" type="revolute">
+                <child>distal_FF</child>
+                <parent>middle_FF</parent>
+
+                <axis>
+                    <xyz>1 0 0</xyz>
+                    <limit>
+                        <lower>0 </lower>
+                        <upper>1.5708 </upper>
+                        <effort>2.0 </effort>
+                        <velocity>2.0 </velocity>
+                    </limit>
+                    <dynamics>
+                        <damping>0.1</damping>
+                        <friction>0</friction>
+                        <spring_reference>0</spring_reference>
+                        <spring_stiffness>0</spring_stiffness>
+                    </dynamics>
+                </axis>
+            </joint>
+        
+        <joint name='J4_FF' type="revolute">
+            <child>knuckle_FF</child>
+            <parent>palm</parent>
+
+            <axis>
+                <xyz>0 0.766044 -0.642788</xyz>
+                <limit>
+                    <lower>-0.349066 </lower>
+                    <upper>0.349066 </upper>
+                    <effort>2.0 </effort>
+                    <velocity>2.0 </velocity>
+                </limit>
+                <dynamics>
+                    <damping>0.1</damping>
+                    <friction>0</friction>
+                    <spring_reference>0</spring_reference>
+                    <spring_stiffness>0</spring_stiffness>
+                </dynamics>
+            </axis>
+        </joint>
+
+    
+
+        <link name = "knuckle_MF">
+
+            <pose frame=''>-0.011000000000000003 0.048636 1.4903380000000002 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0 0 0 0</pose>
+                <mass>0.008</mass>
+                <inertia>
+                    <ixx>2.6e-07</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>2.6e-07</iyy>
+                    <iyz>0</iyz>
+                    <izz>3.2e-07</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_knuckle_link_MF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/knuckle.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.9283818410828072 0.6070925220774287 0.7198245066920588 1</ambient>
+                    <diffuse>0.9035254383426676 0.5190852762367411 0.27696312377409127 1</diffuse>
+                    <specular>0.9458557156577113 0.25989620700882665 0.8087080412802891 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_knuckle_link_MF'>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/knuckle.dae</uri>
+                </mesh>
+            </geometry>
+            </collision>
+        </link>
+        <link name = "proximal_MF">
+            <pose frame=''>-0.011000000000000003 0.048636 1.4903380000000002 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0.0225 0 0 0</pose>
+                <mass>0.03</mass>
+                <inertia>
+                    <ixx>9.8e-06</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>1.0e-05</iyy>
+                    <iyz>0</iyz>
+                    <izz>1.8e-06</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_proximal_link_MF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F3.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.6367203282465832 0.33224320091664783 0.05084940430764506 1</ambient>
+                    <diffuse>0.7713290602088597 0.008258611472971689 0.41435027552740444 1</diffuse>
+                    <specular>0.6305990346740942 0.7607842789021118 0.7968003148709023 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_proximal_link_MF'>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F3_c.dae</uri>
+                </mesh>
+            </geometry>
+            </collision>
+        </link>
+        <link name = "middle_MF">
+            <pose frame=''>-0.011000000000000003 0.077526 1.5248140000000001 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0.0125 0 0 0</pose>
+                <mass>0.017</mass>
+                <inertia>
+                    <ixx>2.6e-06</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>2.7e-06</iyy>
+                    <iyz>0</iyz>
+                    <izz>8.7e-07</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_middle_link_MF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F2.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.23103981755621184 0.2894476436207274 0.2392032401844718 1</ambient>
+                    <diffuse>0.7308461845382747 0.25223729274256346 0.5323909239004869 1</diffuse>
+                    <specular>0.032925642720299186 0.13403768076000822 0.660941949918688 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_middle_link_MF'>
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F2_c.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name =  "distal_MF">
+            <pose frame=''>-0.011000000000000003 0.093596 1.543965 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0.012 0 0 0</pose>
+                <mass>0.012</mass>
+                <inertia>
+                    <ixx>9.4e-07</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>1.1e-06</iyy>
+                    <iyz>0</iyz>
+                    <izz>5.3e-07</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_distal_link_MF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F1.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.8531350279897103 0.011760199542917404 0.15051489290640085 1</ambient>
+                    <diffuse>0.8931855845383717 0.2660345790990656 0.2348534098583327 1</diffuse>
+                    <specular>0.6644514793410734 0.8606041496139949 0.8684018842114288 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_distal_link_MF'>
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F1.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+
+        
+            
+            <joint name="J3_MF" type="revolute">
+                <child>proximal_MF</child>
+                <parent>knuckle_MF</parent>
+
+                <axis>
+                    <xyz>1 0 0</xyz>
+                    <limit>
+                        <lower>0 </lower>
+                        <upper>1.5708 </upper>
+                        <effort>2.0 </effort>
+                        <velocity>2.0 </velocity>
+                    </limit>
+                    <dynamics>
+                        <damping>0.1</damping>
+                        <friction>0</friction>
+                        <spring_reference>0</spring_reference>
+                        <spring_stiffness>0</spring_stiffness>
+                    </dynamics>
+                </axis>
+            </joint>
+        
+            
+            <joint name="J2_MF" type="revolute">
+                <child>middle_MF</child>
+                <parent>proximal_MF</parent>
+
+                <axis>
+                    <xyz>1 0 0</xyz>
+                    <limit>
+                        <lower>0 </lower>
+                        <upper>1.5708 </upper>
+                        <effort>2.0 </effort>
+                        <velocity>2.0 </velocity>
+                    </limit>
+                    <dynamics>
+                        <damping>0.1</damping>
+                        <friction>0</friction>
+                        <spring_reference>0</spring_reference>
+                        <spring_stiffness>0</spring_stiffness>
+                    </dynamics>
+                </axis>
+            </joint>
+        
+            
+            <joint name="J1_MF" type="revolute">
+                <child>distal_MF</child>
+                <parent>middle_MF</parent>
+
+                <axis>
+                    <xyz>1 0 0</xyz>
+                    <limit>
+                        <lower>0 </lower>
+                        <upper>1.5708 </upper>
+                        <effort>2.0 </effort>
+                        <velocity>2.0 </velocity>
+                    </limit>
+                    <dynamics>
+                        <damping>0.1</damping>
+                        <friction>0</friction>
+                        <spring_reference>0</spring_reference>
+                        <spring_stiffness>0</spring_stiffness>
+                    </dynamics>
+                </axis>
+            </joint>
+        
+        <joint name='J4_MF' type="revolute">
+            <child>knuckle_MF</child>
+            <parent>palm</parent>
+
+            <axis>
+                <xyz>0 0.766044 -0.642788</xyz>
+                <limit>
+                    <lower>-0.349066 </lower>
+                    <upper>0.349066 </upper>
+                    <effort>2.0 </effort>
+                    <velocity>2.0 </velocity>
+                </limit>
+                <dynamics>
+                    <damping>0.1</damping>
+                    <friction>0</friction>
+                    <spring_reference>0</spring_reference>
+                    <spring_stiffness>0</spring_stiffness>
+                </dynamics>
+            </axis>
+        </joint>
+
+    
+
+        <link name = "knuckle_RF">
+
+            <pose frame=''>0.010999999999999996 0.0461 1.48727 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0 0 0 0</pose>
+                <mass>0.008</mass>
+                <inertia>
+                    <ixx>2.6e-07</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>2.6e-07</iyy>
+                    <iyz>0</iyz>
+                    <izz>3.2e-07</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_knuckle_link_RF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/knuckle.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.41469366921474027 0.39570211985328085 0.6185666915889257 1</ambient>
+                    <diffuse>0.710373300074206 0.20743728581454535 0.8270013742176968 1</diffuse>
+                    <specular>0.8334400813583495 0.06192815272559471 0.9254866468213699 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_knuckle_link_RF'>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/knuckle.dae</uri>
+                </mesh>
+            </geometry>
+            </collision>
+        </link>
+        <link name = "proximal_RF">
+            <pose frame=''>0.010999999999999996 0.0461 1.48727 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0.0225 0 0 0</pose>
+                <mass>0.03</mass>
+                <inertia>
+                    <ixx>9.8e-06</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>1.0e-05</iyy>
+                    <iyz>0</iyz>
+                    <izz>1.8e-06</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_proximal_link_RF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F3.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.575348260645114 0.8078960224284358 0.4477490576576739 1</ambient>
+                    <diffuse>0.017891784320039794 0.154604938185692 0.8716670420694396 1</diffuse>
+                    <specular>0.31963077508195537 0.4580930518887304 0.07254369469681121 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_proximal_link_RF'>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F3_c.dae</uri>
+                </mesh>
+            </geometry>
+            </collision>
+        </link>
+        <link name = "middle_RF">
+            <pose frame=''>0.010999999999999996 0.07499 1.521746 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0.0125 0 0 0</pose>
+                <mass>0.017</mass>
+                <inertia>
+                    <ixx>2.6e-06</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>2.7e-06</iyy>
+                    <iyz>0</iyz>
+                    <izz>8.7e-07</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_middle_link_RF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F2.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.6523177322808564 0.9296404867352552 0.21681639402571085 1</ambient>
+                    <diffuse>0.758656874742974 0.8594862682774892 0.0005205472900386976 1</diffuse>
+                    <specular>0.10007695460431665 0.5585986025726177 0.7152409601717342 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_middle_link_RF'>
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F2_c.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name =  "distal_RF">
+            <pose frame=''>0.010999999999999996 0.09106 1.540897 -0.698132 0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0.012 0 0 0</pose>
+                <mass>0.012</mass>
+                <inertia>
+                    <ixx>9.4e-07</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>1.1e-06</iyy>
+                    <iyz>0</iyz>
+                    <izz>5.3e-07</izz>
+                </inertia>
+            </inertial>
+
+            <visual name='visual_distal_link_RF'>
+
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F1.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.4653318493603784 0.9194368816832024 0.5570494982002255 1</ambient>
+                    <diffuse>0.28000263459408536 0.9225655764041352 0.8754053218372969 1</diffuse>
+                    <specular>0.6663896548924596 0.4499573997195263 0.6730623598978517 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name='collision_distal_link_RF'>
+                <geometry>
+                    <mesh>
+                        <scale>0.001 0.001 0.001</scale>
+                        <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/F1.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+
+        
+            
+            <joint name="J3_RF" type="revolute">
+                <child>proximal_RF</child>
+                <parent>knuckle_RF</parent>
+
+                <axis>
+                    <xyz>1 0 0</xyz>
+                    <limit>
+                        <lower>0 </lower>
+                        <upper>1.5708 </upper>
+                        <effort>2.0 </effort>
+                        <velocity>2.0 </velocity>
+                    </limit>
+                    <dynamics>
+                        <damping>0.1</damping>
+                        <friction>0</friction>
+                        <spring_reference>0</spring_reference>
+                        <spring_stiffness>0</spring_stiffness>
+                    </dynamics>
+                </axis>
+            </joint>
+        
+            
+            <joint name="J2_RF" type="revolute">
+                <child>middle_RF</child>
+                <parent>proximal_RF</parent>
+
+                <axis>
+                    <xyz>1 0 0</xyz>
+                    <limit>
+                        <lower>0 </lower>
+                        <upper>1.5708 </upper>
+                        <effort>2.0 </effort>
+                        <velocity>2.0 </velocity>
+                    </limit>
+                    <dynamics>
+                        <damping>0.1</damping>
+                        <friction>0</friction>
+                        <spring_reference>0</spring_reference>
+                        <spring_stiffness>0</spring_stiffness>
+                    </dynamics>
+                </axis>
+            </joint>
+        
+            
+            <joint name="J1_RF" type="revolute">
+                <child>distal_RF</child>
+                <parent>middle_RF</parent>
+
+                <axis>
+                    <xyz>1 0 0</xyz>
+                    <limit>
+                        <lower>0 </lower>
+                        <upper>1.5708 </upper>
+                        <effort>2.0 </effort>
+                        <velocity>2.0 </velocity>
+                    </limit>
+                    <dynamics>
+                        <damping>0.1</damping>
+                        <friction>0</friction>
+                        <spring_reference>0</spring_reference>
+                        <spring_stiffness>0</spring_stiffness>
+                    </dynamics>
+                </axis>
+            </joint>
+        
+        <joint name='J4_RF' type="revolute">
+            <child>knuckle_RF</child>
+            <parent>palm</parent>
+
+            <axis>
+                <xyz>0 0.766044 -0.642788</xyz>
+                <limit>
+                    <lower>-0.349066 </lower>
+                    <upper>0.349066 </upper>
+                    <effort>2.0 </effort>
+                    <velocity>2.0 </velocity>
+                </limit>
+                <dynamics>
+                    <damping>0.1</damping>
+                    <friction>0</friction>
+                    <spring_reference>0</spring_reference>
+                    <spring_stiffness>0</spring_stiffness>
+                </dynamics>
+            </axis>
+        </joint>
+
+    
+
+
+    <link name = "thbase">
+        <pose frame=''>-0.034 -0.0028710000000000003 1.442179 0.870557 0.572429 -2.5703</pose>
+        <inertial>
+            <pose frame=''>0 0 0 0 0 0</pose>
+            <mass>0.01</mass>
+            <inertia>
+                <ixx>1.6e-07</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>1.6e-07</iyy>
+                <iyz>0</iyz>
+                <izz>1.6e-07</izz>
+            </inertia>
+        </inertial>
+        <visual name='visual_thbase_link'>
+            
+            <geometry>
+                <box>
+                    <size>0.001 0.001 0.001</size>
+                </box>
+            </geometry>
+            <material>
+                <ambient>0.15878865001170872 0.6138156476504651 0.9784062104955796 1</ambient>
+                <diffuse>0.19629062426326227 0.6962617232868353 0.039379891257147914 1</diffuse>
+                <specular>0.8157693532724056 0.1987864319877245 0.10515364215364542 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+        </visual>
+        <collision name='collision_thbase_link'>
+            <pose frame=''>0 0 0 0 0 0</pose>
+            <geometry>
+
+                <sphere>
+                    <radius>0.011</radius>
+                </sphere>
+            
+            </geometry>
+        </collision>
+    </link>
+    <link name = "thproximal">
+            
+        <pose frame=''>-0.034 -0.0028710000000000003 1.442179 0.870557 0.572429 -2.5703</pose>
+        <inertial>
+            <pose frame=''>0 0 0.021111 0 0 0</pose>
+            <mass>0.04</mass>
+            <inertia>
+                <ixx>1.36e-05</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>1.36e-05</iyy>
+                <iyz>0</iyz>
+                <izz>3.13e-06</izz>
+            </inertia>
+        </inertial>
+
+        <visual name='visual_thproximal_link'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/TH3_z.dae</uri>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>0.8544414235214791 0.28254258410505284 0.09409358106709997 1</ambient>
+                <diffuse>0.5558530505946668 0.5263029774942496 0.04666889237548988 1</diffuse>
+                <specular>0.13128256146845563 0.5010679243015815 0.5557693870850718 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+        </visual>
+        <collision name='collision_thproximal_link'>
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/TH3_z_c.dae</uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+    <link name = "thhub">
+        <pose frame=''>-0.06087000000000001 0.014400999999999999 1.462763 0.870557 0.572429 -2.5703</pose>
+        <inertial>
+            <pose frame=''>0 0 0 0 0 0</pose>
+            <mass>0.005</mass>
+            <inertia>
+                <ixx>1.0e-06</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>1.0e-06</iyy>
+                <iyz>0</iyz>
+                <izz>3.0e-07</izz>
+            </inertia>
+        </inertial>
+        <visual name='visual_thhub_link'>
+            
+            <geometry>
+                <box>
+                    <size>0.001 0.001 0.001</size>
+                </box>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision_thhub_link'>
+            <geometry>
+                <box>
+                    <size>0.001 0.001 0.001</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+    <link name = "thmiddle">
+            
+        <pose frame=''>-0.06087000000000001 0.014400999999999999 1.462763 0.870557 0.572429 -2.5703</pose>
+        <inertial>
+            <pose frame=''>0 0 0.16 0 0 0</pose>
+            <mass>0.02</mass>
+            <inertia>
+                <ixx>5.1e-06</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>5.1e-06</iyy>
+                <iyz>0</iyz>
+                <izz>1.21e-06</izz>
+            </inertia>
+        </inertial>
+
+        <visual name='visual_thmiddle_link'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/TH2_z.dae</uri>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>0.4754724315135933 0.5547814995438745 0.9276650225101436 1</ambient>
+                <diffuse>0.15853820621144699 0.66355098061645 0.6117129945559298 1</diffuse>
+                <specular>0.7717851036112081 0.8819783292481665 0.6936137841508118 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+        </visual>
+
+        <collision name='collision_thmiddle_link'>
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/TH2_z_c.dae</uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+    <link name = "thdistal">
+            
+        <pose frame=''>-0.083498 0.028946 1.480096 -0.785398 0.698132 1.5707999999999998</pose>
+        <inertial>
+            <pose frame=''>0 0 0.014559 0 0 0</pose>
+            <mass>0.016</mass>
+            <inertia>
+                <ixx>2.1e-06</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>2.2e-06</iyy>
+                <iyz>0</iyz>
+                <izz>1.0e-06</izz>
+            </inertia>
+        </inertial>
+
+        <visual name='visual_thdistal_link'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/TH1_z.dae</uri>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>0.027348162549903132 0.3819962405788161 0.24924721861285182 1</ambient>
+                <diffuse>0.1000457338925057 0.2929832170296941 0.5593556770929438 1</diffuse>
+                <specular>0.6859362442507446 0.19118970379511158 0.8272729700752129 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+        </visual>
+        <collision name='collision_thdistal_link'>
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model/meshes/TH1_z.dae</uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+
+    
+        <joint name ="THJ5"  type ="revolute">
+            <child>thbase</child>
+            <parent>palm</parent>
+            <axis>
+                <xyz>0 0 0.541675</xyz>
+                <limit>
+                    <lower>-1.0472 </lower>
+                    <upper>1.0472 </upper>
+                    <effort>5.0 </effort>
+                    <velocity>4.0 </velocity>
+                </limit>
+                <dynamics>
+                    <damping>0.2</damping>
+                    <friction>0</friction>
+                </dynamics>
+            </axis>
+        </joint>
+    
+        <joint name ="THJ4"  type ="revolute">
+            <child>thproximal</child>
+            <parent>thbase</parent>
+            <axis>
+                <xyz>-0.707107 -0.454519 -0.541675</xyz>
+                <limit>
+                    <lower>0 </lower>
+                    <upper>1.22173 </upper>
+                    <effort>3.0 </effort>
+                    <velocity>4.0 </velocity>
+                </limit>
+                <dynamics>
+                    <damping>0.2</damping>
+                    <friction>0</friction>
+                </dynamics>
+            </axis>
+        </joint>
+    
+        <joint name ="THJ2"  type ="revolute">
+            <child>thmiddle</child>
+            <parent>thhub</parent>
+            <axis>
+                <xyz>0 -0.766044 0.642788</xyz>
+                <limit>
+                    <lower>-0.698132 </lower>
+                    <upper>0.698132 </upper>
+                    <effort>2.0 </effort>
+                    <velocity>2.0 </velocity>
+                </limit>
+                <dynamics>
+                    <damping>0.1</damping>
+                    <friction>0</friction>
+                </dynamics>
+            </axis>
+        </joint>
+    
+        <joint name ="THJ1"  type ="revolute">
+            <child>thdistal</child>
+            <parent>thmiddle</parent>
+            <axis>
+                <xyz>0 -0.766044 0.642788</xyz>
+                <limit>
+                    <lower>0 </lower>
+                    <upper>1.5708 </upper>
+                    <effort>1.0 </effort>
+                    <velocity>4.0 </velocity>
+                </limit>
+                <dynamics>
+                    <damping>0.2</damping>
+                    <friction>0</friction>
+                </dynamics>
+            </axis>
+        </joint>
+    
+    <joint name ="THJ3"  type ="fixed">
+        <child>thhub</child>
+        <parent>thproximal</parent>
+        <axis>
+            <xyz>1 0 0</xyz>
+        </axis>
+    </joint>
+
+
+
+
+
+
+ 
+   
+  </model>
+
+</sdf>

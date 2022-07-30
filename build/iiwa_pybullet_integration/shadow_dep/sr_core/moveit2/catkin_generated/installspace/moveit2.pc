@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: moveit2
+Description: Description of moveit2
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

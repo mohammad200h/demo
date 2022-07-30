@@ -1,0 +1,7 @@
+set(sr_example_SETUP_PY_SETUP_MODULE "distutils.core")
+set(sr_example_SETUP_PY_VERSION "1.4.0")
+set(sr_example_SETUP_PY_SCRIPTS "")
+set(sr_example_SETUP_PY_PACKAGES "sr_example")
+set(sr_example_SETUP_PY_PACKAGE_DIRS "scripts/sr_example")
+set(sr_example_SETUP_PY_MODULES "")
+set(sr_example_SETUP_PY_MODULE_DIRS "")

@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: sr_tactile_sensors
+Description: Description of sr_tactile_sensors
+Version: 1.4.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs sr_robot_msgs visualization_msgs gazebo_msgs gazebo_ros

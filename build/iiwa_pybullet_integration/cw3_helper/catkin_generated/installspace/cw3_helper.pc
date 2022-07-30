@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: cw3_helper
+Description: Description of cw3_helper
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

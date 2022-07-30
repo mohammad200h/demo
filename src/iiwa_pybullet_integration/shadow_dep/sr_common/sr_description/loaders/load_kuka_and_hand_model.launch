@@ -1,0 +1,7 @@
+<launch>
+  <!-- spawn the arm model -->
+  
+    <param  name="robot_description"
+    command="$(find xacro)/xacro --inorder '$(find sr_description)/robots/kuka_hand.urdf.xacro'" />
+  
+</launch>

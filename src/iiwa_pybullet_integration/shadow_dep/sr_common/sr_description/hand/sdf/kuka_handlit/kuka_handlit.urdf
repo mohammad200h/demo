@@ -1,0 +1,732 @@
+<?xml version="1.0" ?>
+<robot name="kuka_handlit">
+  <joint name="kuka_handlit__world" type="fixed">
+    <parent link="kuka_handlit__world"/>
+    <child link="kuka_handlit__lbr_iiwa_link_0"/>
+    <origin rpy="0  0  0" xyz="0  0  0"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="kuka_handlit__J0" type="revolute">
+    <parent link="kuka_handlit__lbr_iiwa_link_0"/>
+    <child link="kuka_handlit__lbr_iiwa_link_1"/>
+    <origin rpy="0  0  0" xyz="0      0      0.1575"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="300.0" lower="-2.96706" upper="2.96706" velocity="10.0"/>
+  </joint>
+  <joint name="kuka_handlit__J1" type="revolute">
+    <parent link="kuka_handlit__lbr_iiwa_link_1"/>
+    <child link="kuka_handlit__lbr_iiwa_link_2"/>
+    <origin rpy="1.5708   0      -3.14159" xyz="0      0      0.2025"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="300.0" lower="-2.0944" upper="2.0944" velocity="10.0"/>
+  </joint>
+  <joint name="kuka_handlit__J2" type="revolute">
+    <parent link="kuka_handlit__lbr_iiwa_link_2"/>
+    <child link="kuka_handlit__lbr_iiwa_link_3"/>
+    <origin rpy="1.5708   0      -3.14159" xyz="0      0.2045  0"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="300.0" lower="-2.96706" upper="2.96706" velocity="10.0"/>
+  </joint>
+  <joint name="kuka_handlit__J3" type="revolute">
+    <parent link="kuka_handlit__lbr_iiwa_link_3"/>
+    <child link="kuka_handlit__lbr_iiwa_link_4"/>
+    <origin rpy="1.5708  0      0" xyz="0      0      0.2155"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="300.0" lower="-2.0944" upper="2.0944" velocity="10.0"/>
+  </joint>
+  <joint name="kuka_handlit__J4" type="revolute">
+    <parent link="kuka_handlit__lbr_iiwa_link_4"/>
+    <child link="kuka_handlit__lbr_iiwa_link_5"/>
+    <origin rpy="1.5708   0       3.14159" xyz="0      0.1845  0"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="300.0" lower="-2.96706" upper="2.96706" velocity="10.0"/>
+  </joint>
+  <joint name="kuka_handlit__J5" type="revolute">
+    <parent link="kuka_handlit__lbr_iiwa_link_5"/>
+    <child link="kuka_handlit__lbr_iiwa_link_6"/>
+    <origin rpy="1.5708  0      0" xyz="0      0      0.2155"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="300.0" lower="-2.0944" upper="2.0944" velocity="10.0"/>
+  </joint>
+  <joint name="kuka_handlit__J6" type="revolute">
+    <parent link="kuka_handlit__lbr_iiwa_link_6"/>
+    <child link="kuka_handlit__lbr_iiwa_link_7"/>
+    <origin rpy="1.5708   0      -3.14159" xyz="0     0.081  0"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="300.0" lower="-3.05433" upper="3.05433" velocity="10.0"/>
+  </joint>
+  <joint name="kuka_handlit__forearm_world" type="fixed">
+    <parent link="kuka_handlit__lbr_iiwa_link_7"/>
+    <child link="kuka_handlit__forearm"/>
+    <origin rpy="0       0       1.57079" xyz="0  0  0"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="kuka_handlit__palm_forearm" type="fixed">
+    <parent link="kuka_handlit__forearm"/>
+    <child link="kuka_handlit__palm"/>
+    <origin rpy="-0.69813  0      -1.57079" xyz="-0.015  0     0.149"/>
+    <axis xyz="0 -1  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="kuka_handlit__palm_palm_fake" type="fixed">
+    <parent link="kuka_handlit__palm"/>
+    <child link="kuka_handlit__palm_fake"/>
+    <origin rpy="0  0  0" xyz="-0.01     0.00186  0.05364"/>
+    <axis xyz="0 -1  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="kuka_handlit__J3_FF" type="revolute">
+    <parent link="kuka_handlit__knuckle_FF"/>
+    <child link="kuka_handlit__proximal_FF"/>
+    <origin rpy="0  0  0" xyz="0  0  0"/>
+    <axis xyz="1  0  0"/>
+    <limit effort="2.0" lower="0.0" upper="1.5708" velocity="2.0"/>
+  </joint>
+  <joint name="kuka_handlit__J2_FF" type="revolute">
+    <parent link="kuka_handlit__proximal_FF"/>
+    <child link="kuka_handlit__middle_FF"/>
+    <origin rpy="0  0  0" xyz="0.00000000e+00  -3.00000000e-05   4.49800000e-02"/>
+    <axis xyz="1  0  0"/>
+    <limit effort="2.0" lower="0.0" upper="1.5708" velocity="2.0"/>
+  </joint>
+  <joint name="kuka_handlit__J1_FF" type="revolute">
+    <parent link="kuka_handlit__middle_FF"/>
+    <child link="kuka_handlit__distal_FF"/>
+    <origin rpy="0  0  0" xyz="0     0     0.025"/>
+    <axis xyz="1  0  0"/>
+    <limit effort="2.0" lower="0.0" upper="1.5708" velocity="2.0"/>
+  </joint>
+  <joint name="kuka_handlit__J4_FF" type="revolute">
+    <parent link="kuka_handlit__palm"/>
+    <child link="kuka_handlit__knuckle_FF"/>
+    <origin rpy="0  0  0" xyz="-3.30000000e-02   3.00000000e-05   9.50100000e-02"/>
+    <axis xyz="0       0.76604 -0.64278"/>
+    <limit effort="2.0" lower="-0.349066" upper="0.349066" velocity="2.0"/>
+  </joint>
+  <joint name="kuka_handlit__J3_MF" type="revolute">
+    <parent link="kuka_handlit__knuckle_MF"/>
+    <child link="kuka_handlit__proximal_MF"/>
+    <origin rpy="0  0  0" xyz="0  0  0"/>
+    <axis xyz="1  0  0"/>
+    <limit effort="2.0" lower="0.0" upper="1.5708" velocity="2.0"/>
+  </joint>
+  <joint name="kuka_handlit__J2_MF" type="revolute">
+    <parent link="kuka_handlit__proximal_MF"/>
+    <child link="kuka_handlit__middle_MF"/>
+    <origin rpy="0  0  0" xyz="0.00000000e+00  -3.00000000e-05   4.49800000e-02"/>
+    <axis xyz="1  0  0"/>
+    <limit effort="2.0" lower="0.0" upper="1.5708" velocity="2.0"/>
+  </joint>
+  <joint name="kuka_handlit__J1_MF" type="revolute">
+    <parent link="kuka_handlit__middle_MF"/>
+    <child link="kuka_handlit__distal_MF"/>
+    <origin rpy="0  0  0" xyz="0     0     0.025"/>
+    <axis xyz="1  0  0"/>
+    <limit effort="2.0" lower="0.0" upper="1.5708" velocity="2.0"/>
+  </joint>
+  <joint name="kuka_handlit__J4_MF" type="revolute">
+    <parent link="kuka_handlit__palm"/>
+    <child link="kuka_handlit__knuckle_MF"/>
+    <origin rpy="0  0  0" xyz="-0.011  0     0.099"/>
+    <axis xyz="0       0.76604 -0.64278"/>
+    <limit effort="2.0" lower="-0.349066" upper="0.349066" velocity="2.0"/>
+  </joint>
+  <joint name="kuka_handlit__J3_RF" type="revolute">
+    <parent link="kuka_handlit__knuckle_RF"/>
+    <child link="kuka_handlit__proximal_RF"/>
+    <origin rpy="0  0  0" xyz="0  0  0"/>
+    <axis xyz="1  0  0"/>
+    <limit effort="2.0" lower="0.0" upper="1.5708" velocity="2.0"/>
+  </joint>
+  <joint name="kuka_handlit__J2_RF" type="revolute">
+    <parent link="kuka_handlit__proximal_RF"/>
+    <child link="kuka_handlit__middle_RF"/>
+    <origin rpy="0  0  0" xyz="0.00000000e+00  -3.00000000e-05   4.49800000e-02"/>
+    <axis xyz="1  0  0"/>
+    <limit effort="2.0" lower="0.0" upper="1.5708" velocity="2.0"/>
+  </joint>
+  <joint name="kuka_handlit__J1_RF" type="revolute">
+    <parent link="kuka_handlit__middle_RF"/>
+    <child link="kuka_handlit__distal_RF"/>
+    <origin rpy="0  0  0" xyz="0     0     0.025"/>
+    <axis xyz="1  0  0"/>
+    <limit effort="2.0" lower="0.0" upper="1.5708" velocity="2.0"/>
+  </joint>
+  <joint name="kuka_handlit__J4_RF" type="revolute">
+    <parent link="kuka_handlit__palm"/>
+    <child link="kuka_handlit__knuckle_RF"/>
+    <origin rpy="0  0  0" xyz="1.10000000e-02   3.00000000e-05   9.50100000e-02"/>
+    <axis xyz="0       0.76604 -0.64278"/>
+    <limit effort="2.0" lower="-0.349066" upper="0.349066" velocity="2.0"/>
+  </joint>
+  <joint name="kuka_handlit__THJ5" type="revolute">
+    <parent link="kuka_handlit__palm"/>
+    <child link="kuka_handlit__thbase"/>
+    <origin rpy="0       0.7854  -3.14159" xyz="-0.034  -0.0085  0.029"/>
+    <axis xyz="0       0       0.54167"/>
+    <limit effort="5.0" lower="-1.0472" upper="1.0472" velocity="4.0"/>
+  </joint>
+  <joint name="kuka_handlit__THJ4" type="revolute">
+    <parent link="kuka_handlit__thbase"/>
+    <child link="kuka_handlit__thproximal"/>
+    <origin rpy="0  0  0" xyz="0  0  0"/>
+    <axis xyz="-0.7071  -0.45451 -0.54167"/>
+    <limit effort="3.0" lower="0.0" upper="1.22173" velocity="4.0"/>
+  </joint>
+  <joint name="kuka_handlit__THJ2" type="revolute">
+    <parent link="kuka_handlit__thhub"/>
+    <child link="kuka_handlit__thmiddle"/>
+    <origin rpy="0  0  0" xyz="0  0  0"/>
+    <axis xyz="0      -0.76604  0.64278"/>
+    <limit effort="2.0" lower="-0.698132" upper="0.698132" velocity="2.0"/>
+  </joint>
+  <joint name="kuka_handlit__THJ1" type="revolute">
+    <parent link="kuka_handlit__thmiddle"/>
+    <child link="kuka_handlit__thdistal"/>
+    <origin rpy="0       0      -1.57079" xyz="0     0     0.032"/>
+    <axis xyz="0      -0.76604  0.64278"/>
+    <limit effort="1.0" lower="0.0" upper="1.5708" velocity="4.0"/>
+  </joint>
+  <joint name="kuka_handlit__THJ3" type="fixed">
+    <parent link="kuka_handlit__thproximal"/>
+    <child link="kuka_handlit__thhub"/>
+    <origin rpy="0  0  0" xyz="0     0     0.038"/>
+    <axis xyz="1  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <link name="kuka_handlit__world">
+    <inertial>
+      <mass value="0.0"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0." ixy="0" ixz="0" iyy="0." iyz="0" izz="0."/>
+    </inertial>
+  </link>
+  <link name="kuka_handlit__lbr_iiwa_link_0">
+    <inertial>
+      <mass value="5"/>
+      <origin rpy="0  0  0" xyz="-0.1   0    0.07"/>
+      <inertia ixx="0.05" ixy="0" ixz="0" iyy="0.06" iyz="0" izz="0.03"/>
+    </inertial>
+    <collision name="kuka_handlit__lbr_iiwa_link_0_collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_0.stl OR meshes/link_0.stl OR meshes/link_0.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_0.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_0.stl OR meshes/link_0.stl OR meshes/link_0.stl OR meshes/link_0.stl OR meshes/link_0.stl OR meshes/link_0.stl OR meshes/link_0.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__lbr_iiwa_link_0_visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_0.stl OR meshes/link_0.stl OR meshes/link_0.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_0.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_0.stl OR meshes/link_0.stl OR meshes/link_0.stl OR meshes/link_0.stl OR meshes/link_0.stl OR meshes/link_0.stl OR meshes/link_0.stl" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__lbr_iiwa_link_1">
+    <inertial>
+      <mass value="3.4525"/>
+      <origin rpy="0  0  0" xyz="0    0.03  0.12"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.09" iyz="0" izz="0.02"/>
+    </inertial>
+    <collision name="kuka_handlit__lbr_iiwa_link_1_collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_1.stl OR meshes/link_1.stl OR meshes/link_1.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_1.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_1.stl OR meshes/link_1.stl OR meshes/link_1.stl OR meshes/link_1.stl OR meshes/link_1.stl OR meshes/link_1.stl OR meshes/link_1.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__lbr_iiwa_link_1_visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_1.stl OR meshes/link_1.stl OR meshes/link_1.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_1.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_1.stl OR meshes/link_1.stl OR meshes/link_1.stl OR meshes/link_1.stl OR meshes/link_1.stl OR meshes/link_1.stl OR meshes/link_1.stl" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__lbr_iiwa_link_2">
+    <inertial>
+      <mass value="3.4821"/>
+      <origin rpy="0  0  0" xyz="0.00029  0.059    0.042"/>
+      <inertia ixx="0.05" ixy="0" ixz="0" iyy="0.018" iyz="0" izz="36"/>
+    </inertial>
+    <collision name="kuka_handlit__lbr_iiwa_link_2_collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_2.stl OR meshes/link_2.stl OR meshes/link_2.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_2.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_2.stl OR meshes/link_2.stl OR meshes/link_2.stl OR meshes/link_2.stl OR meshes/link_2.stl OR meshes/link_2.stl OR meshes/link_2.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__lbr_iiwa_link_2_visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_2.stl OR meshes/link_2.stl OR meshes/link_2.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_2.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_2.stl OR meshes/link_2.stl OR meshes/link_2.stl OR meshes/link_2.stl OR meshes/link_2.stl OR meshes/link_2.stl OR meshes/link_2.stl" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__lbr_iiwa_link_3">
+    <inertial>
+      <mass value="4.05623"/>
+      <origin rpy="0  0  0" xyz="0    0.03  0.13"/>
+      <inertia ixx="0.08" ixy="0" ixz="0" iyy="0.075" iyz="0" izz="0.01"/>
+    </inertial>
+    <collision name="kuka_handlit__lbr_iiwa_link_3_collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_3.stl OR meshes/link_3.stl OR meshes/link_3.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_3.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_3.stl OR meshes/link_3.stl OR meshes/link_3.stl OR meshes/link_3.stl OR meshes/link_3.stl OR meshes/link_3.stl OR meshes/link_3.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__lbr_iiwa_link_3_visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_3.stl OR meshes/link_3.stl OR meshes/link_3.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_3.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_3.stl OR meshes/link_3.stl OR meshes/link_3.stl OR meshes/link_3.stl OR meshes/link_3.stl OR meshes/link_3.stl OR meshes/link_3.stl" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__lbr_iiwa_link_4">
+    <inertial>
+      <mass value="3.4822"/>
+      <origin rpy="0.034  0     0" xyz="0     0.067  0"/>
+      <inertia ixx="0.03" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.029"/>
+    </inertial>
+    <collision name="kuka_handlit__lbr_iiwa_link_4_collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_4.stl OR meshes/link_4.stl OR meshes/link_4.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_4.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_4.stl OR meshes/link_4.stl OR meshes/link_4.stl OR meshes/link_4.stl OR meshes/link_4.stl OR meshes/link_4.stl OR meshes/link_4.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__lbr_iiwa_link_4_visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_4.stl OR meshes/link_4.stl OR meshes/link_4.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_4.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_4.stl OR meshes/link_4.stl OR meshes/link_4.stl OR meshes/link_4.stl OR meshes/link_4.stl OR meshes/link_4.stl OR meshes/link_4.stl" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__lbr_iiwa_link_5">
+    <inertial>
+      <mass value="2.1633"/>
+      <origin rpy="0  0  0" xyz="0.0001  0.021   0.076"/>
+      <inertia ixx="0.02" ixy="0" ixz="0" iyy="0.018" iyz="0" izz="0.005"/>
+    </inertial>
+    <collision name="kuka_handlit__lbr_iiwa_link_5_collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_5.stl OR meshes/link_5.stl OR meshes/link_5.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_5.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_5.stl OR meshes/link_5.stl OR meshes/link_5.stl OR meshes/link_5.stl OR meshes/link_5.stl OR meshes/link_5.stl OR meshes/link_5.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__lbr_iiwa_link_5_visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_5.stl OR meshes/link_5.stl OR meshes/link_5.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_5.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_5.stl OR meshes/link_5.stl OR meshes/link_5.stl OR meshes/link_5.stl OR meshes/link_5.stl OR meshes/link_5.stl OR meshes/link_5.stl" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__lbr_iiwa_link_6">
+    <inertial>
+      <mass value="2.3466"/>
+      <origin rpy="0  0  0" xyz="0       0.00059  0.0004"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.0036" iyz="0" izz="0.0047"/>
+    </inertial>
+    <collision name="kuka_handlit__lbr_iiwa_link_6_collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_6.stl OR meshes/link_6.stl OR meshes/link_6.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_6.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_6.stl OR meshes/link_6.stl OR meshes/link_6.stl OR meshes/link_6.stl OR meshes/link_6.stl OR meshes/link_6.stl OR meshes/link_6.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__lbr_iiwa_link_6_visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_6.stl OR meshes/link_6.stl OR meshes/link_6.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_6.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_6.stl OR meshes/link_6.stl OR meshes/link_6.stl OR meshes/link_6.stl OR meshes/link_6.stl OR meshes/link_6.stl OR meshes/link_6.stl" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__lbr_iiwa_link_7">
+    <inertial>
+      <mass value="3.129"/>
+      <origin rpy="0  0  0" xyz="0    0    0.02"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <collision name="kuka_handlit__lbr_iiwa_link_7_collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_7.stl OR meshes/link_7.stl OR meshes/link_7.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_7.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_7.stl OR meshes/link_7.stl OR meshes/link_7.stl OR meshes/link_7.stl OR meshes/link_7.stl OR meshes/link_7.stl OR meshes/link_7.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__lbr_iiwa_link_7_visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/link_7.stl OR meshes/link_7.stl OR meshes/link_7.stl OR sr_description/hand/sdf/kuka_handlit/meshes/link_7.stl OR kuka_pybullet/scripts/kuka_iiwa/meshes/link_7.stl OR meshes/link_7.stl OR meshes/link_7.stl OR meshes/link_7.stl OR meshes/link_7.stl OR meshes/link_7.stl OR meshes/link_7.stl" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__forearm">
+    <inertial>
+      <mass value="1.8"/>
+      <origin rpy="0  0  0" xyz="0    0    0.09"/>
+      <inertia ixx="0.108" ixy="0" ixz="0" iyy="0.108" iyz="0" izz="0.054"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_forearm_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/forearm_lite.dae OR meshes/forearm_lite.dae OR sr_description/hand/sdf/kuka_handlit/meshes/forearm_lite.dae OR sr_description/hand/sdf/shadow_handlit/meshes/forearm_lite.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_forearm_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/forearm_lite.dae OR meshes/forearm_lite.dae OR sr_description/hand/sdf/kuka_handlit/meshes/forearm_lite.dae OR sr_description/hand/sdf/shadow_handlit/meshes/forearm_lite.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__palm">
+    <inertial>
+      <mass value="0.3"/>
+      <origin rpy="0  0  0" xyz="0     0     0.035"/>
+      <inertia ixx="0.0003581" ixy="0" ixz="0" iyy="0.0005287" iyz="0" izz="0.000191"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_palm_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/palm2_c.dae OR meshes/palm2_c.dae OR sr_description/hand/sdf/kuka_handlit/meshes/palm2_c.dae" scale="-0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_palm_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/palm2.dae OR meshes/palm2.dae OR sr_description/hand/sdf/kuka_handlit/meshes/palm2.dae" scale="-0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__palm_fake">
+    <inertial>
+      <mass value="0.0"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+    </inertial>
+    <visual name="kuka_handlit__visual_palm_fake">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__knuckle_FF">
+    <inertial>
+      <mass value="0.008"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="2.6e-07" ixy="0" ixz="0" iyy="2.6e-07" iyz="0" izz="3.2e-07"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_knuckle_link_FF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/knuckle.dae OR sr_description/hand/sdf/kuka_handlit/meshes/knuckle.dae OR sr_description/hand/sdf/shadow_handlit/meshes/knuckle.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_knuckle_link_FF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/knuckle.dae OR sr_description/hand/sdf/kuka_handlit/meshes/knuckle.dae OR sr_description/hand/sdf/shadow_handlit/meshes/knuckle.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__proximal_FF">
+    <inertial>
+      <mass value="0.03"/>
+      <origin rpy="0  0  0" xyz="0      0      0.0225"/>
+      <inertia ixx="9.8e-06" ixy="0" ixz="0" iyy="1.0e-05" iyz="0" izz="1.8e-06"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_proximal_link_FF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F3_c.dae OR meshes/F3_c.dae OR meshes/F3_c.dae OR meshes/F3_c.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F3_c.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_proximal_link_FF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/F3.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F3.dae OR sr_description/hand/sdf/shadow_handlit/meshes/F3.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__middle_FF">
+    <inertial>
+      <mass value="0.017"/>
+      <origin rpy="0  0  0" xyz="0      0      0.0125"/>
+      <inertia ixx="2.6e-06" ixy="0" ixz="0" iyy="2.7e-06" iyz="0" izz="8.7e-07"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_middle_link_FF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F2_c.dae OR meshes/F2_c.dae OR meshes/F2_c.dae OR meshes/F2_c.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F2_c.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_middle_link_FF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/F2.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F2.dae OR sr_description/hand/sdf/shadow_handlit/meshes/F2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__distal_FF">
+    <inertial>
+      <mass value="0.012"/>
+      <origin rpy="0  0  0" xyz="0     0     0.012"/>
+      <inertia ixx="9.4e-07" ixy="0" ixz="0" iyy="1.1e-06" iyz="0" izz="5.3e-07"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_distal_link_FF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/F1.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F1.dae OR sr_description/hand/sdf/shadow_handlit/meshes/F1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_distal_link_FF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/F1.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F1.dae OR sr_description/hand/sdf/shadow_handlit/meshes/F1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__knuckle_MF">
+    <inertial>
+      <mass value="0.008"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="2.6e-07" ixy="0" ixz="0" iyy="2.6e-07" iyz="0" izz="3.2e-07"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_knuckle_link_MF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/knuckle.dae OR sr_description/hand/sdf/kuka_handlit/meshes/knuckle.dae OR sr_description/hand/sdf/shadow_handlit/meshes/knuckle.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_knuckle_link_MF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/knuckle.dae OR sr_description/hand/sdf/kuka_handlit/meshes/knuckle.dae OR sr_description/hand/sdf/shadow_handlit/meshes/knuckle.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__proximal_MF">
+    <inertial>
+      <mass value="0.03"/>
+      <origin rpy="0  0  0" xyz="0      0      0.0225"/>
+      <inertia ixx="9.8e-06" ixy="0" ixz="0" iyy="1.0e-05" iyz="0" izz="1.8e-06"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_proximal_link_MF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F3_c.dae OR meshes/F3_c.dae OR meshes/F3_c.dae OR meshes/F3_c.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F3_c.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_proximal_link_MF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/F3.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F3.dae OR sr_description/hand/sdf/shadow_handlit/meshes/F3.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__middle_MF">
+    <inertial>
+      <mass value="0.017"/>
+      <origin rpy="0  0  0" xyz="0      0      0.0125"/>
+      <inertia ixx="2.6e-06" ixy="0" ixz="0" iyy="2.7e-06" iyz="0" izz="8.7e-07"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_middle_link_MF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F2_c.dae OR meshes/F2_c.dae OR meshes/F2_c.dae OR meshes/F2_c.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F2_c.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_middle_link_MF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/F2.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F2.dae OR sr_description/hand/sdf/shadow_handlit/meshes/F2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__distal_MF">
+    <inertial>
+      <mass value="0.012"/>
+      <origin rpy="0  0  0" xyz="0     0     0.012"/>
+      <inertia ixx="9.4e-07" ixy="0" ixz="0" iyy="1.1e-06" iyz="0" izz="5.3e-07"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_distal_link_MF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/F1.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F1.dae OR sr_description/hand/sdf/shadow_handlit/meshes/F1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_distal_link_MF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/F1.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F1.dae OR sr_description/hand/sdf/shadow_handlit/meshes/F1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__knuckle_RF">
+    <inertial>
+      <mass value="0.008"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="2.6e-07" ixy="0" ixz="0" iyy="2.6e-07" iyz="0" izz="3.2e-07"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_knuckle_link_RF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/knuckle.dae OR sr_description/hand/sdf/kuka_handlit/meshes/knuckle.dae OR sr_description/hand/sdf/shadow_handlit/meshes/knuckle.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_knuckle_link_RF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR meshes/knuckle.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/knuckle.dae OR sr_description/hand/sdf/kuka_handlit/meshes/knuckle.dae OR sr_description/hand/sdf/shadow_handlit/meshes/knuckle.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__proximal_RF">
+    <inertial>
+      <mass value="0.03"/>
+      <origin rpy="0  0  0" xyz="0      0      0.0225"/>
+      <inertia ixx="9.8e-06" ixy="0" ixz="0" iyy="1.0e-05" iyz="0" izz="1.8e-06"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_proximal_link_RF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F3_c.dae OR meshes/F3_c.dae OR meshes/F3_c.dae OR meshes/F3_c.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F3_c.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_proximal_link_RF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR meshes/F3.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/F3.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F3.dae OR sr_description/hand/sdf/shadow_handlit/meshes/F3.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__middle_RF">
+    <inertial>
+      <mass value="0.017"/>
+      <origin rpy="0  0  0" xyz="0      0      0.0125"/>
+      <inertia ixx="2.6e-06" ixy="0" ixz="0" iyy="2.7e-06" iyz="0" izz="8.7e-07"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_middle_link_RF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F2_c.dae OR meshes/F2_c.dae OR meshes/F2_c.dae OR meshes/F2_c.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F2_c.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_middle_link_RF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR meshes/F2.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/F2.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F2.dae OR sr_description/hand/sdf/shadow_handlit/meshes/F2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__distal_RF">
+    <inertial>
+      <mass value="0.012"/>
+      <origin rpy="0  0  0" xyz="0     0     0.012"/>
+      <inertia ixx="9.4e-07" ixy="0" ixz="0" iyy="1.1e-06" iyz="0" izz="5.3e-07"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_distal_link_RF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/F1.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F1.dae OR sr_description/hand/sdf/shadow_handlit/meshes/F1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_distal_link_RF">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR meshes/F1.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/F1.dae OR sr_description/hand/sdf/kuka_handlit/meshes/F1.dae OR sr_description/hand/sdf/shadow_handlit/meshes/F1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__thbase">
+    <inertial>
+      <mass value="0.01"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="1.6e-07" ixy="0" ixz="0" iyy="1.6e-07" iyz="0" izz="1.6e-07"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_thbase_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <sphere radius="0.011"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_thbase_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__thproximal">
+    <inertial>
+      <mass value="0.04"/>
+      <origin rpy="0  0  0" xyz="0       0       0.02111"/>
+      <inertia ixx="1.36e-05" ixy="0" ixz="0" iyy="1.36e-05" iyz="0" izz="3.13e-06"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_thproximal_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/TH3_z_c.dae OR meshes/TH3_z_c.dae OR meshes/TH3_z_c.dae OR meshes/TH3_z_c.dae OR sr_description/hand/sdf/kuka_handlit/meshes/TH3_z_c.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_thproximal_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/TH3_z.dae OR meshes/TH3_z.dae OR meshes/TH3_z.dae OR meshes/TH3_z.dae OR meshes/TH3_z.dae OR meshes/TH3_z.dae OR meshes/TH3_z.dae OR meshes/TH3_z.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/TH3_z.dae OR sr_description/hand/sdf/kuka_handlit/meshes/TH3_z.dae OR sr_description/hand/sdf/shadow_handlit/meshes/TH3_z.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__thhub">
+    <inertial>
+      <mass value="0.005"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="1.0e-06" ixy="0" ixz="0" iyy="1.0e-06" iyz="0" izz="3.0e-07"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_thhub_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_thhub_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__thmiddle">
+    <inertial>
+      <mass value="0.02"/>
+      <origin rpy="0  0  0" xyz="0    0    0.16"/>
+      <inertia ixx="5.1e-06" ixy="0" ixz="0" iyy="5.1e-06" iyz="0" izz="1.21e-06"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_thmiddle_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/TH2_z_c.dae OR meshes/TH2_z_c.dae OR meshes/TH2_z_c.dae OR meshes/TH2_z_c.dae OR sr_description/hand/sdf/kuka_handlit/meshes/TH2_z_c.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_thmiddle_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/TH2_z.dae OR meshes/TH2_z.dae OR meshes/TH2_z.dae OR meshes/TH2_z.dae OR meshes/TH2_z.dae OR meshes/TH2_z.dae OR meshes/TH2_z.dae OR meshes/TH2_z.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/TH2_z.dae OR sr_description/hand/sdf/kuka_handlit/meshes/TH2_z.dae OR sr_description/hand/sdf/shadow_handlit/meshes/TH2_z.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="kuka_handlit__thdistal">
+    <inertial>
+      <mass value="0.016"/>
+      <origin rpy="0  0  0" xyz="0       0       0.01455"/>
+      <inertia ixx="2.1e-06" ixy="0" ixz="0" iyy="2.2e-06" iyz="0" izz="1.0e-06"/>
+    </inertial>
+    <collision name="kuka_handlit__collision_thdistal_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/TH1_z.dae OR meshes/TH1_z.dae OR meshes/TH1_z.dae OR meshes/TH1_z.dae OR meshes/TH1_z.dae OR meshes/TH1_z.dae OR meshes/TH1_z.dae OR meshes/TH1_z.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/TH1_z.dae OR sr_description/hand/sdf/kuka_handlit/meshes/TH1_z.dae OR sr_description/hand/sdf/shadow_handlit/meshes/TH1_z.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="kuka_handlit__visual_thdistal_link">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/TH1_z.dae OR meshes/TH1_z.dae OR meshes/TH1_z.dae OR meshes/TH1_z.dae OR meshes/TH1_z.dae OR meshes/TH1_z.dae OR meshes/TH1_z.dae OR meshes/TH1_z.dae OR sr_description/hand/sdf/shadow_hand_vijay/meshes/TH1_z.dae OR sr_description/hand/sdf/kuka_handlit/meshes/TH1_z.dae OR sr_description/hand/sdf/shadow_handlit/meshes/TH1_z.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

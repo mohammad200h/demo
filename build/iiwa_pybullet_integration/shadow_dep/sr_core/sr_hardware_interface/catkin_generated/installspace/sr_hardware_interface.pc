@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: sr_hardware_interface
+Description: Description of sr_hardware_interface
+Version: 1.4.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp ros_ethercat_hardware ros_ethercat_model

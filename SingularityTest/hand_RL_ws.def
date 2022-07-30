@@ -1,0 +1,135 @@
+bootstrap:docker
+From:  nvidia/cudagl:9.2-devel-ubuntu16.04
+
+%pre
+    ./update.sh
+%files
+    cuda9.2/cuda/lib64/* /usr/local/cuda/lib64/
+    cuda9.2/cuda/include/* /usr/local/cuda/include/
+    cuda9.2/* /tmp
+
+    driverFiles/i386-linux-gnu/libcuda.so.450.102.04 /usr/lib/i386-linux-gnu/libcuda.so.450.102.04
+    driverFiles/i386-linux-gnu/libcuda.so.1 /usr/lib/i386-linux-gnu/libcuda.so.1
+
+    driverFiles/x86_64-linux-gnu/libcuda.so.450.102.04 /usr/lib/x86_64-linux-gnu/libcuda.so.450.102.04
+    driverFiles/x86_64-linux-gnu/libcuda.so.1 /usr/lib/x86_64-linux-gnu/libcuda.so.1
+
+
+
+    ./kuka_handlit /opt/kuka_handlit
+    ./kuka_PPO_Algorithem7 /opt/kuka_PPO_Algorithem7
+%post
+
+    #****************************Installing General*********************
+    apt-get update
+    echo "y" |apt-get install software-properties-common
+    #python2.7
+    apt-get update
+    echo "Y" |  apt upgrade
+    echo "Y" |  apt install python2.7 python-pip
+
+    #installing python3
+    echo "\u000A" |add-apt-repository ppa:fkrull/deadsnakes
+    apt-get update
+    echo "y" | apt-get install python3.6
+    echo "y" |apt-get install python3-pip
+    echo "y" |  apt-get install python3 python-dev python3-dev \
+     build-essential libssl-dev libffi-dev \
+     libxml2-dev libxslt1-dev zlib1g-dev \
+     python3-pip
+
+    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
+    apt-get install -y python3 python3.6-dev
+    cd /usr/lib/python3/dist-packages
+    ln apt_pkg.cpython-35m-x86_64-linux-gnu.so apt_pkg.so
+    cd
+    #gedit
+    echo "Y" | apt-get install gedit
+    #installing terminator
+    #"\u000A" is like pressing the Enter key
+    echo "\u000A" | add-apt-repository ppa:gnome-terminator
+    apt-get update
+    echo "Y" | apt-get install terminator
+    echo "y" | apt install libcanberra-gtk-module libcanberra-gtk3-module
+    # installing extra libraries
+    echo "y"|apt-get install swig
+    pip3 install --upgrade pip==21.0.1
+    pip3 install scikit-build
+    pip3 install opencv-python
+    pip3 install pyyaml
+    pip3 install slacker
+    pip3 install schedule
+    pip3 install open3d
+    echo "y" |apt-get install libstdc++6
+    echo "y" |apt-get upgrade libstdc++6
+    #****************************Installing ROS *********************
+    #Setup your sources.list
+    sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+    #Set up your keys
+    apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+    #Installation
+    apt-get update
+    #Desktop-Full Install: (Recommended) : ROS, rqt, rviz, robot-generic libraries, 2D/3D simulators, navigation and 2D/3D perception 
+    echo "Y" |  apt-get install ros-kinetic-desktop-full
+    
+    #Initialize rosdep
+    rosdep init
+    rosdep update
+
+    #Dependencies for building packages
+    echo "Y" | apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
+
+    #Moveit Installation
+    echo "y" | apt-get install ros-kinetic-ros-control ros-kinetic-ros-controllers 
+    echo "y" | apt-get install ros-kinetic-moveit
+    #shadow hand packages
+    echo "y" | apt-get install graphicsmagick-libmagick-dev-compat
+    echo "y" | apt install ros-kinetic-ethercat-grant
+    echo "y" | apt-get install libcap-dev
+    apt-get install binutils-dev
+    echo "y" | apt-get install libnlopt-dev
+    # installing ROS python3 support
+    pip3 install rospkg catkin_pkg
+    echo "y" |apt-get install python3-tk
+    #****************************Installing Tensorflow *********************
+    cd /usr/local/cuda-9.2/targets/x86_64-linux/lib/
+    rm libcudnn.so.7
+    cd /tmp
+    dpkg -i libcudnn7_7.6.5.32-1+cuda9.2_amd64.deb 
+    dpkg -i libcudnn7-dev_7.6.5.32-1+cuda9.2_amd64.deb
+
+    pip install --upgrade pip==21.0.1
+    pip3 install --upgrade pip==21.0.1
+
+
+    apt install -y cuda-toolkit-9-0
+    apt install -y cuda-toolkit-10-0
+    
+    pip3 install tensorflow-gpu==1.14.0
+    #*********************nvidia drivers**********************
+
+    #****************************Installing hand_RL_ws *********************
+
+    cd /opt/kuka_handlit
+    pip3 install -e .
+    chmod -R 777 /opt/kuka_handlit
+    cd /opt/kuka_PPO_Algorithem7
+    ./install_singularity.sh
+    chmod -R 777 /opt/kuka_PPO_Algorithem7
+
+%startscript
+    # Tensorflow
+    echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.2/lib64/" >> ~/.bashrc
+    echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64/" >> ~/.bashrc
+    echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.0/lib64/" >> ~/.bashrc
+    # ROS
+    echo ". /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+    .  ~/.bashrc 
+    chmod +x /opt/ros/kinetic/setup.bash
+    bash /opt/ros/kinetic/setup.bash
+
+
+
+
+
+ 

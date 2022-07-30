@@ -1,0 +1,9 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~interpolation_rate" : \b [double] Rate (hz) to run the movement interpolation. 1hz would be 1% of motion per second. min: 0.1, default: 100.0, max: 1000.0
+- \b "~force_threshold" : \b [double] Force on sensor needed to stop finger moving during the grasp. Range depends on sensor will be small for Nano style (0.0..8.0ish) large for PST (0..1000ish). min: 0.0, default: 0.3, max: 1000.0
+- \b "~squeeze" : \b [double] Percentage of grasp to move after all in contact min: 0.0, default: 4.0, max: 100.0
+- \b "~first_contact_only" : \b [bool] When true stop finger after first contact made. When false the finger will restart if contact is lost. min: False, default: False, max: True
+

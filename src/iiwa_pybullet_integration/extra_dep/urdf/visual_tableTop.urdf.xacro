@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name = "shittytest">
+
+    <xacro:property name="t_width" value="1.25" /> <!-- width 60 cm -->
+    <xacro:property name="t_length" value="2.00" /> <!-- length 90 cm -->
+    <xacro:property name="t_thickness" value="0.03" /> <!-- thickness 3 cm -->
+    <xacro:property name="t_z" value="0.715" /> <!-- z 71.5 cm -->
+    <xacro:property name="t_mass" value="1" />  <!-- mass 1 kg -->
+  <!-- Base Link -->
+
+  <xacro:macro name="tableTop">
+    <link name="tableTop">
+       <inertial>
+         <origin xyz="0 0 ${t_z+t_thickness/2}" rpy="1.57 0 0"/>
+         <mass value="${t_mass}"/>
+         <inertia ixx="100"  ixy="0"  ixz="0" iyy="100" iyz="0" izz="100" />
+       </inertial>
+    
+       <visual>
+         <origin xyz="0 0 ${t_z+t_thickness/2}" rpy="1.57 0 0" />
+        <geometry>
+          <box size="${t_width} ${t_thickness} ${t_length}"/>
+        </geometry>
+        <material name="Cyan">
+          <color rgba="0 1.0 1.0 1.0"/>
+        </material>
+      </visual>
+   
+
+    </link>
+  </xacro:macro>
+</robot>

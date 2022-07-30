@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/devel
+
+Name: handlit_iiwa7_bioik
+Description: Description of handlit_iiwa7_bioik
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

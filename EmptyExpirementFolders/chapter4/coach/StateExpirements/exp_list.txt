@@ -1,0 +1,51 @@
+These are the expirements that are preformed for the Thesis:
+
+-exp1_state:
+	palm_pos_orn:
+	The state is caluclated in world frame.states are:
+	-FF pos dim:3
+	-MF pos dim:3
+	-RF pos dim:3
+	-TH pos dim:3
+	-Plam pos dim: 3
+	-Plam orn dim: 3
+	-Block pos dim: 3
+	-Block orn dim: 3
+
+-exp3_state:
+	palm:
+	The states are calculated according to end effector coordinate. There are 5 coordinates.
+	Palm,FF,MF,RF,TH frames:
+	- Block dist dim: 1   FF frame
+	- Block dist dim: 1   MF frame
+	- Block dist dim: 1   RF frame
+	- Block dist dim: 1   TH frame
+	- Block dist dim: 1   Palm frame
+	- Block orn  dim: 3   Palm frame
+
+-exp6_state:
+	palm_pos_orn_and_hand_joints:
+	This is in the world frame:
+	-Palm pos dim: 3
+	-Palm orn dim: 3
+	-Cube pos dim: 3
+	-Cube orn dim: 3
+	-FF joints dim:	4
+	-MF joints dim:	4
+	-RF joints dim:	4
+	-TH joints dim:	4
+
+	 
+-exp7_state:
+	palm_pose_orn_joint_values:
+	This is in world frame:
+	-Palm pos dim: 3
+	-Palm orn dim: 3
+	-Cube pos dim: 3
+	-Cube orn dim: 3
+	-FF joints dim:	4
+	-MF joints dim:	4
+	-RF joints dim:	4
+	-TH joints dim:	4
+	-Kuka joints dim: 7
+

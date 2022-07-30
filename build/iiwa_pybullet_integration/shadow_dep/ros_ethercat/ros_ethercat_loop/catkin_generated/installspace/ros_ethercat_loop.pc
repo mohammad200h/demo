@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: ros_ethercat_loop
+Description: Description of ros_ethercat_loop
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs controller_manager ros_ethercat_hardware ros_ethercat_model realtime_tools diagnostic_updater diagnostic_msgs pluginlib

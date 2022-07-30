@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="hand_iiwa">
+
+    <xacro:arg name="hardware_interface" default="PositionJointInterface"/>
+    <xacro:property name="kuka_link_0_width" value="0.1" />
+    <xacro:arg name="initial_x" default="0.0"/>   
+    <xacro:arg name="initial_y" default="'${-1.0+kuka_link_0_width}'"/>   
+    <xacro:arg name="initial_z" default="0.745"/>  
+        <xacro:arg name="orn_z" default="3.14159"/>   
+    
+    <link name="world"/>
+  
+    <!-- <xacro:include filename="$(find realsense_gazebo_plugin)/urdf/realsense-RS200.macro.xacro"/> -->
+    <xacro:include filename="$(find iiwa_fri_description)/urdf/iiwa7.xacro"/>
+    <xacro:include filename="$(find sr_description)/materials.urdf.xacro"/>
+	<xacro:include filename="$(find sr_description)/hand/xacro/hand_lite_fakePalm.urdf.xacro"/>
+    <xacro:include filename="$(find sr_description)/other/xacro/gazebo/gazebo.urdf.xacro"/>
+    <xacro:include filename="$(find extra_dep)/urdf/table.urdf.xacro"/> 
+    <xacro:arg name="robot_name" default="hand_iiwa"/>
+    <xacro:arg name="hardware_interface" default="PositionJointInterface"/>
+
+    <joint name="$(arg robot_name)_table_joint" type="fixed">
+        <parent link="tableTop"/>
+        <child link="$(arg robot_name)_link_0"/>
+        <origin xyz=" ${$(arg initial_x)} ${$(arg initial_y)} ${$(arg initial_z)}" rpy="0.0 0.0 ${$(arg orn_z)}"/>
+    </joint>
+
+    <joint name="world_table_joint" type="fixed">
+        <parent link="world"/>
+        <child link="tableTop"/>
+        <origin xyz=" 0.0 0.0 ${0}" rpy="0.0 0.0 ${0.0}"/>
+    </joint>
+    
+    <xacro:iiwa7 hardware_interface="$(arg hardware_interface)" robot_name="$(arg robot_name)">
+    </xacro:iiwa7>
+
+    <xacro:table >
+    </xacro:table>
+ 
+    <xacro:shadowhand muscletrans="false" muscle="false" bio="false" bt_sp="false" ubi="false" eli="false"
+                      reflect="-1.0" prefix="lh_" extra_lite="false"/>
+
+    <joint name="$(arg robot_name)_ee_to_hand" type="fixed">
+        <parent link="$(arg robot_name)_link_ee"/>
+        <child link="lh_forearm"/>
+		<!-- <origin xyz="0.0 0.0 0.0" rpy="${0.0} ${0.0} ${0.0}"/> -->
+    </joint>
+<!-- 
+    <xacro:realsense-rs200 prefix="" parent="world">
+        <origin xyz="1.2 0.3 1.5" rpy="-1.5708 0.785398 -3.14 " />
+    </xacro:realsense-rs200> -->
+
+  
+
+
+</robot>

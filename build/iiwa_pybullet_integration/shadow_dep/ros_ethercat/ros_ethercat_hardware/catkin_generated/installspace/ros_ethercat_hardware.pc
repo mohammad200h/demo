@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: ros_ethercat_hardware
+Description: Description of ros_ethercat_hardware
+Version: 0.3.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lros_ethercat_hardware
+Requires: roscpp realtime_tools diagnostic_msgs diagnostic_updater pluginlib hardware_interface ros_ethercat_eml

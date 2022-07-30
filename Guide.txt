@@ -1,0 +1,3 @@
+
+
+sudo docker run --runtime=nvidia  -it  --name demo -v $(pwd)/demo:$(pwd)/demo  -e DISPLAY -e LOCAL_USER_ID=$(id -u)  --user=$(id -u) -e QT_X11_NO_MITSHM=1  -v /tmp/.X11-unix:/tmp/.X11-unix:rw  --net=host --privileged nvidia_docer2_kinetic:TF

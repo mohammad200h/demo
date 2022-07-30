@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="table">
+
+<xacro:include filename="$(find extra_dep)/urdf/tableLeg.urdf.xacro"/>
+<xacro:include filename="$(find extra_dep)/urdf/tableTop.urdf.xacro"/> 
+ 
+<xacro:property name="table_width" value="1.25" /> <!-- width 125 cm -->
+<xacro:property name="table_length" value="2.0" /> <!-- length 200 cm -->
+
+<xacro:macro name="table">
+
+  <xacro:TableLeg legPos="topLeft">
+  </xacro:TableLeg>
+  <xacro:TableLeg legPos="topRight">
+  </xacro:TableLeg>
+  <xacro:TableLeg legPos="buttomLeft">
+  </xacro:TableLeg>
+  <xacro:TableLeg legPos="buttomRight">
+  </xacro:TableLeg>
+
+  <xacro:tableTop >
+  </xacro:tableTop>
+
+
+
+  <joint name="topLeft_Tabletop" type="fixed">
+      <parent link="tableTop"/>
+      <child link="topLeft_Leg"/>
+      <origin xyz=" ${(table_width/-2)+0.02} ${(table_length/-2)+0.02} 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+
+  <joint name="topRight_Tabletop" type="fixed">
+      <parent link="tableTop"/>
+      <child link="topRight_Leg"/>
+      <origin xyz=" ${(table_width/2)-0.02} ${(table_length/-2)+0.02} 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+
+  <joint name="buttomLeft_Tabletop" type="fixed">
+      <parent link="tableTop"/>
+      <child link="buttomLeft_Leg"/>
+      <origin xyz=" ${(table_width/-2)+0.02} ${(table_length/2)-0.02} 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+
+  <joint name="buttomRight_Tabletop" type="fixed">
+      <parent link="tableTop"/>
+      <child link="buttomRight_Leg"/>
+      <origin xyz=" ${(table_width/2)-0.02} ${(table_length/2)-0.02} 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+
+
+</xacro:macro>
+
+
+
+
+</robot>
+

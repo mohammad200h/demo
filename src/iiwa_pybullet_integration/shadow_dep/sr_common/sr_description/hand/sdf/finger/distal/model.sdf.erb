@@ -1,0 +1,52 @@
+<?xml version='1.0'?>
+<%
+# This is where ruby code goes
+M_PI = 3.14
+#Mesh path for Ros
+
+#Mesh path for pybullet
+    pyb_forearm_lite_path_v = "model://distal/F1.dae"
+#Current path
+    forearm_lite_path_v = pyb_forearm_lite_path_v
+%>
+<sdf version='1.6'>
+  <model name='distal'>
+  <!-- Standard distal  -->
+    <link name = "distal_link">
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0 0.012 0 0 0</pose>
+            <mass>0.012</mass>
+            <inertia>
+                <ixx>0.00000094</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.0000011</iyy>
+                <iyz>0</iyz>
+                <izz>0.00000053</izz>
+            </inertia>
+        </inertial>
+	  
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= forearm_lite_path_v %></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= forearm_lite_path_v %></uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+  </model>
+</sdf>

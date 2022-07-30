@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/devel
+
+Name: sr_logging_common
+Description: Description of sr_logging_common
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/localadmin/catkin_ws/src/iiwa_fri_stack/fri_client_sdk/cmake-build-debug/devel/setup.sh

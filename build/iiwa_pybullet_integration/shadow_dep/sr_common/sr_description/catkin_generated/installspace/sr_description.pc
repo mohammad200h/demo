@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: sr_description
+Description: Description of sr_description
+Version: 1.4.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: urdf xacro position_controllers joint_trajectory_controller

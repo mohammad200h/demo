@@ -1,0 +1,30 @@
+version: '3.5'
+
+services:
+  hand_rl_ws:
+    image:  mamd/dockercompose_hand_rl_ws:latest
+    
+    environment:
+      - CORES=16
+      - EXP_LIST=['exp1_noAW_state','exp2_noAW_state']
+      - DEVELOPMENT=False
+      - PASS=ros 
+    volumes:
+      - ./Expirements:/home/ros/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/Expirements
+      - ./ExpirementRecord:/home/ros/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/ExpirementRecord
+    
+    
+    
+
+    deploy:
+      mode: replicated
+      replicas: 1
+      
+
+    entrypoint: python3
+    command: run_exp.py
+volumes:
+  Expirements:
+      external: False
+  ExpirementRecord:
+      external: False                        

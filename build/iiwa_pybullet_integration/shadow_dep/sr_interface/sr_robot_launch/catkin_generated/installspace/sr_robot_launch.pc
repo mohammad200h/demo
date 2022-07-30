@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: sr_robot_launch
+Description: Description of sr_robot_launch
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: controller_manager_msgs joint_state_publisher robot_state_publisher rospy sr_multi_description sr_robot_msgs ur_gazebo

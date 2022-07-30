@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: sr_edc_muscle_tools
+Description: Description of sr_edc_muscle_tools
+Version: 1.4.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

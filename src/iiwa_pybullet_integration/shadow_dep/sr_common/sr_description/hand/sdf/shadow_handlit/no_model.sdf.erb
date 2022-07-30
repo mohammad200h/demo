@@ -1,0 +1,375 @@
+<?xml version='1.0'?>
+<%
+# This is where ruby code goes
+ # meshes psth
+    distal   = "model://shadow_hand/F1.dae"
+    middle   = "model://shadow_hand/F2.dae"
+    proximal = "model://shadow_hand/F3.dae"
+    knuckle  = "model://shadow_hand/knuckle.dae"
+    palm     = "model://shadow_hand/palm.dae"
+    forearm  = "model://shadow_hand/forearm_lite.dae"
+   
+#constants
+    M_PI = 3.1415926535897931
+# model variables
+    # constant pose
+    forearm = {  # object pose
+                      'pose'=> Vector[0,0,0,
+                                     0,0,M_P/2],
+                      # inetia 
+                      'pose_i'=> Vector[0,0,0.09,
+                                       0,0,0],                   
+                      'mass'=> 1.8,
+                      'ixx'=> 0.108 ,'ixy'=> 0     ,'ixz'=> 0 ,
+                      'iyy'=> 0.108 ,'iyz'=> 0     ,'izz'=> 0.054 
+                    }
+    
+    # relative pose 0 -0.015 0.149 <%=-40*M_PI/180%> 0 0
+    palm = {  # object pose
+                    'pose'=> Vector[ 0+forearm['pose'][0],
+                                    -0.015+forearm['pose'][1],
+                                    0.149+forearm['pose'][2],
+                                    -40*M_PI/180,0,0],
+                    # inetia
+                    'pose_i'=> Vector[0,0,0.035,
+                                     0,0,0],
+                    'mass'=> 0.3,
+                    'ixx'=> 0.0003581 ,'ixy'=> 0     ,'ixz'=> 0 ,
+                    'iyy'=> 0.0005287 ,'iyz'=> 0     ,'izz'=> 0.000191 
+                    
+
+                 }
+    # finger components            
+    pose_finger_knockle = 0
+    pose_finger_proximal = 0
+    pose_finger_middle = 0
+    pose_finger_distal =0
+
+    pose_index_finger  =0
+    pose_middle_finger = 0
+    pose_ring_finger =0
+    
+%>
+<sdf version='1.6'>
+<!--left hand-->
+<model name='shadow_hand'>
+    <!-- foreaem -> palm -->
+   
+    <link name = "foreaem_link">
+        <pose frame=''><%=forearm['pose']%></pose>
+        <inertial>
+            <pose frame=''><%=forearm['pose_i'] %></pose>
+            <mass><%=forearm['mass']%></mass>
+            <inertia>
+                <ixx><%=forearm['ixx']%></ixx>
+                <ixy><%=forearm['ixy']%></ixy>
+                <ixz><%=forearm['ixz']%></ixz>
+                <iyy><%=forearm['iyy']%></iyy>
+                <iyz><%=forearm['iyz']%></iyz>
+                <izz><%=forearm['izz']%></izz>
+            </inertia>
+        </inertial>
+
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>1 1 1</scale>
+                    <uri><%=forearm%></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <mesh>
+                    <scale>1 1 1</scale>
+                    <uri><%=forearm%></uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+   
+    <link name = "palm_link">
+        <pose frame=''><%=palm['pose']%></pose>
+        <inertial>
+            <pose frame=''><%=palm['pose_i']%></pose>
+            <mass><%=palm['mass']%></mass>
+            <inertia>
+                <ixx><%=palm['ixx']%></ixx>
+                <ixy><%=palm['ixy']%></ixy>
+                <ixz><%=palm['ixx']%></ixz>
+                <iyy><%=palm['iyy']%></iyy>
+                <iyz><%=palm['iyz']%></iyz>
+                <izz><%=palm['izz']%></izz>
+            </inertia>
+        </inertial>
+	  
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>-0.001 0.001 0.001</scale>
+                    <uri><%= palm %></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= palm %></uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+
+   
+    
+    <!-- index finger -->
+    <!-- palm -> knuckle -->
+    <link name = "knuckle_link">
+        <!--<pose frame=''>-0.033 -0.015 0.244 0 0 0</pose>-->
+        <pose frame=''>-0.033 0.048 0.225 0 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0 0 0 0 0</pose>
+            <mass>0.008</mass>
+            <inertia>
+                <ixx>0.00000026</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.00000026</iyy>
+                <iyz>0</iyz>
+                <izz>0.00000032</izz>
+            </inertia>
+        </inertial>
+	  
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= knuckle %></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= knuckle %></uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+    <link name = "proximal_link">
+        <pose frame=''>-0.033 0.048 0.225 0 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0 0.0225 0 0 0</pose>
+            <mass>0.030</mass>
+            <inertia>
+                <ixx>0.0000098</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.00001</iyy>
+                <iyz>0</iyz>
+                <izz>0.0000018</izz>
+            </inertia>
+        </inertial>
+	  
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= proximal %></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= proximal %></uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+    <link name = "middle_link">
+        <pose frame=''>-0.033 0.048 0.27 0 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0 0.0125 0 0 0</pose>
+            <mass>0.017</mass>
+            <inertia>
+                <ixx>0.0000026</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.0000027</iyy>
+                <iyz>0</iyz>
+                <izz>0.00000087</izz>
+            </inertia>
+        </inertial>
+	  
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= middle %></uri>
+                </mesh>
+            </geometry>
+            <material>
+                <script>
+                    <uri>file://media/materials/scripts/gazebo.material</uri>
+                    <name>Gazebo/Blue</name>
+                </script>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= middle %></uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+    <link name = "distal_link">
+        <pose frame=''>-0.033 0.048 0.295 0 0 0</pose>
+        <inertial>
+            <pose frame=''>0 0 0.012 0 0 0</pose>
+            <mass>0.012</mass>
+            <inertia>
+                <ixx>0.00000094</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.0000011</iyy>
+                <iyz>0</iyz>
+                <izz>0.00000053</izz>
+            </inertia>
+        </inertial>
+	  
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= distal %></uri>
+                </mesh>
+            </geometry>
+            <material>
+                 <script>
+                    <uri>file://media/materials/scripts/gazebo.material</uri>
+                    <name>Gazebo/Red</name>
+                </script>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= distal %></uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+   
+    <joint name='distal_middle' type='revolute'>
+        <child>distal_link</child>
+        <parent>middle_link</parent>
+        
+        <axis>
+            <use_parent_model_frame>1</use_parent_model_frame>
+            <xyz>1 0 0</xyz>
+            <limit>
+                <lower>0</lower>
+                <upper><%=M_PI/2%></upper>
+                <effort>2</effort>
+                <velocity>2.0</velocity>
+            </limit>
+            <dynamics>
+                <damping>0.1</damping>
+            </dynamics>
+        </axis>
+    </joint>
+
+    <joint name='middle_proximal' type='revolute'>
+        <child>middle_link</child>
+        <parent>proximal_link</parent>
+        
+        <axis>
+            <use_parent_model_frame>1</use_parent_model_frame>
+            <xyz>1 0 0</xyz>
+            <limit>
+                <lower>0</lower>
+                <upper><%=M_PI/2%></upper>
+                <effort>2</effort>
+                <velocity>2.0</velocity>
+            </limit>
+            <dynamics>
+                <damping>0.1</damping>
+            </dynamics>
+        </axis>
+    </joint>
+
+    <joint name='proximal_knuckle' type='revolute'>
+        <child>proximal_link</child>
+        <parent>knuckle_link</parent>
+        
+        <axis>
+            <use_parent_model_frame>1</use_parent_model_frame>
+            <xyz>1 0 0</xyz>
+            <limit>
+                <lower>0</lower>
+                <upper><%=M_PI/2%></upper>
+                <effort>2</effort>
+                <velocity>2.0</velocity>
+            </limit>
+            <dynamics>
+                <damping>0.1</damping>
+            </dynamics>
+        </axis>
+    </joint>
+
+    <joint name='knuckle_palm' type='revolute'>
+        <child>knuckle_link</child>
+        <parent>palm_link</parent>
+        
+        <axis>
+            <use_parent_model_frame>1</use_parent_model_frame>
+            <xyz>0 1 0</xyz>
+            <limit>
+                <lower><%=-20/180*M_PI%></lower>
+                <upper><%=20/180*M_PI%></upper>
+                <effort>2</effort>
+                <velocity>2.0</velocity>
+            </limit>
+            <dynamics>
+                <damping>0.1</damping>
+            </dynamics>
+        </axis>
+    </joint>
+
+    <joint name='forearm_palm' type='fixed'>
+        <child>foreaem_link</child>
+        <parent>palm_link</parent>
+        <pose frame=''>0 -0.015 0.149 <%=-40*M_PI/180%> 0 0</pose>
+        <axis>
+            <use_parent_model_frame>1</use_parent_model_frame>
+            <xyz>0 -1 0</xyz>
+        </axis>
+    </joint>
+    <static>1</static>
+</model>
+</sdf>

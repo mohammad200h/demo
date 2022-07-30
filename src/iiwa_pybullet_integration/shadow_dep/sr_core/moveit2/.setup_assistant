@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: sr_description
+    relative_path: robots/kuka_hand.urdf.xacro
+  SRDF:
+    relative_path: config/kuka_and_hand.srdf
+  CONFIG:
+    author_name: Mohammad Hamid
+    author_email: mohammad.hamid.16@ucl.ac.uk
+    generated_timestamp: 1528728734

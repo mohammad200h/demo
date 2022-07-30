@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: sr_robot_commander
+Description: Description of sr_robot_commander
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy moveit_commander pluginlib moveit_core moveit_ros_planning_interface moveit_ros_perception interactive_markers

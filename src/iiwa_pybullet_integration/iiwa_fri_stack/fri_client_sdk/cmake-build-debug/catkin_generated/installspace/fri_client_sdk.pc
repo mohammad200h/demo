@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: fri_client_sdk
+Description: Description of fri_client_sdk
+Version: 1.11.0
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib -lfri_client_sdk
+Requires: 

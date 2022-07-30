@@ -1,0 +1,128 @@
+sudo singularity build  hand_RL_ws.sif hand_RL_ws.def
+sudo singularity build  sb.sif sb.def
+sudo singularity build ros.sif ros.def
+sudo singularity build test.sif test.def
+
+
+sudo singularity build -B /home/mamad/hand_RL_ws:/hand_RL_ws --sandbo hand_RL_ws/ hand_RL_ws.def 
+
+
+singularity shell hand_RL_ws.sif
+
+
+singularity run --nv hand_RL_ws.sif
+
+xhost +
+cd 
+singularity run --nv --rocm -B /home/mamad/hand_RL_ws:/hand_RL_ws /home/mamad/hand_RL_ws/SingularityTest/hand_RL_ws.sif 
+
+
+singularity run --nv --rocm -B /home/ucabmh0/Scratch/hand_RL_ws/:/hand_RL_ws /home/ucabmh0/Scratch/hand_RL_ws/SingularityTest/hand_RL_ws.sif 
+
+sudo singularity shell  -w --nv -B /home/mamad/hand_RL_ws:/hand_RL_ws ./hand_RL_ws/SingularityFile/hand_RL_ws.sif 
+
+singularity start_instance --nv hand_RL_ws.sif instance
+singularity run --nv ros.sif
+
+find /usr/ -name 'libcuda.so.*'
+find /usr/ -name 'libcudnn.so.7'
+
+http://gpucomputing.shef.ac.uk/education/creating_gpu_singularity/#:~:text=Singularity%20and%20GPUs,containerization%20technology%20similar%20to%20Docker.&text=The%20problem%20faced%20when%20trying,installed%20on%20the%20host%20system.
+https://sylabs.io/guides/3.5/user-guide/gpu.html
+https://askubuntu.com/questions/997557/libcuda-so-1-not-found-despite-installing-cuda
+https://medium.com/@fmorenovr/installing-successfully-cuda-10-1-and-tensorflow-1-14-to-enable-gpu-processing-1b220dcb23b9#:~:text=Installing%20successfully%20CUDA%2010.1%20and%20Tensorflow%201.14%20to%20enable%20GPU%20processing,-Felipe%20A.&text=x%20and%20Tensorflow%201.14.,tensorflow%20and%20cuda%20version%20here.
+
+    
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/lib
+echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64/" >> ~/.bashrc
+
+
+https://groups.google.com/a/lbl.gov/forum/#!topic/singularity/58Xr72oDfBg
+https://kb.iu.edu/d/abdb#:~:text=To%20change%20file%20and%20directory,%2C%20write%2C%20and%20execute%20permissions.
+
+
+bashrc:
+export LD_LIBRARY_PATH=/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/home/mamad/.mujoco/mujoco200_linux/bin:/usr/local/cuda-10.0/lib64/:/usr/lib/x86_64-linux-gnu/
+export LD_LIBRARY_PATH=/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/home/mamad/.mujoco/mujoco200_linux/bin:/usr/local/cuda-10.0/lib64/
+export LD_LIBRARY_PATH=/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/home/mamad/.mujoco/mujoco200_linux/bin:/usr/local/cuda-10.0/lib64/:/usr/local/cuda-10.0/lib64/
+export LD_LIBRARY_PATH=/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/home/mamad/.mujoco/mujoco200_linux/bin:/usr/local/cuda-10.0/lib64/:/usr/local/cuda-10.0/lib64/:/usr/local/cuda-10.0/lib64/
+export LD_LIBRARY_PATH=/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/home/mamad/.mujoco/mujoco200_linux/bin:/usr/local/cuda-10.0/lib64/:/usr/local/cuda-10.0/lib64/:/usr/local/cuda-10.0/lib64/:/usr/local/cuda-10.0/lib64/
+export LD_LIBRARY_PATH=/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/home/mamad/.mujoco/mujoco200_linux/bin:/usr/local/cuda-10.0/lib64/:/usr/local/cuda-10.0/lib64/:/usr/local/cuda-10.0/lib64/:/usr/local/cuda-10.0/lib64/:/usr/local/cuda-10.0/lib64/
+
+
+--------------------------------
+    apt-get update
+    apt-get install -y software-properties-common
+    #gedit
+    echo "Y" | apt-get install gedit
+    #python2.7
+    apt-get update
+    echo "Y" |  apt upgrade
+    echo "Y" |  apt install python2.7 python-pip
+
+    #installing terminator
+    #"\u000A" is like pressing the Enter key
+    apt-get install -y software-properties-common
+    echo "\u000A" | add-apt-repository ppa:gnome-terminator
+    apt-get update
+    echo "Y" | apt-get install terminator
+    echo "y" | apt install libcanberra-gtk-module libcanberra-gtk3-module
+
+    #installing python3
+    apt-get update
+    echo "y" |apt-get install software-properties-common
+    echo "\u000A" |add-apt-repository ppa:deadsnakes/ppa
+    apt-get update
+    echo "y" | apt-get install python3.6
+    echo "y" |apt-get install python3-pip
+    echo "y" |  apt-get install python3 python-dev python3-dev \
+     build-essential libssl-dev libffi-dev \
+     libxml2-dev libxslt1-dev zlib1g-dev \
+     python3-pip
+
+    apt-get update
+    echo "y"|apt-get install swig
+
+    pip3 install --upgrade pip==9.0.1
+    pip3 install opencv-python
+
+    pip3 install rospkg catkin_pkg
+    echo "y" |apt-get install python3-tk
+
+    pip install pyyaml
+
+    pip3 install slacker
+
+    pip3 install schedule
+
+    pip3 install open3d
+    apt-get update
+    echo "y" |apt-get install libstdc++6
+    echo "y" |apt-get upgrade libstdc++6
+    #******************** Installing ros kinetic************************
+    
+    #Setup your sources.list
+    sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+    #Set up your keys
+    apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+    #Installation
+    apt-get update
+    #Desktop-Full Install: (Recommended) : ROS, rqt, rviz, robot-generic libraries, 2D/3D simulators, navigation and 2D/3D perception 
+    echo "Y" |  apt-get install ros-kinetic-desktop-full
+    
+    #Initialize rosdep
+    rosdep init
+    rosdep update
+
+    #Dependencies for building packages
+    echo "Y" | apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
+
+    #Moveit Installation
+    echo "y" | apt-get install ros-kinetic-ros-control ros-kinetic-ros-controllers 
+    echo "y" | apt-get install ros-kinetic-moveit
+
+    echo "y" | apt-get install graphicsmagick-libmagick-dev-compat
+    echo "y" | apt install ros-kinetic-ethercat-grant
+    echo "y" | apt-get install libcap-dev
+    apt-get install binutils-dev
+    echo "y" | apt-get install libnlopt-dev

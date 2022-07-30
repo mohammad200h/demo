@@ -1,0 +1,525 @@
+    <!--Hand-->
+    <link name = "forearm_link">
+        <pose frame=''><%=a_to_s(forearm['pose'])%></pose>
+        <inertial>
+            <pose frame=''><%=a_to_s(forearm['pose_i'])%></pose>
+            <mass><%=forearm['mass']%></mass>
+            <inertia>
+                <ixx><%=forearm['ixx']%></ixx>
+                <ixy><%=forearm['ixy']%></ixy>
+                <ixz><%=forearm['ixz']%></ixz>
+                <iyy><%=forearm['iyy']%></iyy>
+                <iyz><%=forearm['iyz']%></iyz>
+                <izz><%=forearm['izz']%></izz>
+            </inertia>
+        </inertial>
+
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>1 1 1</scale>
+                    <uri><%=forearm_path%></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <pose frame=''>0 0 0.065 0 0 0</pose>
+            <geometry>
+                <box><size>0.120 0.109 0.130</size></box>
+            </geometry>
+        </collision>
+    </link>
+    
+    <link name = "palm_link">
+        <pose frame=''><%=a_to_s(palm['pose'])%></pose>
+        <inertial>
+            <pose frame=''><%=a_to_s(palm['pose_i'])%></pose>
+            <mass><%=palm['mass']%></mass>
+            <inertia>
+                <ixx><%=palm['ixx']%></ixx>
+                <ixy><%=palm['ixy']%></ixy>
+                <ixz><%=palm['ixz']%></ixz>
+                <iyy><%=palm['iyy']%></iyy>
+                <iyz><%=palm['iyz']%></iyz>
+                <izz><%=palm['izz']%></izz>
+            </inertia>
+        </inertial>
+	  
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>-0.001 0.001 0.001</scale>
+                    <uri><%= palm_path %></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name="palm1">
+            <pose frame=''>-0.011 0.0085 0.038 0 0 0</pose>
+            <geometry>
+                <box><size>0.062 0.007 0.098</size></box>
+            </geometry>
+        </collision>
+        <collision name="palm2">
+            <pose frame=''>-0.0005 -0.0035 0.038 0 0 0</pose>
+            <geometry>
+                <box><size>0.041 0.017 0.098</size></box>
+            </geometry>
+        </collision>
+        <collision name=" below first finger">
+            <pose frame=''>-0.0315 -0.0035 0.073 0 0 0</pose>
+            <geometry>
+                <box><size>0.021 0.017 0.028</size></box>
+            </geometry>
+        </collision>
+        <collision name=" thumb pulp side">
+            <pose frame=''>-0.0315 -0.0085 0.001 0 0 0</pose>
+            <geometry>
+                <box><size>0.021 0.027 0.024</size></box>
+            </geometry>
+        </collision>
+        <collision name=" thumb pulp central">
+            <pose frame=''>-0.01 -0.017 0.011 0 0 0</pose>
+            <geometry>
+                <box><size>0.022 0.010 0.044</size></box>
+            </geometry>
+        </collision>
+        <collision name=" above middle finger">
+            <pose frame=''>-0.011 0 0.089 0 0 0</pose>
+            <geometry>
+                <box><size>0.018 0.024 0.004</size></box>
+            </geometry>
+        </collision>
+        <collision name=" metacarpal side">
+            <pose frame=''>0.030 0 0.009 0 0 0</pose>
+            <geometry>
+                <box><size>0.020 0.024 0.040</size></box>
+            </geometry>
+        </collision>
+        
+    </link>
+    <joint name='palm_forearm' type='fixed'>
+        <child>forearm_link</child>
+        <parent>palm_link</parent>
+        <axis>
+            
+            <xyz>0 -1 0</xyz>
+         </axis>
+    </joint>  
+
+  
+   <%fingers.each do |finger|%>
+  
+    <link name = "knuckle_link_<%=finger.fingername%>">
+        
+        <pose frame=''><%=a_to_s(finger.knuckle['pose'])%></pose>
+        <inertial>
+            <pose frame=''><%=a_to_s(finger.knuckle['pose_i'])%></pose>
+            <mass><%=finger.knuckle['mass']%></mass>
+            <inertia>
+                <ixx><%=finger.knuckle['ixx']%></ixx>
+                <ixy><%=finger.knuckle['ixy']%></ixy>
+                <ixz><%=finger.knuckle['ixz']%></ixz>
+                <iyy><%=finger.knuckle['iyy']%></iyy>
+                <iyz><%=finger.knuckle['iyz']%></iyz>
+                <izz><%=finger.knuckle['izz']%></izz>
+            </inertia>
+        </inertial>
+      
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= ff.mesh_v['knuckle'] %></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <pose frame=''>0 0 0 0 1.5708 0</pose>
+            <geometry>
+                <cylinder>
+                    <radius>0.007</radius> 
+                    <length>0.014</length> 
+                </cylinder> 
+            </geometry>
+        </collision>
+    </link>
+    <link name = "proximal_link_<%=finger.fingername%>">
+        <pose frame=''><%=a_to_s(finger.proximal['pose'])%></pose>
+        <inertial>
+            <pose frame=''><%=a_to_s(finger.proximal['pose_i'])%></pose>
+            <mass><%=finger.proximal['mass']%></mass>
+            <inertia>
+                <ixx><%=finger.proximal['ixx']%></ixx>
+                <ixy><%=finger.proximal['ixy']%></ixy>
+                <ixz><%=finger.proximal['ixz']%></ixz>
+                <iyy><%=finger.proximal['iyy']%></iyy>
+                <iyz><%=finger.proximal['iyz']%></iyz>
+                <izz><%=finger.proximal['izz']%></izz>
+            </inertia>
+        </inertial>
+        
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= ff.mesh_v['proximal'] %></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <pose frame=''>0 0 0.025 0 0 0</pose>
+            <geometry>
+                <cylinder>
+                    <radius>0.007</radius> 
+                    <length>0.040</length> 
+                </cylinder> 
+            </geometry>
+        </collision>
+    </link>
+    <link name = "middle_link_<%=finger.fingername%>">
+        <pose frame=''><%=a_to_s(finger.middle['pose'])%></pose>
+        <inertial>
+            <pose frame=''><%=a_to_s(finger.middle['pose_i'])%></pose>
+            <mass><%=finger.middle['mass']%></mass>
+            <inertia>
+                <ixx><%=finger.middle['ixx']%></ixx>
+                <ixy><%=finger.middle['ixy']%></ixy>
+                <ixz><%=finger.middle['ixz']%></ixz>
+                <iyy><%=finger.middle['iyy']%></iyy>
+                <iyz><%=finger.middle['iyz']%></iyz>
+                <izz><%=finger.middle['izz']%></izz>
+            </inertia>
+        </inertial>
+      
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= ff.mesh_v['middle'] %></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <pose frame=''>0 0 0.0125 0 0 0</pose>
+            <geometry>
+                <cylinder>
+                    <radius>0.007</radius> 
+                    <length>0.025</length> 
+                </cylinder> 
+            </geometry>
+        </collision>
+    </link>
+    <link name = "distal_link_<%=finger.fingername%>">
+        <pose frame=''><%=a_to_s(finger.distal['pose'])%></pose>
+        <inertial>
+            <pose frame=''><%=a_to_s(finger.distal['pose_i'])%></pose>
+            <mass><%=finger.distal['mass']%></mass>
+            <inertia>
+                <ixx><%=finger.distal['ixx']%></ixx>
+                <ixy><%=finger.distal['ixy']%></ixy>
+                <ixz><%=finger.distal['ixz']%></ixz>
+                <iyy><%=finger.distal['iyy']%></iyy>
+                <iyz><%=finger.distal['iyz']%></iyz>
+                <izz><%=finger.distal['izz']%></izz>
+            </inertia>
+        </inertial>
+      
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= ff.mesh_v['distal'] %></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= ff.mesh_c['distal'] %></uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+    
+    <%j_finger_L.each do |f_L|%>
+        <joint name="<%=f_L['j_name']%>_<%=finger.fingername%>" type="<%=f_L['j_type']%>">
+            <child><%=f_L['name']%>_link_<%=finger.fingername%></child>
+            <parent><%=f_L['p_name']%>_link_<%=finger.fingername%></parent>
+            
+            <axis>
+                <xyz><%=a_to_s(f_L['j_axis'])%></xyz>
+                <limit>
+                    <lower><%=f_L['j_limit'][0]%> </lower>
+                    <upper><%=f_L['j_limit'][1]%> </upper>
+                    <effort><%=f_L['j_effort']%> </effort>
+                    <velocity><%=f_L['j_velocity']%> </velocity>
+                </limit>
+                <dynamics>
+                    <damping><%=f_L['j_damping']%></damping>
+                </dynamics>
+            </axis>
+        </joint>
+    <%end%>
+    <joint name='<%=ff.knuckle['j_name']%>_<%=finger.fingername%>' type="<%=ff.knuckle['j_type']%>">
+        <child><%=ff.knuckle['name']%>_link_<%=finger.fingername%></child>
+        <parent><%=ff.knuckle['p_name']%>_link</parent>
+        
+        <axis>
+            <xyz><%=a_to_s(ff.knuckle['j_axis'])%></xyz>
+            <limit>
+                <lower><%=ff.knuckle['j_limit'][0]%> </lower>
+                <upper><%=ff.knuckle['j_limit'][1]%> </upper>
+                <effort><%=ff.knuckle['j_effort']%> </effort>
+                <velocity><%=ff.knuckle['j_velocity']%> </velocity>
+            </limit>
+            <dynamics>
+                <damping><%=ff.knuckle['j_damping']%></damping>
+            </dynamics>
+        </axis>
+    </joint>
+
+   <%end%>
+
+
+    <link name = "thbase_link">
+        <pose frame=''><%=a_to_s(thumb.thbase['pose'])%></pose>
+        <inertial>
+            <pose frame=''><%=a_to_s(thumb.thbase['pose_i'])%></pose>
+            <mass><%=thumb.thbase['mass']%></mass>
+            <inertia>
+                <ixx><%=thumb.thbase['ixx']%></ixx>
+                <ixy><%=thumb.thbase['ixy']%></ixy>
+                <ixz><%=thumb.thbase['ixz']%></ixz>
+                <iyy><%=thumb.thbase['iyy']%></iyy>
+                <iyz><%=thumb.thbase['iyz']%></iyz>
+                <izz><%=thumb.thbase['izz']%></izz>
+            </inertia>
+        </inertial>
+        <visual name='visual'>
+            
+            <geometry>
+                <box>
+                    <size>0.001 0.001 0.001</size>
+                </box>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <pose frame=''>0 0 0 0 0 0</pose>
+            <geometry>
+                <!--
+                <sphere>
+                    <radius>0.011</radius>
+                </sphere>
+                -->
+                <sphere radius = "0.011"/>
+            </geometry>
+        </collision>
+    </link>
+    <link name = "thproximal_link">
+            
+        <pose frame=''><%=a_to_s(thumb.thproximal['pose'])%></pose>
+        <inertial>
+            <pose frame=''><%=a_to_s(thumb.thproximal['pose_i'])%></pose>
+            <mass><%=thumb.thproximal['mass']%></mass>
+            <inertia>
+                <ixx><%=thumb.thproximal['ixx']%></ixx>
+                <ixy><%=thumb.thproximal['ixy']%></ixy>
+                <ixz><%=thumb.thproximal['ixz']%></ixz>
+                <iyy><%=thumb.thproximal['iyy']%></iyy>
+                <iyz><%=thumb.thproximal['iyz']%></iyz>
+                <izz><%=thumb.thproximal['izz']%></izz>
+            </inertia>
+        </inertial>
+    
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= thumb.mesh_v['thproximal'] %></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <pose frame=''>0 0 0.020 0 0 0</pose>
+            <geometry>
+                <cylinder>
+                    <radius>0.012</radius>
+                    <length>0.018</length>
+                </cylinder>
+            </geometry>
+        </collision>
+    </link>
+    <link name = "thhub_link">
+        <pose frame=''><%=a_to_s(thumb.thhub['pose'])%></pose>
+        <inertial>
+            <pose frame=''><%=a_to_s(thumb.thhub['pose_i'])%></pose>
+            <mass><%=thumb.thhub['mass']%></mass>
+            <inertia>
+                <ixx><%=thumb.thhub['ixx']%></ixx>
+                <ixy><%=thumb.thhub['ixy']%></ixy>
+                <ixz><%=thumb.thhub['ixz']%></ixz>
+                <iyy><%=thumb.thhub['iyy']%></iyy>
+                <iyz><%=thumb.thhub['iyz']%></iyz>
+                <izz><%=thumb.thhub['izz']%></izz>
+            </inertia>
+        </inertial>
+        <visual name='visual'>
+            
+            <geometry>
+                <box>
+                    <size>0.001 0.001 0.001</size>
+                </box>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>0.001 0.001 0.001</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+    <link name = "thmiddle_link">
+            
+        <pose frame=''><%=a_to_s(thumb.thmiddle['pose'])%></pose>
+        <inertial>
+            <pose frame=''><%=a_to_s(thumb.thmiddle['pose_i'])%></pose>
+            <mass><%=thumb.thmiddle['mass']%></mass>
+            <inertia>
+                <ixx><%=thumb.thmiddle['ixx']%></ixx>
+                <ixy><%=thumb.thmiddle['ixy']%></ixy>
+                <ixz><%=thumb.thmiddle['ixz']%></ixz>
+                <iyy><%=thumb.thmiddle['iyy']%></iyy>
+                <iyz><%=thumb.thmiddle['iyz']%></iyz>
+                <izz><%=thumb.thmiddle['izz']%></izz>
+            </inertia>
+        </inertial>
+
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= thumb.mesh_v['thmiddle'] %></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+
+        <collision name='collision'>
+            <pose frame=''>0 0 0.012 0 0 0</pose>
+            <geometry>
+                <cylinder>
+                    <radius>0.011</radius>
+                    <length>0.018</length>
+                </cylinder>
+            </geometry>
+        </collision>
+    </link>
+    <link name = "thdistal_link">
+            
+        <pose frame=''><%=a_to_s(thumb.thdistal['pose'])%></pose>
+        <inertial>
+            <pose frame=''><%=a_to_s(thumb.thdistal['pose_i'])%></pose>
+            <mass><%=thumb.thdistal['mass']%></mass>
+            <inertia>
+                <ixx><%=thumb.thdistal['ixx']%></ixx>
+                <ixy><%=thumb.thdistal['ixy']%></ixy>
+                <ixz><%=thumb.thdistal['ixz']%></ixz>
+                <iyy><%=thumb.thdistal['iyy']%></iyy>
+                <iyz><%=thumb.thdistal['iyz']%></iyz>
+                <izz><%=thumb.thdistal['izz']%></izz>
+            </inertia>
+        </inertial>
+
+        <visual name='visual'>
+            
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= thumb.mesh_v['thdistal'] %></uri>
+                </mesh>
+            </geometry>
+            <material>
+
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri><%= thumb.mesh_c['thdistal']  %></uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+ 
+    <%j_thumb_L.each do |th_L|%>
+        <joint name ="<%=th_L['j_name']%>"  type ="<%=th_L['j_type']%>">
+            <child><%=th_L['name']%>_link</child>
+            <parent><%=th_L['p_name']%>_link</parent>
+            <axis>
+                <xyz><%=a_to_s(th_L['j_axis'])%></xyz>
+                <limit>
+                    <lower><%=th_L['j_limit'][0]%> </lower>
+                    <upper><%=th_L['j_limit'][1]%> </upper>
+                    <effort><%=th_L['j_effort']%> </effort>
+                    <velocity><%=th_L['j_velocity']%> </velocity>
+                </limit>
+                <dynamics>
+                <damping><%=th_L['j_damping']%></damping>
+                </dynamics>
+            </axis>
+        </joint>
+    <%end%>
+    <joint name ="<%=thumb.thhub['j_name']%>"  type ="<%=thumb.thhub['j_type']%>">
+        <child><%=thumb.thhub['name']%>_link</child>
+        <parent><%=thumb.thhub['p_name']%>_link</parent>
+        <axis>
+            <xyz><%=a_to_s(thumb.thhub['j_axis'])%></xyz>
+        </axis>
+    </joint>
+
+    <!-- Hand_Kuka joint-->
+    <joint name = "kuka_hand" type="fixed">
+        <child>forearm_link</child>
+        <parent>lbr_iiwa_link_7</parent>
+    </joint>
+

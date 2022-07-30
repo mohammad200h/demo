@@ -1,0 +1,7 @@
+set(sr_robot_lib_SETUP_PY_SETUP_MODULE "distutils.core")
+set(sr_robot_lib_SETUP_PY_VERSION "1.4.0")
+set(sr_robot_lib_SETUP_PY_SCRIPTS "")
+set(sr_robot_lib_SETUP_PY_PACKAGES "sr_robot_lib")
+set(sr_robot_lib_SETUP_PY_PACKAGE_DIRS "python_lib/sr_robot_lib")
+set(sr_robot_lib_SETUP_PY_MODULES "")
+set(sr_robot_lib_SETUP_PY_MODULE_DIRS "")

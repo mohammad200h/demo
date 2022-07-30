@@ -1,0 +1,8 @@
+joints: 
+    - sr_iiwa_joint_1
+    - sr_iiwa_joint_2
+    - sr_iiwa_joint_3
+    - sr_iiwa_joint_4
+    - sr_iiwa_joint_5
+    - sr_iiwa_joint_6
+    - sr_iiwa_joint_7

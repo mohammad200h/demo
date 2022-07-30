@@ -1,0 +1,8 @@
+<launch>
+    <env name="MESH_WORKSPACE_PATH" value="$(find sr_description)/hand/sdf/kuka_handlit/meshes" />
+
+
+    <node  name="sdf2Urdf" pkg="pysdf" type="sdf2urdf.py" args="model.sdf kuka_handlit.urdf "/>
+
+
+</launch>

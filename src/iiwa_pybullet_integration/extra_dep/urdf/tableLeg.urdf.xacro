@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name = "shittytest">
+
+    <xacro:property name="width" value="0.04" /> <!-- width 4 cm -->
+    <xacro:property name="length" value="0.715" /> <!-- length 71.5 cm -->
+    <xacro:property name="thickness" value="0.04" /> <!-- thickness 4 cm -->
+    <xacro:property name="z" value="0.715" /> <!-- z 71.5 cm -->
+    <xacro:property name="mass" value="1" />  <!-- mass 1 kg -->
+  <!-- Base Link -->
+  <xacro:macro name="TableLeg" params="legPos">
+    <link name="${legPos}_Leg">
+       <inertial>
+         <origin xyz="0 0 ${z/2}" rpy="0 0 0"/>
+         <mass value="${mass}"/>
+         <inertia ixx="100"  ixy="0"  ixz="0" iyy="100" iyz="0" izz="100" />
+       </inertial>
+    
+       <visual>
+         <origin xyz="0 0 ${z/2}" rpy="0 0 0" />
+        <geometry>
+          <box size="${width} ${thickness} ${length}"/>
+        </geometry>
+        <material name="Cyan">
+          <color rgba="0 1.0 1.0 1.0"/>
+        </material>
+      </visual>
+   
+      <collision>
+         <origin xyz="0 0 ${z/2}" rpy="0 0 0" />
+        <geometry>
+          <box size="${width} ${thickness} ${length}"/>
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>

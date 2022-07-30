@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/devel
+
+Name: sr_ur_arm_config
+Description: Description of sr_ur_arm_config
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

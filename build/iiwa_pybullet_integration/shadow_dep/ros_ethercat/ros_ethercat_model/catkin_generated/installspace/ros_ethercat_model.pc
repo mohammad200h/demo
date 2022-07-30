@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: ros_ethercat_model
+Description: Description of ros_ethercat_model
+Version: 0.3.0
+Cflags: -I${prefix}/include -I/usr/include
+Libs: -L${prefix}/lib /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_chrono.so /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_atomic.so /usr/lib/x86_64-linux-gnu/libpthread.so
+Requires: roscpp hardware_interface pluginlib urdf kdl_parser sr_robot_msgs realtime_tools ros_ethercat_hardware

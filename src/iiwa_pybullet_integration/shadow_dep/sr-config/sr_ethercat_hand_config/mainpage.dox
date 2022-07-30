@@ -1,0 +1,9 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+\b sr_ethercat_hand_config contains the different yaml files storing the parameters used on the etherCAT hand.
+
+They are stored in a separate sr_config stack to make it easier for users to keep their code up-to-date while modifying their parameters to reflect their specific config.
+
+*/

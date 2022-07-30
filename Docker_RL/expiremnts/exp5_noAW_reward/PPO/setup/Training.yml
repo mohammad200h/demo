@@ -1,0 +1,36 @@
+training_description: ""
+reward_mode: 8
+action_mode: "jointControl"
+obs_mode: "palm_world"
+reward_obs_mode: "palm"
+AW_mode: None
+AW_radius : [0.3,0.4]
+batch_size: 64
+feature_extractionLayers: 
+  layers: [64,64,64]
+  type: dense
+  conv:
+    num_filters:
+    kernel_size:
+    strides:
+DenseLayer: 
+  layers: [64]
+  type: dense
+  LSTM:
+    number_of_lstm_cells: 200
+
+n_epoch: 10
+
+lr: 1e-4
+
+discount: 0.99
+lam: 0.95
+horizon: 2048
+
+enable_gae: True
+
+
+slack_channel: rl_server
+
+
+

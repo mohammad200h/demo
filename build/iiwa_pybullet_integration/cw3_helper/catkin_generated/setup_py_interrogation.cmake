@@ -1,0 +1,7 @@
+set(cw3_helper_SETUP_PY_SETUP_MODULE "distutils.core")
+set(cw3_helper_SETUP_PY_VERSION "0.0.0")
+set(cw3_helper_SETUP_PY_SCRIPTS "")
+set(cw3_helper_SETUP_PY_PACKAGES "cw3_helper")
+set(cw3_helper_SETUP_PY_PACKAGE_DIRS "src/cw3_helper")
+set(cw3_helper_SETUP_PY_MODULES "")
+set(cw3_helper_SETUP_PY_MODULE_DIRS "")

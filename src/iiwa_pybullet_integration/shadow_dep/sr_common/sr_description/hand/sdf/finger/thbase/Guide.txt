@@ -1,0 +1,11 @@
+How can I declare a variable in model.sdf file?
+http://answers.gazebosim.org/question/14063/how-can-i-declare-a-variable-in-modelsdf-file/
+https://bitbucket.org/osrf/gazebo_models/src/b237ea45262f51ff8d72aaa96ef19f1288723c42/cart_rigid_suspension/model.rsdf?at=default&fileviewer=file-view-default
+
+erb model.sdf.erb > model.sdf
+-----------------------------
+copying file to .gazebo/model
+cp -r ~/hand_RL_ws/src/iiwa_pybullet_integration/shadow_dep/sr_common/sr_description/hand/sdf/finger/thbase ~/.gazebo/models
+
+copying file from .gazebo/model
+cp -r ~/.gazebo/models/middle ~/hand_RL_ws/src/iiwa_pybullet_integration/shadow_dep/sr_common/sr_description/hand/sdf/finger

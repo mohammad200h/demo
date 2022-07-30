@@ -1,0 +1,72 @@
+training_description: ""
+max_episode_steps: 5000
+
+actionRepeat_reward_mode: "tele"
+adaptive_action_reperate:
+  compute_AAR: True
+  decay: False
+  decay_mode: "decay_on_success"
+  starting_AAR_percentage : 0.2
+  decay_param: 
+    success_threshold: 10
+    decay_portion: 0.1
+  training_steps: 10000000
+  control_setting:
+    kuka:
+      force: 200.0
+      maxVelocity: 0.35
+      positionGain: 0.3
+      velocityGain: 1
+    hand:
+      force: None
+      maxVelocity: None
+      positionGain: 1
+      velocityGain: 1
+
+
+
+reward_mode: 1
+actionRepeat: 1
+action_mode: "jointControl"
+random_start: False
+obs_mode: "palm"
+reward_obs_mode: "palm_world"
+AW_mode: None
+AW_radius : [0.3,0.4]
+batch_size: 64
+feature_extractionLayers: 
+  layers: [64,64,64]
+  type: dense
+  conv:
+    num_filters:
+    kernel_size:
+    strides:
+DenseLayer: 
+  layers: [64]
+  type: dense
+  LSTM:
+    number_of_lstm_cells: 200
+
+n_epoch: 10
+
+lr: 1e-4
+
+discount: 0.99
+lam: 0.95
+horizon: 2048
+
+enable_gae: True
+
+
+ent_coef: 0.01 #0 to 0.01
+
+vf_coef: 0.5 #0.5, 1
+
+max_grad_norm: 0.5
+
+cliprange: 0.1 # 0.1, 0.2, 0.3
+
+cliprange_vf: None
+
+
+

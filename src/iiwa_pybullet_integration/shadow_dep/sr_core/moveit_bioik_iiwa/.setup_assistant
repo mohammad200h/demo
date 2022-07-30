@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: sr_description
+    relative_path: robots/kuka_hand.urdf.xacro
+  SRDF:
+    relative_path: config/kuka_and_hand.srdf
+  CONFIG:
+    author_name: lol
+    author_email: lol@lol.com
+    generated_timestamp: 1527642964

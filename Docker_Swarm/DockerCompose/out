@@ -1,0 +1,401 @@
+Building hand_rl_ws
+Sending build context to Docker daemon  36.58GB
+Step 1/78 : FROM nvidia/cudagl:9.2-devel-ubuntu16.04
+ ---> 3c882a7b8b11
+Step 2/78 : ARG UNAME=ros
+ ---> Using cache
+ ---> 8cdc85c34a54
+Step 3/78 : ARG PASS=ros
+ ---> Using cache
+ ---> 969224c9abcc
+Step 4/78 : ARG UID=1000
+ ---> Using cache
+ ---> a3316be58921
+Step 5/78 : ARG GID=1000
+ ---> Using cache
+ ---> 977ae74de679
+Step 6/78 : RUN apt-get update && apt-get install sudo -y
+ ---> Running in 364cd7483430
+Get:1 http://archive.ubuntu.com/ubuntu xenial InRelease [247 kB]
+Ign:1 http://archive.ubuntu.com/ubuntu xenial InRelease
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+Ign:2 http://archive.ubuntu.com/ubuntu xenial-updates InRelease
+Get:3 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+Ign:3 http://archive.ubuntu.com/ubuntu xenial-backports InRelease
+Get:4 http://archive.ubuntu.com/ubuntu xenial Release [246 kB]
+Ign:4 http://archive.ubuntu.com/ubuntu xenial Release
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates Release [108 kB]
+Ign:5 http://archive.ubuntu.com/ubuntu xenial-updates Release
+Get:6 http://archive.ubuntu.com/ubuntu xenial-backports Release [106 kB]
+Ign:6 http://archive.ubuntu.com/ubuntu xenial-backports Release
+Get:7 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages [1558 kB]
+Ign:7 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages
+Get:8 http://archive.ubuntu.com/ubuntu xenial/main i386 Packages [1552 kB]
+Ign:8 http://archive.ubuntu.com/ubuntu xenial/main i386 Packages
+Ign:9 http://archive.ubuntu.com/ubuntu xenial/main all Packages
+Get:10 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages [14.1 kB]
+Ign:10 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages
+Get:11 http://archive.ubuntu.com/ubuntu xenial/restricted i386 Packages [14.5 kB]
+Ign:11 http://archive.ubuntu.com/ubuntu xenial/restricted i386 Packages
+Ign:12 http://archive.ubuntu.com/ubuntu xenial/restricted all Packages
+Get:13 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [9827 kB]
+Ign:13 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages
+Get:14 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
+Ign:14 http://security.ubuntu.com/ubuntu xenial-security InRelease
+Get:15 http://archive.ubuntu.com/ubuntu xenial/universe i386 Packages [9804 kB]
+Ign:15 http://archive.ubuntu.com/ubuntu xenial/universe i386 Packages
+Ign:16 http://archive.ubuntu.com/ubuntu xenial/universe all Packages
+Get:17 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [176 kB]
+Ign:17 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages
+Get:18 http://archive.ubuntu.com/ubuntu xenial/multiverse i386 Packages [172 kB]
+Ign:18 http://archive.ubuntu.com/ubuntu xenial/multiverse i386 Packages
+Ign:19 http://archive.ubuntu.com/ubuntu xenial/multiverse all Packages
+Get:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [2559 kB]
+Ign:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages
+Get:21 http://archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages [1912 kB]
+Ign:21 http://archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages
+Ign:22 http://archive.ubuntu.com/ubuntu xenial-updates/main all Packages
+Get:23 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [16.4 kB]
+Ign:23 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages
+Get:24 http://archive.ubuntu.com/ubuntu xenial-updates/restricted i386 Packages [16.4 kB]
+Ign:24 http://archive.ubuntu.com/ubuntu xenial-updates/restricted i386 Packages
+Ign:25 http://archive.ubuntu.com/ubuntu xenial-updates/restricted all Packages
+Get:26 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [1544 kB]
+Ign:26 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages
+Get:27 http://archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages [1377 kB]
+Ign:27 http://archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages
+Ign:28 http://archive.ubuntu.com/ubuntu xenial-updates/universe all Packages
+Get:29 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [26.2 kB]
+Ign:29 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages
+Get:30 http://security.ubuntu.com/ubuntu xenial-security Release [108 kB]
+Ign:30 http://security.ubuntu.com/ubuntu xenial-security Release
+Get:31 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse i386 Packages [24.6 kB]
+Ign:31 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse i386 Packages
+Ign:32 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse all Packages
+Get:33 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [10.9 kB]
+Ign:33 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages
+Get:34 http://archive.ubuntu.com/ubuntu xenial-backports/main i386 Packages [10.9 kB]
+Ign:34 http://archive.ubuntu.com/ubuntu xenial-backports/main i386 Packages
+Ign:35 http://archive.ubuntu.com/ubuntu xenial-backports/main all Packages
+Get:36 http://archive.ubuntu.com/ubuntu xenial-backports/restricted amd64 Packages [40 B]
+Ign:36 http://archive.ubuntu.com/ubuntu xenial-backports/restricted amd64 Packages
+Get:37 http://archive.ubuntu.com/ubuntu xenial-backports/restricted i386 Packages [40 B]
+Ign:37 http://archive.ubuntu.com/ubuntu xenial-backports/restricted i386 Packages
+Ign:38 http://archive.ubuntu.com/ubuntu xenial-backports/restricted all Packages
+Get:39 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [12.7 kB]
+Ign:39 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages
+Get:40 http://archive.ubuntu.com/ubuntu xenial-backports/universe i386 Packages [12.2 kB]
+Ign:40 http://archive.ubuntu.com/ubuntu xenial-backports/universe i386 Packages
+Ign:41 http://archive.ubuntu.com/ubuntu xenial-backports/universe all Packages
+Get:42 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse amd64 Packages [40 B]
+Ign:42 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse amd64 Packages
+Get:43 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse i386 Packages [40 B]
+Ign:43 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse i386 Packages
+Get:44 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [2051 kB]
+Ign:44 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages
+Ign:45 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse all Packages
+Get:7 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages [1201 kB]
+Ign:7 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages
+Get:8 http://archive.ubuntu.com/ubuntu xenial/main i386 Packages [1196 kB]
+Ign:8 http://archive.ubuntu.com/ubuntu xenial/main i386 Packages
+Ign:9 http://archive.ubuntu.com/ubuntu xenial/main all Packages
+Get:10 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages [8344 B]
+Ign:10 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages
+Get:11 http://archive.ubuntu.com/ubuntu xenial/restricted i386 Packages [8684 B]
+Ign:11 http://archive.ubuntu.com/ubuntu xenial/restricted i386 Packages
+Ign:12 http://archive.ubuntu.com/ubuntu xenial/restricted all Packages
+Get:13 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [7532 kB]
+Ign:13 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages
+Get:15 http://archive.ubuntu.com/ubuntu xenial/universe i386 Packages [7512 kB]
+Ign:15 http://archive.ubuntu.com/ubuntu xenial/universe i386 Packages
+Ign:16 http://archive.ubuntu.com/ubuntu xenial/universe all Packages
+Get:17 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [144 kB]
+Ign:17 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages
+Get:18 http://archive.ubuntu.com/ubuntu xenial/multiverse i386 Packages [140 kB]
+Ign:18 http://archive.ubuntu.com/ubuntu xenial/multiverse i386 Packages
+Ign:19 http://archive.ubuntu.com/ubuntu xenial/multiverse all Packages
+Get:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [2049 kB]
+Ign:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages
+Get:21 http://archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages [1525 kB]
+Ign:21 http://archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages
+Get:46 http://security.ubuntu.com/ubuntu xenial-security/main i386 Packages [1442 kB]
+Ign:46 http://security.ubuntu.com/ubuntu xenial-security/main i386 Packages
+Ign:22 http://archive.ubuntu.com/ubuntu xenial-updates/main all Packages
+Get:23 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [10.2 kB]
+Ign:23 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages
+Get:24 http://archive.ubuntu.com/ubuntu xenial-updates/restricted i386 Packages [10.2 kB]
+Ign:24 http://archive.ubuntu.com/ubuntu xenial-updates/restricted i386 Packages
+Ign:25 http://archive.ubuntu.com/ubuntu xenial-updates/restricted all Packages
+Get:26 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [1219 kB]
+Ign:26 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages
+Get:27 http://archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages [1086 kB]
+Ign:27 http://archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages
+Ign:47 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64  InRelease
+Ign:28 http://archive.ubuntu.com/ubuntu xenial-updates/universe all Packages
+Ign:29 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages
+Ign:31 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse i386 Packages
+Ign:32 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse all Packages
+Ign:33 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages
+Ign:34 http://archive.ubuntu.com/ubuntu xenial-backports/main i386 Packages
+Ign:35 http://archive.ubuntu.com/ubuntu xenial-backports/main all Packages
+Ign:36 http://archive.ubuntu.com/ubuntu xenial-backports/restricted amd64 Packages
+Ign:37 http://archive.ubuntu.com/ubuntu xenial-backports/restricted i386 Packages
+Ign:38 http://archive.ubuntu.com/ubuntu xenial-backports/restricted all Packages
+Ign:39 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages
+Ign:40 http://archive.ubuntu.com/ubuntu xenial-backports/universe i386 Packages
+Ign:48 http://security.ubuntu.com/ubuntu xenial-security/main all Packages
+Ign:41 http://archive.ubuntu.com/ubuntu xenial-backports/universe all Packages
+Ign:42 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse amd64 Packages
+Ign:43 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse i386 Packages
+Ign:45 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse all Packages
+Ign:7 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages
+Ign:8 http://archive.ubuntu.com/ubuntu xenial/main i386 Packages
+Ign:9 http://archive.ubuntu.com/ubuntu xenial/main all Packages
+Ign:10 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages
+Ign:11 http://archive.ubuntu.com/ubuntu xenial/restricted i386 Packages
+Ign:12 http://archive.ubuntu.com/ubuntu xenial/restricted all Packages
+Ign:13 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages
+Ign:49 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages
+Ign:15 http://archive.ubuntu.com/ubuntu xenial/universe i386 Packages
+Ign:16 http://archive.ubuntu.com/ubuntu xenial/universe all Packages
+Ign:17 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages
+Ign:18 http://archive.ubuntu.com/ubuntu xenial/multiverse i386 Packages
+Ign:19 http://archive.ubuntu.com/ubuntu xenial/multiverse all Packages
+Ign:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages
+Ign:21 http://archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages
+Ign:22 http://archive.ubuntu.com/ubuntu xenial-updates/main all Packages
+Ign:23 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages
+Ign:24 http://archive.ubuntu.com/ubuntu xenial-updates/restricted i386 Packages
+Ign:25 http://archive.ubuntu.com/ubuntu xenial-updates/restricted all Packages
+Ign:26 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages
+Ign:27 http://archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages
+Ign:28 http://archive.ubuntu.com/ubuntu xenial-updates/universe all Packages
+Ign:29 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages
+Ign:31 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse i386 Packages
+Ign:32 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse all Packages
+Ign:50 http://security.ubuntu.com/ubuntu xenial-security/restricted i386 Packages
+Ign:33 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages
+Ign:34 http://archive.ubuntu.com/ubuntu xenial-backports/main i386 Packages
+Ign:35 http://archive.ubuntu.com/ubuntu xenial-backports/main all Packages
+Ign:36 http://archive.ubuntu.com/ubuntu xenial-backports/restricted amd64 Packages
+Ign:37 http://archive.ubuntu.com/ubuntu xenial-backports/restricted i386 Packages
+Ign:38 http://archive.ubuntu.com/ubuntu xenial-backports/restricted all Packages
+Ign:39 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages
+Ign:40 http://archive.ubuntu.com/ubuntu xenial-backports/universe i386 Packages
+Ign:41 http://archive.ubuntu.com/ubuntu xenial-backports/universe all Packages
+Ign:42 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse amd64 Packages
+Ign:43 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse i386 Packages
+Ign:45 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse all Packages
+Ign:7 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages
+Ign:8 http://archive.ubuntu.com/ubuntu xenial/main i386 Packages
+Ign:9 http://archive.ubuntu.com/ubuntu xenial/main all Packages
+Ign:10 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages
+Ign:11 http://archive.ubuntu.com/ubuntu xenial/restricted i386 Packages
+Ign:12 http://archive.ubuntu.com/ubuntu xenial/restricted all Packages
+Ign:13 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages
+Ign:15 http://archive.ubuntu.com/ubuntu xenial/universe i386 Packages
+Ign:51 http://security.ubuntu.com/ubuntu xenial-security/restricted all Packages
+Ign:16 http://archive.ubuntu.com/ubuntu xenial/universe all Packages
+Ign:17 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages
+Ign:18 http://archive.ubuntu.com/ubuntu xenial/multiverse i386 Packages
+Ign:19 http://archive.ubuntu.com/ubuntu xenial/multiverse all Packages
+Ign:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages
+Ign:21 http://archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages
+Ign:22 http://archive.ubuntu.com/ubuntu xenial-updates/main all Packages
+Ign:23 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages
+Ign:24 http://archive.ubuntu.com/ubuntu xenial-updates/restricted i386 Packages
+Ign:25 http://archive.ubuntu.com/ubuntu xenial-updates/restricted all Packages
+Ign:26 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages
+Ign:27 http://archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages
+Ign:52 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages
+Ign:28 http://archive.ubuntu.com/ubuntu xenial-updates/universe all Packages
+Ign:29 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages
+Ign:31 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse i386 Packages
+Ign:32 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse all Packages
+Ign:33 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages
+Ign:34 http://archive.ubuntu.com/ubuntu xenial-backports/main i386 Packages
+Ign:35 http://archive.ubuntu.com/ubuntu xenial-backports/main all Packages
+Ign:36 http://archive.ubuntu.com/ubuntu xenial-backports/restricted amd64 Packages
+Ign:37 http://archive.ubuntu.com/ubuntu xenial-backports/restricted i386 Packages
+Ign:38 http://archive.ubuntu.com/ubuntu xenial-backports/restricted all Packages
+Ign:53 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64  InRelease
+Ign:39 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages
+Ign:40 http://archive.ubuntu.com/ubuntu xenial-backports/universe i386 Packages
+Ign:41 http://archive.ubuntu.com/ubuntu xenial-backports/universe all Packages
+Ign:42 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse amd64 Packages
+Ign:43 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse i386 Packages
+Ign:45 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse all Packages
+Ign:7 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages
+Ign:54 http://security.ubuntu.com/ubuntu xenial-security/universe i386 Packages
+Ign:8 http://archive.ubuntu.com/ubuntu xenial/main i386 Packages
+Ign:9 http://archive.ubuntu.com/ubuntu xenial/main all Packages
+Ign:10 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages
+Ign:11 http://archive.ubuntu.com/ubuntu xenial/restricted i386 Packages
+Ign:12 http://archive.ubuntu.com/ubuntu xenial/restricted all Packages
+Get:55 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64  Release [697 B]
+Ign:13 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages
+Ign:15 http://archive.ubuntu.com/ubuntu xenial/universe i386 Packages
+Ign:55 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64  Release
+Ign:16 http://archive.ubuntu.com/ubuntu xenial/universe all Packages
+Ign:17 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages
+Ign:18 http://archive.ubuntu.com/ubuntu xenial/multiverse i386 Packages
+Ign:19 http://archive.ubuntu.com/ubuntu xenial/multiverse all Packages
+Ign:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages
+Ign:21 http://archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages
+Ign:22 http://archive.ubuntu.com/ubuntu xenial-updates/main all Packages
+Ign:23 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages
+Ign:24 http://archive.ubuntu.com/ubuntu xenial-updates/restricted i386 Packages
+Ign:25 http://archive.ubuntu.com/ubuntu xenial-updates/restricted all Packages
+Get:56 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64  Release [564 B]
+Ign:57 http://security.ubuntu.com/ubuntu xenial-security/universe all Packages
+Ign:56 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64  Release
+Ign:26 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages
+Ign:27 http://archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages
+Ign:28 http://archive.ubuntu.com/ubuntu xenial-updates/universe all Packages
+Ign:29 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages
+Ign:31 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse i386 Packages
+Ign:32 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse all Packages
+Ign:33 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages
+Ign:34 http://archive.ubuntu.com/ubuntu xenial-backports/main i386 Packages
+Ign:35 http://archive.ubuntu.com/ubuntu xenial-backports/main all Packages
+Ign:36 http://archive.ubuntu.com/ubuntu xenial-backports/restricted amd64 Packages
+Ign:58 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages
+Ign:37 http://archive.ubuntu.com/ubuntu xenial-backports/restricted i386 Packages
+Ign:38 http://archive.ubuntu.com/ubuntu xenial-backports/restricted all Packages
+Ign:39 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages
+Ign:40 http://archive.ubuntu.com/ubuntu xenial-backports/universe i386 Packages
+Ign:41 http://archive.ubuntu.com/ubuntu xenial-backports/universe all Packages
+Ign:42 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse amd64 Packages
+Ign:43 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse i386 Packages
+Ign:45 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse all Packages
+Err:7 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages
+  Error writing to output file - write (28: No space left on device) Error writing to file - write (28: No space left on device) [IP: 91.189.88.142 80]
+Ign:8 http://archive.ubuntu.com/ubuntu xenial/main i386 Packages
+Ign:9 http://archive.ubuntu.com/ubuntu xenial/main all Packages
+Get:59 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64  Packages [594 kB]
+Ign:10 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages
+Ign:59 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64  Packages
+Ign:11 http://archive.ubuntu.com/ubuntu xenial/restricted i386 Packages
+Ign:12 http://archive.ubuntu.com/ubuntu xenial/restricted all Packages
+Ign:13 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages
+Ign:15 http://archive.ubuntu.com/ubuntu xenial/universe i386 Packages
+Ign:16 http://archive.ubuntu.com/ubuntu xenial/universe all Packages
+Ign:17 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages
+Ign:18 http://archive.ubuntu.com/ubuntu xenial/multiverse i386 Packages
+Err:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages
+  Error writing to output file - write (28: No space left on device) Error writing to file - write (28: No space left on device) [IP: 91.189.88.142 80]
+Ign:21 http://archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages
+Ign:22 http://archive.ubuntu.com/ubuntu xenial-updates/main all Packages
+Ign:23 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages
+Ign:24 http://archive.ubuntu.com/ubuntu xenial-updates/restricted i386 Packages
+Ign:25 http://archive.ubuntu.com/ubuntu xenial-updates/restricted all Packages
+Ign:60 http://security.ubuntu.com/ubuntu xenial-security/multiverse i386 Packages
+Ign:26 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages
+Ign:27 http://archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages
+Ign:28 http://archive.ubuntu.com/ubuntu xenial-updates/universe all Packages
+Ign:29 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages
+Ign:31 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse i386 Packages
+Err:33 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages
+  Error writing to output file - write (28: No space left on device) Error writing to file - write (28: No space left on device) [IP: 91.189.88.142 80]
+Ign:34 http://archive.ubuntu.com/ubuntu xenial-backports/main i386 Packages
+Ign:35 http://archive.ubuntu.com/ubuntu xenial-backports/main all Packages
+Ign:36 http://archive.ubuntu.com/ubuntu xenial-backports/restricted amd64 Packages
+Ign:37 http://archive.ubuntu.com/ubuntu xenial-backports/restricted i386 Packages
+Ign:38 http://archive.ubuntu.com/ubuntu xenial-backports/restricted all Packages
+Get:61 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64  Packages [122 kB]
+Ign:39 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages
+Ign:40 http://archive.ubuntu.com/ubuntu xenial-backports/universe i386 Packages
+Ign:61 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64  Packages
+Ign:41 http://archive.ubuntu.com/ubuntu xenial-backports/universe all Packages
+Ign:42 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse amd64 Packages
+Ign:43 http://archive.ubuntu.com/ubuntu xenial-backports/multiverse i386 Packages
+Ign:62 http://security.ubuntu.com/ubuntu xenial-security/multiverse all Packages
+Ign:44 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages
+Ign:46 http://security.ubuntu.com/ubuntu xenial-security/main i386 Packages
+Ign:48 http://security.ubuntu.com/ubuntu xenial-security/main all Packages
+Ign:49 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages
+Ign:59 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64  Packages
+Ign:50 http://security.ubuntu.com/ubuntu xenial-security/restricted i386 Packages
+Ign:51 http://security.ubuntu.com/ubuntu xenial-security/restricted all Packages
+Ign:52 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages
+Ign:54 http://security.ubuntu.com/ubuntu xenial-security/universe i386 Packages
+Ign:57 http://security.ubuntu.com/ubuntu xenial-security/universe all Packages
+Ign:61 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64  Packages
+Ign:58 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages
+Ign:60 http://security.ubuntu.com/ubuntu xenial-security/multiverse i386 Packages
+Ign:62 http://security.ubuntu.com/ubuntu xenial-security/multiverse all Packages
+Ign:44 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages
+Ign:46 http://security.ubuntu.com/ubuntu xenial-security/main i386 Packages
+Ign:48 http://security.ubuntu.com/ubuntu xenial-security/main all Packages
+Ign:59 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64  Packages
+Ign:49 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages
+Ign:50 http://security.ubuntu.com/ubuntu xenial-security/restricted i386 Packages
+Ign:51 http://security.ubuntu.com/ubuntu xenial-security/restricted all Packages
+Ign:52 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages
+Ign:54 http://security.ubuntu.com/ubuntu xenial-security/universe i386 Packages
+Ign:57 http://security.ubuntu.com/ubuntu xenial-security/universe all Packages
+Ign:58 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages
+Ign:60 http://security.ubuntu.com/ubuntu xenial-security/multiverse i386 Packages
+Ign:62 http://security.ubuntu.com/ubuntu xenial-security/multiverse all Packages
+Ign:61 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64  Packages
+Ign:44 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages
+Ign:46 http://security.ubuntu.com/ubuntu xenial-security/main i386 Packages
+Ign:48 http://security.ubuntu.com/ubuntu xenial-security/main all Packages
+Ign:49 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages
+Ign:50 http://security.ubuntu.com/ubuntu xenial-security/restricted i386 Packages
+Ign:51 http://security.ubuntu.com/ubuntu xenial-security/restricted all Packages
+Ign:52 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages
+Ign:54 http://security.ubuntu.com/ubuntu xenial-security/universe i386 Packages
+Ign:57 http://security.ubuntu.com/ubuntu xenial-security/universe all Packages
+Ign:59 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64  Packages
+Ign:58 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages
+Ign:60 http://security.ubuntu.com/ubuntu xenial-security/multiverse i386 Packages
+Ign:62 http://security.ubuntu.com/ubuntu xenial-security/multiverse all Packages
+Ign:44 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages
+Ign:46 http://security.ubuntu.com/ubuntu xenial-security/main i386 Packages
+Ign:48 http://security.ubuntu.com/ubuntu xenial-security/main all Packages
+Ign:49 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages
+Ign:61 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64  Packages
+Ign:50 http://security.ubuntu.com/ubuntu xenial-security/restricted i386 Packages
+Ign:51 http://security.ubuntu.com/ubuntu xenial-security/restricted all Packages
+Ign:52 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages
+Ign:54 http://security.ubuntu.com/ubuntu xenial-security/universe i386 Packages
+Ign:57 http://security.ubuntu.com/ubuntu xenial-security/universe all Packages
+Ign:58 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages
+Ign:60 http://security.ubuntu.com/ubuntu xenial-security/multiverse i386 Packages
+Ign:62 http://security.ubuntu.com/ubuntu xenial-security/multiverse all Packages
+Ign:59 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64  Packages
+Err:44 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages
+  Error writing to output file - write (28: No space left on device) Error writing to file - write (28: No space left on device) [IP: 91.189.91.39 80]
+Ign:46 http://security.ubuntu.com/ubuntu xenial-security/main i386 Packages
+Ign:48 http://security.ubuntu.com/ubuntu xenial-security/main all Packages
+Ign:49 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages
+Ign:50 http://security.ubuntu.com/ubuntu xenial-security/restricted i386 Packages
+Ign:51 http://security.ubuntu.com/ubuntu xenial-security/restricted all Packages
+Ign:52 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages
+Ign:61 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64  Packages
+Ign:54 http://security.ubuntu.com/ubuntu xenial-security/universe i386 Packages
+Get:59 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64  Packages [2581 kB]
+Err:59 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64  Packages
+  Could not open file /var/lib/apt/lists/partial/developer.download.nvidia.com_compute_cuda_repos_ubuntu1604_x86%5f64_Packages - open (28: No space left on device)
+Ign:57 http://security.ubuntu.com/ubuntu xenial-security/universe all Packages
+Ign:58 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages
+Ign:60 http://security.ubuntu.com/ubuntu xenial-security/multiverse i386 Packages
+Err:61 https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64  Packages
+  Could not open file /var/lib/apt/lists/partial/developer.download.nvidia.com_compute_machine-learning_repos_ubuntu1604_x86%5f64_Packages.gz - open (28: No space left on device)
+Reading package lists...
+[91mW: The repository 'http://archive.ubuntu.com/ubuntu xenial Release' does not have a Release file.
+W: The repository 'http://archive.ubuntu.com/ubuntu xenial-updates Release' does not have a Release file.
+W: The repository 'http://archive.ubuntu.com/ubuntu xenial-backports Release' does not have a Release file.
+W: The repository 'http://security.ubuntu.com/ubuntu xenial-security Release' does not have a Release file.
+W: The repository 'https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64  Release' does not have a Release file.
+W: The repository 'https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64  Release' does not have a Release file.
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial/main/binary-amd64/Packages  Error writing to output file - write (28: No space left on device) Error writing to file - write (28: No space left on device) [IP: 91.189.88.142 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial-updates/main/binary-amd64/Packages  Error writing to output file - write (28: No space left on device) Error writing to file - write (28: No space left on device) [IP: 91.189.88.142 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial-backports/main/binary-amd64/Packages  Error writing to output file - write (28: No space left on device) Error writing to file - write (28: No space left on device) [IP: 91.189.88.142 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/xenial-security/main/binary-amd64/Packages  Error writing to output file - write (28: No space left on device) Error writing to file - write (28: No space left on device) [IP: 91.189.91.39 80]
+E: Failed to fetch https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/Packages  Could not open file /var/lib/apt/lists/partial/developer.download.nvidia.com_compute_cuda_repos_ubuntu1604_x86%5f64_Packages - open (28: No space left on device)
+E: Failed to fetch https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/Packages  Could not open file /var/lib/apt/lists/partial/developer.download.nvidia.com_compute_machine-learning_repos_ubuntu1604_x86%5f64_Packages.gz - open (28: No space left on device)
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+[0mThe command '/bin/sh -c apt-get update && apt-get install sudo -y' returned a non-zero code: 100
+Service 'hand_rl_ws' failed to build : Build failed

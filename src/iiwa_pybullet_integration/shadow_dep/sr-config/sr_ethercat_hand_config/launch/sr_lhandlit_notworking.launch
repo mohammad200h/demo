@@ -1,0 +1,35 @@
+<launch>
+    <arg name="robot_name" default="hand_lit_left"/>
+    <arg name="gui" default="true"/>
+    <arg name="sim" default="false"/>
+    <arg name="eth_port" default="enxa0cec80fff48" />
+    <arg name="grasp_controller" default="true" />
+    <arg name="hand_id" default="lh" />
+ <arg name="hardware_interface" default="PositionJointInterface"/>
+<arg name="initial_z" default="0.855" />
+
+    <arg name="robot_description" default="$(find sr_description)/hand/xacro/handlit_left.urdf.xacro" />
+    <!--Ros controllers -->
+    <include file="$(find sr_handlit_controller)/launch/hand_g_control.launch">
+      <arg name="robot_name" value="$(arg robot_name)"/>
+      <arg name="sim" value="$(arg sim)"/>
+      <arg name="hardware_interface" value="$(arg hardware_interface)"/>
+      <arg name="hand_serial" value="1658" />
+      <arg name="hand_id" value="lh" />
+      <arg name="eth_port" value="$(arg eth_port)" />
+      <arg name="robot_description" value="$(arg robot_description)" />
+      <arg name="initial_z" value="$(arg initial_z)"/>
+    </include>
+ 
+    <!-- Moveit -->
+    <include file="$(find sr_moveit_handlit_config)/launch/planning_context.launch" />
+    <include file="$(find sr_moveit_handlit_config)/launch/move_group.launch">
+
+    </include>
+    
+    <!-- GUI -->
+    <include if="$(arg gui)" file="$(find sr_moveit_handlit_config)/launch/moveit_rviz.launch">
+        <arg name="config" value="true"/>
+    </include>
+
+</launch>

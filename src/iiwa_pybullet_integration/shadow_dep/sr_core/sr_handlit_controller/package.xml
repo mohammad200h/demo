@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>sr_handlit_controller</name>
+  <version>0.0.0</version>
+  <description>The sat_iiwa_control package</description>
+
+  <author email="george.dwyer@ucl.ac.uk">George Dwyer</author>
+  <maintainer email="george.dwyer@ucl.ac.uk">George Dwyer</maintainer>
+
+  <license>Private</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

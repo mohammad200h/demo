@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: sr_external_dependencies
+Description: Description of sr_external_dependencies
+Version: 1.4.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

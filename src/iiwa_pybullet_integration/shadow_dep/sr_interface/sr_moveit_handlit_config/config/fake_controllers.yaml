@@ -1,0 +1,43 @@
+controller_list:
+  - name: fake_TH_controller
+    joints:
+      - lh_THJ5
+      - lh_THJ4
+      - lh_THJ2
+      - lh_THJ1
+  - name: fake_FF_controller
+    joints:
+      - lh_FFJ4
+      - lh_FFJ3
+      - lh_FFJ2
+      - lh_FFJ1
+  - name: fake_MF_controller
+    joints:
+      - lh_MFJ4
+      - lh_MFJ3
+      - lh_MFJ2
+      - lh_MFJ1
+  - name: fake_RF_controller
+    joints:
+      - lh_RFJ4
+      - lh_RFJ3
+      - lh_RFJ2
+      - lh_RFJ1
+  - name: fake_hand_controller
+    joints:
+      - lh_FFJ4
+      - lh_FFJ3
+      - lh_FFJ2
+      - lh_FFJ1
+      - lh_MFJ4
+      - lh_MFJ3
+      - lh_MFJ2
+      - lh_MFJ1
+      - lh_RFJ4
+      - lh_RFJ3
+      - lh_RFJ2
+      - lh_RFJ1
+      - lh_THJ5
+      - lh_THJ4
+      - lh_THJ2
+      - lh_THJ1

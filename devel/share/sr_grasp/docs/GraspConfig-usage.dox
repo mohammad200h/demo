@@ -1,0 +1,10 @@
+\subsubsection usage Usage
+\verbatim
+<node name="grasp" pkg="sr_grasp" type="grasp">
+  <param name="interpolation_rate" type="double" value="100.0" />
+  <param name="force_threshold" type="double" value="0.3" />
+  <param name="squeeze" type="double" value="4.0" />
+  <param name="first_contact_only" type="bool" value="False" />
+</node>
+\endverbatim
+

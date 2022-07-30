@@ -1,0 +1,36 @@
+{
+    "BaseLine":"exp_baseline",
+    "expiremnts": {
+        "StateExpirements":[
+            "exp1_noAW_state",
+            "exp2_noAW_state",
+            "exp3_noAW_state",
+            "exp4_noAW_state",
+            "exp6_noAW_state"
+        ],
+        "HyperParametersExpirements":[
+            "exp2.2_noAW",
+            "exp2.3_noAW",
+            "exp2.4_noAW"
+
+        ],
+        "RewardExpirements":[
+            "exp1_noAW_reward"   
+        ],
+        "ActionExpirements":[  
+            "exp2_action"
+        ],
+        "ExcludedExpirements":[
+            "exp5_noAW_state",
+            "exp2_noAW_reward",
+            "exp3_noAW_reward",
+            "exp4_noAW_reward",
+            "exp5_noAW_reward",
+            "exp1_action",
+            "exp3_action"
+        ]
+        
+    },
+    "repeat": 4
+    
+}

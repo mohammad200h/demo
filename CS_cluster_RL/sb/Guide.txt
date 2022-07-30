@@ -1,0 +1,9 @@
+Runing a job:
+cd /home/ucabmh0/Scratch/hand_RL_ws/cluster_RL
+qsub -N Test hand_RL_job.sh
+qsub -N Test2 hand_RL_job.sh
+
+
+
+
+

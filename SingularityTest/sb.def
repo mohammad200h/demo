@@ -1,0 +1,57 @@
+bootstrap:docker
+From:  nvidia/cudagl:11.2.0-devel-ubuntu20.04
+
+%pre
+    ./update_sb.sh
+%files
+    cuda11.2/cuda/lib64/* /usr/local/cuda/lib64/
+    cuda11.2/cuda/include/* /usr/local/cuda/include/
+    cuda11.2/* /tmp
+
+    driverFiles/i386-linux-gnu/libcuda.so.450.102.04 /usr/lib/i386-linux-gnu/libcuda.so.450.102.04
+    driverFiles/i386-linux-gnu/libcuda.so.1 /usr/lib/i386-linux-gnu/libcuda.so.1
+
+    driverFiles/x86_64-linux-gnu/libcuda.so.450.102.04 /usr/lib/x86_64-linux-gnu/libcuda.so.450.102.04
+    driverFiles/x86_64-linux-gnu/libcuda.so.1 /usr/lib/x86_64-linux-gnu/libcuda.so.1
+
+
+
+    kuka_handlit_multiprocess/* /opt/kuka_handlit_multiprocess/
+    sb_3/* /opt/sb_3/
+%post
+
+
+    #***********************************Installing TF*************************
+
+    apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/3bf863cc.pub
+
+    apt-get update
+
+    dpkg -i /tmp/libcudnn8_8.0.5.39-1+cuda11.1_amd64.deb
+    dpkg -i /tmp/libcudnn8-dev_8.0.5.39-1+cuda11.1_amd64.deb
+    apt-get install -y python3-pip
+    pip3 install --upgrade pip==20.2.4
+    #********************Installing pytorch***************
+    pip3  install torch torchvision
+    pip3 install tensorboard 
+    #********************Installing pybullet***************
+    pip3 install pybullet
+    #****************************Installing hand_RL_ws *********************
+    pip3 install pyaml
+    chmod -R 777 /opt/kuka_handlit_multiprocess
+    cd /opt/kuka_handlit_multiprocess
+    pip3 install -e .
+    cd 
+    pwd
+    cd /opt/sb_3/stable-baselines3/
+    pip3 install -e .
+    
+   
+
+
+
+
+
+
+
+ 

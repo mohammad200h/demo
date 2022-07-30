@@ -1,0 +1,104 @@
+<?xml version='1.0'?>
+<%
+require 'matrix'
+require 'erb'
+require 'yaml'
+
+class GraspPhase
+    #constants
+    M_PI = 3.1415926535897931
+    attr_accessor :base,:texture
+    def initialize(sim_env,path)
+        @base =  {  # object pose
+                "link_name" =>"link",
+                'pose'=> [0,0,0,
+                         0,0,0],
+                # inetia 
+                'pose_i'=> [0,0,0.035,
+                                0,0,0],                   
+                'mass'=> 0.0000000000000000001,
+                'ixx'=> 0.0 ,'ixy'=> 0     ,'ixz'=> 0 ,
+                'iyy'=> 0.0 ,'iyz'=> 0     ,'izz'=> 0.5,
+                'radius'=>0.1,
+                'length'=>0.5,
+                #color
+                "ambient"=>  [1,0.5,1,0.3],
+                "diffuse"=>  [1,0.5,1,0.3],
+                "specular"=> [1,0.5,1,0.3],
+                "emissive"=> [0, 0, 0,0.3]
+            } 
+        def loadYamlAndChange(path)
+        
+            file = YAML.load_file(path+"/config.yml") 
+        
+            counter = 0
+            loop do 
+                
+                @base["pose"][counter] = file["position"][counter]
+                if counter == file["position"].length-2
+                    break
+                end
+                counter +=1
+            end
+            @base["pose"][2] = file["position"][2]+file["length"]/2
+            @base["radius"] = file["radius"]
+            @base["length"] = file["length"]
+        end
+        
+        loadYamlAndChange(path)
+
+    end
+end
+
+
+def a_to_s(v)#converts array to string
+    Array(v).join(" ")
+end
+
+
+#####################################hand setting######################
+    #sim env setting
+    path
+
+    sim_env ="pybullet" #change to pybullet|gazebo 
+
+    gp = GraspPhase.new(sim_env,path)
+
+%>
+<sdf version="1.5">
+    <model name="box">
+        <static>true</static>
+        <link name="link">
+            <pose frame=''><%=a_to_s(gp.base["pose"])%></pose>
+            <inertial>
+                <pose frame=''><%=a_to_s(gp.base["pose_i"])%></pose>
+                <mass><%=gp.base["mass"]%></mass>
+                <inertia>
+                    <ixx><%=gp.base["ixx"]%></ixx>
+                    <ixy><%=gp.base["ixy"]%></ixy>
+                    <ixz><%=gp.base["ixz"]%></ixz>
+                    <iyy><%=gp.base["iyy"]%></iyy>
+                    <iyz><%=gp.base["iyz"]%></iyz>
+                    <izz><%=gp.base["izz"]%></izz>
+                </inertia>
+            </inertial>
+
+
+            <visual name="visual">
+                <pose><%=a_to_s(gp.base["pose"])%></pose>
+                <geometry>
+                    <sphere>
+                        <radius><%=gp.base["radius"]%></radius>
+                        
+                    </sphere>
+                </geometry>  
+                <material>
+                    <ambient><%=a_to_s(gp.base['ambient'])%></ambient>
+                    <diffuse><%=a_to_s(gp.base['diffuse'])%></diffuse>
+                    <specular><%=a_to_s(gp.base['specular'])%></specular>
+                    <emissive><%=a_to_s(gp.base['emissive'])%></emissive>
+              </material>
+            </visual>
+        </link>
+    </model>
+</sdf>

@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: bio_ik
+Description: Description of bio_ik
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lbio_ik
+Requires: moveit_core moveit_ros_planning pluginlib roscpp tf tf_conversions

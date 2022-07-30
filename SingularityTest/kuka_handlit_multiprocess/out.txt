@@ -1,0 +1,1097 @@
+pybullet build time: Dec 23 2020 01:46:51
+Matplotlib created a temporary config/cache directory at /tmp/matplotlib-f696ni60 because the default path (/home/mamad/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+current_dir=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs
+
+
+
+modelGenerator::path: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit
+ resource_filename(__name__) /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka
+
+
+
+current_dir=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka
+current_dir=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/hand
+current_dir=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs
+current_dir=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs
+current_dir=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs
+Kuka_HandlitGymEnv::env_setting_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit
+path succesfully created at:  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit
+src::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/initial_env_setting
+Kuka_HandlitGymEnv::self.env_dir_manager.path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit
+2021-06-14T09:10:49.345:application.d:loadResources:138 Could not load CSS /com/gexperts/Tilix/css/tilix.base320.css
+2021-06-14T09:10:49.377:terminal.d:outputError:2678 Unexpected error occurred: Failed to execute child process "roscore" (No such file or directory)
+2021-06-14T09:10:49.377:terminal.d:outputError:2679 Working Directory=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit
+2021-06-14T09:10:49.377:terminal.d:outputError:2680 Arguments used to execute process:
+2021-06-14T09:10:49.377:terminal.d:outputError:2682 	arg 0=roscore
+2021-06-14T09:10:49.377:terminal.d:outputError:2683 Environment used to execute process:
+2021-06-14T09:10:49.378:terminal.d:outputError:2685 	env 0=TILIX_ID=77785ea3-877a-4f77-b469-9f22b29062c5
+2021-06-14T09:10:49.378:terminal.d:outputError:2685 	env 1=PWD=/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit
+ROS_Manager::agent_recorder
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf.erb
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/kuka/modelGenerator.sh: line 10: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka/model.sdf: No such file or directory
+Launching Model ..
+python3: can't open file 'launch_hand_model.py': [Errno 2] No such file or directory
+startThreads creating 1 threads.
+starting thread 0
+started thread 0 
+argc=2
+argv[0] = --unused
+argv[1] = --start_demo_name=Physics Server
+ExampleBrowserThreadFunc started
+X11 functions dynamically loaded using dlopen/dlsym OK!
+X11 functions dynamically loaded using dlopen/dlsym OK!
+Creating context
+Created GL 3.3 context
+Direct GLX rendering context obtained
+Making context current
+GL_VENDOR=NVIDIA Corporation
+GL_RENDERER=Quadro P400/PCIe/SSE2
+GL_VERSION=3.3.0 NVIDIA 460.80
+GL_SHADING_LANGUAGE_VERSION=3.30 NVIDIA via Cg compiler
+pthread_getconcurrency()=0
+Version = 3.3.0 NVIDIA 460.80
+Vendor = NVIDIA Corporation
+Renderer = Quadro P400/PCIe/SSE2
+b3Printf: Selected demo: Physics Server
+startThreads creating 1 threads.
+starting thread 0
+started thread 0 
+MotionThreadFunc thread started
+ven = NVIDIA Corporation
+ven = NVIDIA Corporation
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frame
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: lbr_iiwa_link_ee
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frame
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: lbr_iiwa_link_ee
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frame
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: lbr_iiwa_link_ee
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frame
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: lbr_iiwa_link_ee
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frame
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: lbr_iiwa_link_ee
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frame
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: lbr_iiwa_link_ee
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: No inertial data for link, using mass=1, localinertiadiagonal = 1,1,1, identity local inertial frame
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: lbr_iiwa_link_ee
+numActiveThreads = 0
+stopping threads
+Thread with taskId 0 exiting
+Thread TERMINATED
+destroy semaphore
+semaphoGenerating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model.sdf.erb
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model.sdf.erb
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model.sdf.erb
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model.sdf.erb
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model.sdf.erb
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model.sdf.erb
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model.sdf.erb
+Generating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model.sdf.erb
+re destroyed
+destroy main semaphore
+main semaphore destroyed
+finished
+numActiveThreads = 0
+btShutDownExampleBrowser stopping threads
+Thread with taskId 0 exiting
+Thread TERMINATED
+destroy semaphore
+semaphore destroyed
+destroy main semaphore
+main semaphore destroyed
+startThreads creating 1 threads.
+starting thread 0
+started thread 0 
+argc=2
+argv[0] = --unused
+argv[1] = --start_demo_name=Physics Server
+ExampleBrowserThreadFunc started
+X11 functions dynamically loaded using dlopen/dlsym OK!
+X11 functions dynamically loaded using dlopen/dlsym OK!
+Creating context
+Created GL 3.3 context
+Direct GLX rendering context obtained
+Making context current
+GL_VENDOR=NVIDIA Corporation
+GL_RENDERER=Quadro P400/PCIe/SSE2
+GL_VERSION=3.3.0 NVIDIA 460.80
+GL_SHADING_LANGUAGE_VERSION=3.30 NVIDIA via Cg compiler
+pthread_getconcurrency()=0
+Version = 3.3.0 NVIDIA 460.80
+Vendor = NVIDIA Corporation
+Renderer = Quadro P400/PCIe/SSE2
+b3Printf: Selected demo: Physics Server
+startThreads creating 1 threads.
+starting thread 0
+started thread 0 
+MotionThreadFunc thread started
+ven = NVIDIA Corporation
+ven = NVIDIA Corporation
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+numActiveThreads = 0
+stopping threads
+Thread with taskId 0 exiting
+Thread TERMINATED
+destroy semaphore
+semaphore destroyed
+destroy main semaphore
+main semaphore destroyed
+finished
+numActiveThreads = 0
+btShutDownExampleBrowser stopping threads
+Thread with taskId 0 exiting
+Thread TERMINATED
+destroy semaphore
+semaphore destroyed
+destroy main semaphore
+main semaphore destroyed
+startThreads creating 1 threads.
+starting thread 0
+started thread 0 
+argc=2
+argv[0] = --unused
+argv[1] = --start_demo_name=Physics Server
+ExampleBrowserThreadFunc started
+X11 functions dynamically loaded using dlopen/dlsym OK!
+X11 functions dynamically loaded using dlopen/dlsym OK!
+Creating context
+Created GL 3.3 context
+Direct GLX rendering context obtained
+Making context current
+GL_VENDOR=NVIDIA Corporation
+GL_RENDERER=Quadro P400/PCIe/SSE2
+GL_VERSION=3.3.0 NVIDIA 460.80
+GL_SHADING_LANGUAGE_VERSION=3.30 NVIDIA via Cg compiler
+pthread_getconcurrency()=0
+Version = 3.3.0 NVIDIA 460.80
+Vendor = NVIDIA Corporation
+Renderer = Quadro P400/PCIe/SSE2
+b3Printf: Selected demo: Physics Server
+startThreads creating 1 threads.
+starting thread 0
+started thread 0 
+MotionThreadFunc thread started
+ven = NVIDIA Corporation
+ven = NVIDIA Corporation
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+numActiveThreads = 0
+stopping threads
+Thread with taskId 0 exiting
+Thread TERMINATED
+destroy semaphore
+semaphore destroyed
+destroy main semaphore
+main semaphore destroyed
+finished
+numActiveThreads = 0
+btShutDownExampleBrowser stopping threads
+Thread with taskId 0 exiting
+Thread TERMINATED
+destroy semaphore
+semaphore destroyed
+destroy main semaphore
+main semaphore destroyed
+startThreads creating 1 threads.
+starting thread 0
+started thread 0 
+argc=2
+argv[0] = --unused
+argv[1] = --start_demo_name=Physics Server
+ExampleBrowserThreadFunc started
+X11 functions dynamically loaded using dlopen/dlsym OK!
+X11 functions dynamicGenerating Model ..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka_handlit_model/model.sdf.erb
+GymEnv::AW1::set_AW_mode()
+GymEnv::AW1::set_AW_mode()::AW_setting::  {'obs_mode': 'palm', 'initial_r': [0.3, 0.3]}
+env_setting_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit
+self.config_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/kuka/adaptiveActionRepeat.yml
+path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/kuka/model.sdf
+path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/kuka/model.sdf
+path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/kuka/model.sdf
+path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/kuka/model.sdf
+path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/kuka/model.sdf
+path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/kuka/model.sdf
+path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/kuka/model.sdf
+self.robot_steps::  {'J0': 8477, 'J1': 5988, 'J2': 8483, 'J3': 5984, 'J4': 8477, 'J5': 5984, 'J6': 8734}
+kuka::save_setting::self.config_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/kuka/adaptiveActionRepeat.yml
+self.config_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/kuka/adaptiveActionRepeat.yml
+reading file
+self.folder_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+self.lib_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/hand
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model_MF.sdf
+reading file
+self.folder_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+self.lib_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/hand
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model_MF.sdf
+reading file
+self.folder_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+self.lib_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/hand
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model_MF.sdf
+reading file
+self.folder_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+self.lib_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/hand
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model_MF.sdf
+reading file
+self.folder_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+self.lib_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/hand
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model_TH.sdf
+reading file
+self.folder_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+self.lib_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/hand
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model_TH.sdf
+reading file
+self.folder_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+self.lib_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/hand
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model_TH.sdf
+reading file
+self.folder_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+self.lib_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/adaptiveActionRepeat/hand
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand
+sdf_path::  /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/adaptiveActionRepeat/hand/model_TH.sdf
+env_setting_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit
+reading file
+self.folder_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka_handlit_model
+self.lib_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_handlit/kuka_handlit/envs/kuka_handlit_model
+Doing it..
+/home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka_handlit_model
+robot_path:: /home/mamad/hand_RL_ws/src/iiwa_pybullet_integration/Modular_RL/shit/kuka_handlit_model/model.sdf
+
+
+
+action_repeate:: 2451
+joint_obs::  [-9.867199461281762e-09, -2.9765473706929616e-08, 1.851454115763801e-08, -4.3291139662014585e-10, -6.433451272524029e-08, -1.3194425660804412e-07, 1.0793548529168182e-07, 2.329251364609035e-07, -9.727014398575041e-08, -1.0583757685811435e-09, -6.251799835361172e-07, 1.0079437283774807e-08, 2.1658187030926256e-08, -4.1711584169656926e-07, -7.013609304440394e-12, -8.246105180197832e-10, 1.1102230246251566e-19, -1.6153669735063936e-07, -1.4629128940452098e-07, -1.0552801517904609e-08, -2.4200678333530235e-10, -1.2520328780143974e-08, 8.599831013977876e-12]
+motorCommands::  [-0.47776428  1.3105644  -0.02050816  1.7152853   1.4130586  -0.4291356
+  1.2015743   0.2964699   0.62186     0.51007056  0.0036521   0.5437483
+  1.1022097   1.4461972   0.34863865  0.26702216  1.124058    0.3032329
+ -0.2083523   0.12892042  0.7013831  -0.63959855  1.4441918 ]
+
+
+
+
+
+
+action_repeate:: 4740
+joint_obs::  [-0.4777647782004652, 1.31056411974476, -0.02050840517120617, 1.714706114954202, 1.4130571409930563, -0.42914056322861993, 1.2015775658937151, -0.001713377042400395, -3.315775741317858e-05, -8.862237307749102e-07, 0.011995448175132106, -2.527917263214759e-06, 0.0018508213615878884, -4.2752793841358083e-19, 0.008106305627541851, 2.770836675909315e-05, 0.0020941008071611368, -3.2613359483260245e-07, 0.005494942746953146, -0.000615590298839474, 4.3772627332446577e-05, -2.7494007042776496e-05, 0.000183801342486537]
+motorCommands::  [-1.85312     0.8776693  -2.2388725   2.0880084  -1.9044825   1.7468281
+  0.9884039   1.1470296   1.3581314   1.0533081   0.21590766  0.15178952
+  0.5646023   1.2207501   0.17037672  1.0739343   0.5994548   1.4575013
+  0.25788167  0.12474962  1.1537049   0.5677969   1.4658077 ]
+
+
+
+
+
+
+action_repeate:: 4008
+joint_obs::  [-1.8531199881899996, 0.8776692831616019, -2.2388725324721417, 2.08800840482336, -1.9039639346617978, 1.7468280283141757, 0.988403916845631, -0.00011504529110095143, -8.532040559102793e-07, -5.2941760885810796e-06, -1.0157938978647641e-05, 1.3034512699446052e-05, -3.2251961519000525e-07, -2.6202062162733424e-05, -1.2648170222673573e-06, 2.728559832566398e-05, -3.0505499617370437e-17, -9.306242660232334e-06, -1.0356645133375836e-05, 0.0005786692842207423, 0.0001754080981846196, -0.00014783413096712786, 0.00012545784142433165]
+motorCommands::  [ 0.50993973 -1.1568156  -2.6776345   0.8306919  -0.06997012 -1.058381
+ -0.3822076   1.071389    0.03787756  0.80259025  0.1657245   0.29357472
+  1.1835576   0.02228024  0.2955844   0.15055358  0.92307     0.4738267
+  0.00585526 -0.97337055  0.6575677   0.47069257  0.1990527 ]
+
+
+
+
+
+
+action_repeate:: 2870
+joint_obs::  [0.5099398998642536, -1.1568169435270832, -2.6776350123122645, 0.8306918892122012, -0.06996904418778763, -1.0510401620578858, -0.382209609423436, -0.018735133329653746, -5.045056969092973e-06, -2.9803273257088346e-07, -2.6402304617387855e-05, -0.001443110287761334, -6.968465176550297e-08, -3.69019342118749e-05, -4.1434688368792545e-07, -1.5579674351657966e-06, -3.686327854034274e-08, -3.766411810578721e-05, -3.297467684060615e-05, 0.014087301153690874, 0.0034444488455494665, -0.0008558588510894347, 2.1911715131326334e-09]
+motorCommands::  [ 2.2512016e+00  2.7804223e-01 -6.7004895e-01 -1.1588292e+00
+ -1.9206431e+00 -6.6640353e-01 -1.5364125e+00  4.8480332e-01
+  9.6498585e-01  7.8933275e-01  1.7196639e-01  1.5388552e+00
+  6.3205808e-01  9.2298776e-02  4.4608451e-02  3.5051385e-01
+  1.1329924e-03  5.2660185e-01 -3.4266299e-01  1.4964695e-01
+  1.0862375e+00 -5.5317152e-01  1.4445332e+00]
+
+
+
+
+
+
+action_repeate:: 5754
+joint_obs::  [2.2513845483481685, 0.27807279613025837, -0.6704679290630021, -1.15882881141192, -1.9206456263539748, -0.6665114511311028, -1.536439270423613, -0.020183702432895405, 0.022073513000998354, 0.0005486157423136061, 0.09633649699283361, -0.0014696021440792418, -1.5335204926824801e-15, 0.12041626399257015, 0.010262877949896776, -9.629098640911222e-06, 0.001816461020887128, 0.08999764920918096, -0.00027843618367330065, 0.011368128956878013, 0.0034218778936431445, -0.0006431932831300621, 0.0013596291890491231]
+motorCommands::  [-1.7759752  -1.6754789   1.4741387  -1.544347    0.9021186  -0.21472146
+ -1.949398    1.4743086   1.2759056   0.18377912  0.3341561   1.3237809
+  0.01009108  0.792539    0.28342214  0.58702165  0.35647494  1.0127394
+ -0.34400794 -0.12040991  0.7868982   0.6095437   0.7150369 ]
+
+
+
+
+
+
+action_repeate:: 3325
+joint_obs::  [-1.7731702464137329, -1.6754806803803328, 1.4741377195189793, -1.544347026557523, 0.9021230804403381, -0.21470909505563948, -1.9494084651967987, -0.02428647203796765, -4.7119057130269103e-05, -1.3646154443158884e-05, -0.00037108989117999797, -0.0014404251323653409, 1.0843739929293445e-06, -0.00026936849062456704, -8.103304676661642e-06, -1.8711851806156562e-06, -3.5809313760046615e-17, -0.00016253445322808246, 0.009276261660503247, 0.01885602563199459, 0.004184819438407882, -0.0008887490966884176, 0.00020059024048817695]
+motorCommands::  [-0.6320228   0.64982104  2.5666323   0.35029417  1.5117472  -0.59290415
+  1.2094296   0.1611449   1.1925615   0.75883716 -0.16011885  1.1266497
+  1.4682224   0.9921484   0.11660869  0.10392649  1.338788    0.65196353
+  0.04506593 -0.05495996  0.49201906 -0.66527414  0.39938262]
+
+
+
+
+
+
+action_repeate:: 6516
+joint_obs::  [-0.6320280670609717, 0.649891290186294, 2.5666322185401365, 0.35029417250873784, 1.5117363749444213, -0.5929071142098897, 0.37746255766564185, -0.030315523958847075, -5.056390840399849e-05, -2.178235241644946e-06, -0.0003662392293520856, -0.0024677890354935237, -7.936460771751703e-06, -0.0003326977881217664, -1.742990264429606e-05, -3.1541414305322595e-05, -3.333199395610726e-06, -0.0002826787140410262, -0.00025613384646623063, 0.03630200871325795, 0.006718669998047458, -0.0014535517101665664, -6.420651932838009e-07]
+motorCommands::  [ 1.4832953   1.9538977  -1.9913162   1.4896845   2.6199293  -1.1154281
+ -0.4368763   0.7087611   0.42735413  0.55515635  0.13695112  1.5517998
+  1.1774067   0.6429428  -0.08316124  0.80426246  1.5211395   1.2444851
+ -0.09589972 -0.6583912   0.5994933  -0.04020395  0.04084618]
+
+
+
+
+
+
+action_repeate:: 4086
+joint_obs::  [1.4832952669703823, 1.9538982102963354, -1.9911930239542899, 1.4896844577385242, 2.6199292209708265, -1.1154270668536261, -0.43687703068131706, -0.02363211460082173, 0.05914316949179914, 1.8250078521660007e-06, 0.26577025914761176, -0.0018571158207054512, -3.842021645279136e-11, 0.21604310820046574, 0.026494388354384793, -1.4202239100728204e-05, 0.0001949610431301023, 0.08574350510896653, 0.001964787345092367, 0.03323637676106353, 0.005050288494983007, -0.0009662602136944009, 0.002576480412978628]
+motorCommands::  [ 0.58065856  1.6802574   0.8664827   0.9846411   1.6657485   1.0609789
+  2.7556376   0.84953064  0.740039    0.88059354  0.16373666  0.7259454
+  0.7959737   1.114547   -0.3437824   0.5582225   0.8562242   0.67598903
+  0.03221007 -0.5572259   1.0081546  -0.57751936  1.162042  ]
+
+
+
+
+
+
+action_repeate:: 3757
+joint_obs::  [0.5806566700669014, 1.6802641189607819, 0.8662338108837065, 0.9846413314264253, 1.6657403418413976, 1.060957617335717, 2.4198853644775835, -0.04578483335992737, 0.091316127021072, 0.012702463717643256, 0.4526180183381025, -0.0035653604647031224, 0.006561894862024852, 0.3073770189528899, 0.05091985314884942, 1.6148734539661838e-05, 0.0019582592386447567, 0.12914339764712335, 0.04489328271226593, 0.03833781719273612, 0.007355627182607774, -0.0013313101478050246, 0.0022804433759497744]
+motorCommands::  [-1.8729085   1.8454242   0.8099594  -0.6612582   0.90607667 -1.5688936
+  1.4797672   0.5197282   0.3836731   1.3838499  -0.07041522  0.2509878
+  1.1687207   0.3562551   0.09083666  0.6806021   0.8890481   0.87738365
+ -0.00235878 -0.4449546   0.2877176  -0.3106032   1.0709344 ]
+
+
+
+
+
+
+action_repeate:: 4403
+joint_obs::  [-0.46080384700353877, 1.7227286948497316, 0.8099553959556144, -0.6612583869394139, 0.9060733716203965, -1.5161205981320314, 1.4797627545994219, -0.048242994472407784, 0.1800636124574072, 0.05224966123615268, 0.854114983543368, -0.20945500280885712, 0.4830731473165666, 0.574534676919459, 0.634369170464853, 0.030396628464144114, 0.07132790623286517, 0.709804536246663, 0.0003997355856887323, 0.02043020411550044, 0.00043723088021471545, -0.004050345072336211, 2.7128871894963214e-07]
+motorCommands::  [-1.6756705  -1.3566476  -1.3584634  -1.577434    2.7654464  -0.39093181
+ -0.19632098  0.15655528  1.0324712   0.403784    0.31608337  0.1855441
+  1.0713946   0.76627654  0.33748922  1.1596652   0.316713    0.0840219
+  0.1912514   0.31723115  1.0575497   0.62200546  0.37497458]
+
+
+
+
+
+
+action_repeate:: 5328
+joint_obs::  [-1.6756697669900882, -1.3315464735045632, -1.3584624051932659, -1.5774339347438027, 2.7654443984667303, -0.3909389615643103, -0.19631273689154913, -0.6894701734762964, 1.3852700670131777, 0.35264621698924475, 1.1128280271308078, -0.23094709870605734, 0.36129768335341433, 0.8864376490561252, 0.572360226720646, -0.013131805223913754, 0.000392323691245825, 0.7882078780792703, 0.014390544216936585, 0.6172702147883797, 1.9733392649586714, -0.009197029331104506, 0.5095336259448489]
+motorCommands::  [ 1.9769305  -1.3292698   0.49344778  1.3486778  -0.9640191   0.17804737
+  3.0105157   1.3428888   0.46587446  0.49065375  0.2705153   0.64546984
+  1.4566302   0.38695842  0.07886398  0.01794359  0.19481045  0.7400534
+ -0.34241062 -0.7741688   0.7552608   0.4252933   0.19813742]
+
+
+
+
+
+
+action_repeate:: 6394
+joint_obs::  [1.9769636577901855, -1.1818723836594023, 0.49343030114844705, 1.3486707314997872, -0.9471907884395603, 0.17823716303233766, 3.010399461726248, -0.5091321821499142, 1.5384229047417717, 0.9026252623405615, 1.4452481868522027, -0.3415403447800322, 0.24497457088527239, 2.623158820508342, -0.00014166878036979397, -0.87594325153203, -1.2617454742146548e-05, 0.0006571294327965079, 3.005066207880814, -0.18223887389590684, 1.9220696606572236, -0.03806068071959621, 0.490558193261384]
+motorCommands::  [-2.4988594   1.6686643  -1.2285624   0.898373   -2.645194   -1.470924
+  1.3231652   0.26176915  0.07686492  0.90890384  0.3429094   0.14174664
+  0.09342099  0.28517988  0.02449313  0.91804063  1.0356953   0.5360811
+  0.12544017  0.57459235  0.2211192  -0.07904473  0.8365225 ]
+
+
+
+
+
+
+action_repeate:: 5787
+joint_obs::  [-2.492102024060398, 1.6686664360523653, -1.2285616787055742, 0.8983730168920124, -2.645194338951196, -1.4709257546262025, 1.3231627653933444, -0.4918224470068702, 1.5100959389157007, 0.9081403552078993, 1.3710297319635478, -0.34371186693487826, 0.2455822875984665, 2.6223412545924867, 0.012000473121864844, -0.8755374505749783, -3.986053889891588e-10, -3.3567662352076844e-05, 3.004350398857447, -0.5230464311825016, 1.6288182762911894, -0.17672960656368944, 0.42502311251734987]
+motorCommands::  [-1.1869754  -1.251058    2.044622    1.2899191   1.4052013  -1.9323972
+  0.47705644  1.5065459   1.3785655   1.2828579  -0.07822401  0.79967356
+  0.34254768  0.9533571  -0.3041813   1.557016    0.40546614  1.0656177
+  0.15099864 -0.99933326  0.06519954  0.44784853  1.3095149 ]
+
+
+
+
+
+
+action_repeate:: 2949
+joint_obs::  [-1.1869753816252822, -1.2510581061813664, 2.0446219352213237, 1.2899191820120384, 1.404636047569187, -1.932396637971385, 0.47705758227753686, -0.4907692212730636, 1.503212362410101, 0.9120826137727651, 1.354025519295816, -0.34448054697983477, 0.2452264691049658, 2.622115957814297, 0.0135841544484006, -0.8755358056254281, 8.198632744175727e-05, 0.0002688660135666306, 3.0044856224694017, -0.587604915451666, 1.516174236282577, -0.16092660901173136, 0.40993170611923857]
+motorCommands::  [-0.1971913  -0.08980887  1.2419196  -0.4184841   1.6904885   0.13170056
+ -0.5491859   1.1320757   1.4114612   0.22629236 -0.30551568  0.45033395
+  0.7716389   0.9465422  -0.19793819  1.1275423   1.3361375   0.4260884
+ -0.0884966  -0.83846325  1.2156116   0.1171765   0.65881056]
+
+
+
+
+
+
+action_repeate:: 4905
+joint_obs::  [-0.19716168552437552, -0.08981218413488773, 1.24191623052326, -0.4184840646429011, 1.6904922405791913, 0.13116209842433071, -0.5491930656430759, -0.49025191036358823, 1.5041988000265054, 0.916902297480226, 1.3605006521858627, -0.3445018691804625, 0.24557375893691788, 2.621980540197303, 0.01748943483611922, -0.8755354262584173, 0.00011111250659694122, 0.00012458703034833493, 3.004581038413674, -0.7994126863178314, 1.487161766213837, -0.20334538177514933, 0.40221211164378684]
+motorCommands::  [-1.3641995  -1.8707831  -2.1888456  -0.47452086 -0.5686082   1.9877889
+ -2.1070378   0.32111913  0.3464415   1.2358706   0.2061913   0.66382986
+  0.79270095  0.7043945  -0.10189576  0.8203403   0.950776    1.5176164
+  0.29725397 -0.4515238   0.64922935  0.58974874  0.81219953]
+
+
+
+
+
+
+action_repeate:: 5485
+joint_obs::  [-1.364199280873681, -1.8707833960892764, -2.1887161640610975, -0.47452086576976604, -0.56860782653266, 1.9877900068940417, -2.1070390239273595, -0.48691925245272016, 1.5047492223118835, 0.9468447373390351, 1.3750547804565876, -0.3441768908952096, 0.24566221126638274, 2.6218085887225464, 0.018248359292512263, -0.8755354262584173, 0.0011038313597997878, 0.022851434851628435, 2.9997009898465365, -0.9333580908285461, 1.4549833842144442, -0.2010524705812487, 0.3983465725833381]
+motorCommands::  [-1.5084040e+00  2.5299415e-01  3.5594460e-01 -1.1389641e+00
+  1.4690268e+00 -1.8513174e+00  7.9817295e-01  8.1621438e-01
+  7.5549120e-01  1.1796829e+00 -1.8906510e-02  9.5024310e-02
+  7.3927057e-01  1.2642446e+00  6.0375340e-02  9.3829894e-01
+  8.9659977e-01  1.5152997e+00  1.4499032e-01 -3.0104107e-01
+  9.0424092e-03  2.9006246e-02  1.3457705e-03]
+
+
+
+
+
+
+action_repeate:: 5753
+joint_obs::  [-1.5084177970715882, 0.2529947061231962, 0.35594446417288145, -1.1389640801955168, 1.4690266050107428, -1.8505126901507973, 0.7981733653069504, -0.4805997350167613, 1.5043270537110256, 0.9296369001458975, 1.370190543058592, -0.34468756397773487, 0.24432896052351372, 2.617682686576529, 0.020375826423015872, -0.8754732734682654, 0.0003266709605729171, 0.05359780900246262, 2.9760770800720784, -0.8653349430191528, 1.4546138025645965, -0.15436104904617412, 0.40236098499183437]
+motorCommands::  [ 2.518385   -0.847643    2.7994623   0.9669305  -1.7973366   1.6651356
+ -1.22178     1.2556401   0.70071566  0.27928448  0.07222095  0.58437425
+  1.4398643   0.60140073  0.23671298  0.60210025  0.33450472  1.3916323
+  0.33268788  0.22206588  0.05315641 -0.1481908   1.220374  ]
+
+
+
+
+
+
+action_repeate:: 7137
+joint_obs::  [2.5170826416450427, -0.8476430816111307, 2.799462341671311, 0.9669305134825655, -1.7973364247292662, 1.665135493546239, -1.221780283530662, -0.47846814993103914, 1.4937787973076335, 0.9340852299533817, 1.3522784320613899, -0.3448977473211493, 0.24503410186462452, 2.617405460053809, 0.031813758041439384, -0.8754723264892068, 3.274651215208082e-05, 0.01620087014516881, 2.979610318697649, -1.0471977204345406, 1.4004881756602967, -0.2526575728511447, 0.3948091003477684]
+motorCommands::  [-2.4783547  -1.0416491   1.4065847  -1.4393469   0.2654747   1.832529
+ -2.5181553   0.18308887  0.8915468   0.3958053  -0.32647237  0.8923266
+  0.7488487   0.57575583 -0.22743802  0.14254616  0.35940343  0.8944474
+ -0.10919489  0.98803383  1.073378    0.06968087  0.8029234 ]
+
+
+
+
+
+
+action_repeate:: 4855
+joint_obs::  [-2.4779632376871086, -1.0416490972968178, 1.4065847601677237, -1.4393469118939197, 0.2654746421996038, 1.832529191774715, -2.518156062886574, -0.4737993093396944, 1.4912199487554816, 0.931029531113973, 1.3439160077629402, -0.3448775441998138, 0.2441523023617273, 2.6139364559411864, 0.026889684754374754, -0.8749453888516427, -1.371422360475432e-21, 0.011534316136098828, 2.978318002501074, -0.8941435065131169, 1.3934844590587758, -0.2166974753026108, 0.40506933262192724]
+motorCommands::  [-1.1444095   1.3754907   0.96147346  1.6798397  -2.641944   -1.5656621
+ -1.9874388   1.3168814   1.4217528   0.05756935  0.2803697   1.5521512
+  1.1493502   0.07267041  0.03767341  1.2863821   0.43595582  0.15435015
+  0.1093678   0.92673916  1.0729654   0.16941486  0.7597925 ]
+
+
+
+
+
+
+action_repeate:: 7787
+joint_obs::  [-1.1444095414304365, 1.3754906933359532, 0.961473465453031, 1.6798397223932453, -2.6419439419774498, -1.5576470149525368, -1.987438370802751, -0.46300040339119053, 1.4916446412438187, 0.8970011491286771, 1.3320093968088866, -0.34514937930788475, 0.24393503947941067, 2.613759930709003, 0.06233514524932297, -0.8749326328358334, -1.1096245918561522e-13, -3.3035790630521497e-06, 2.9857200445457863, -1.0472659553414025, 1.3163836371279867, -0.28179945883266105, 0.3988182514327556]
+motorCommands::  [-2.0907693  -1.02879     2.6370184   1.9135457   2.809124   -1.5064613
+ -0.03088774  0.59060496  1.4429355   1.0846757  -0.03250958  1.4385473
+  0.61851126  0.69654125  0.260422    0.19148542  0.3756202   0.3322194
+ -0.33663797 -0.8729575   0.8972533  -0.47912067  1.5675291 ]
+
+
+
+
+
+
+action_repeate:: 6507
+joint_obs::  [-2.090769285471257, -1.0287899930212014, 2.6370184092476574, 1.913545726498956, 2.808276064226865, -1.5064613692304678, -0.03088770810590577, -0.46144463771259986, 1.494201034471479, 0.8958321558731568, 1.3371848147246348, -0.345513794995319, 0.2430405787442928, 2.612865723210726, 0.07024212684992513, -0.8743819826949949, 3.3237158687422386e-07, 3.58766675118577e-06, 2.9852994590388144, -1.047044143468749, 1.218629210000776, -0.23002601795397365, 0.40322463251207463]
+motorCommands::  [ 1.2805555   1.7904263  -0.9971388   2.0349343  -1.74655    -1.9818429
+ -0.77714276  0.07905626  1.0538392   1.3989604   0.14291982  1.2759516
+  0.48325676  0.9784742   0.12926365  1.1965743   0.22229117  1.3015234
+ -0.07991239 -0.33017102  0.96633387 -0.20356055  1.4783407 ]
+
+
+
+
+
+
+action_repeate:: 4453
+joint_obs::  [1.280555486632357, 1.7904262540731999, -0.9971387986254078, 2.0349342845640375, -1.745906959235869, -1.9818428604750147, -0.7771428821774863, -0.46143876355028335, 1.4945963682501946, 0.8925625223133699, 1.3354731735612515, -0.3461925825548589, 0.2433626292038332, 2.612304978545702, 0.070123370173224, -0.8743603167528472, 1.2782213857903459e-08, 0.003572361411943898, 2.9828570225138806, -0.9427880513157694, 1.2216746425721032, -0.2632528727703442, 0.408409768841427]
+motorCommands::  [-0.79480493  0.34526992  1.0847106  -0.19170639 -2.9420598   1.1346936
+ -0.3703304   0.32168666  1.5152992   1.5272567  -0.24141687  0.68505704
+  0.44303975  0.42753774 -0.15864214  0.24207461  1.4494694   1.4766622
+ -0.07541458  0.8177992   0.61067295 -0.22490126  1.0061146 ]
+
+
+
+
+
+
+action_repeate:: 4397
+joint_obs::  [-0.7948038933654562, 0.34527034729785117, 1.0847113877648158, -0.19170639627433983, -2.942059846244085, 1.1269570450792583, -0.37033040708113274, -0.46134747775648455, 1.485445762734189, 0.9025603972663442, 1.3191949550748596, -0.34568518655634456, 0.2430800704654148, 2.611440841235376, 0.07522585261280954, -0.8743347755038434, -3.8280664952163857e-10, -2.750774687306216e-05, 2.984548998762378, -1.0472894517398135, 1.1985674837846458, -0.2721754286680959, 0.4103824763432467]
+motorCommands::  [-1.7960699  -1.8764056  -1.4589388   1.9541223   0.13564265  0.40449718
+ -0.6608815   0.23542304  1.4359118   0.6230395   0.15330882  0.00461588
+  1.219259    0.7165765   0.26790386  0.3835739   0.13823558  1.5209734
+ -0.06282306 -0.66037583  0.3759213  -0.35004115  0.1070241 ]
+
+
+
+
+
+
+action_repeate:: 5096
+joint_obs::  [-1.7960698633939152, -1.8764055840349054, -1.4589387988181146, 1.9541223411858053, 0.13518366307629553, 0.4044977637589144, -0.6608826579245811, -0.5138204372723438, 1.5017162372597606, 1.0181894261600948, 1.5447821795107817, -0.349066779859393, 0.24292195185757587, 2.6035923489269406, 0.06919490569134609, -0.8749578217478885, 0.0041031491335623855, 0.09501158739829596, 2.943057546227304, -1.4158853427752884, 0.7189319037543896, -0.10261779339022736, 0.3337570333536233]
+motorCommands::  [-2.1260586   0.01732767  2.1055267   2.0298533  -0.47725546 -1.5206805
+ -0.5456984   0.7851764   1.1589493   1.281718    0.2715746   1.5673933
+  0.60768986  1.5570133  -0.00713584  1.4670297   0.4619337   1.0821234
+ -0.1308594  -0.2343358   1.0153346  -0.5151024   0.60936826]
+
+
+
+
+
+
+action_repeate:: 5766
+joint_obs::  [-2.1260554539345873, 0.01732775783992116, 1.9484597081646626, 2.029853330927302, -0.477255753971677, -1.520680582477387, -0.5456991319595857, 0.06077515186705584, 1.3950594267636258, 1.5603276717958352, 1.3582764361191126, -0.34844084322320046, 0.08228859656739682, 2.724819796234951, 0.07569418293589329, -0.9642011687239916, 5.228978223009436e-09, -0.07523973410628733, 3.022424119090016, -0.30050124971364284, 0.9885640553794638, -0.0676936177261297, 0.32839785040530756]
+motorCommands::  [ 1.5850116   1.751343    1.959225   -2.006064    1.916509   -1.6299491
+  0.6450853   1.1442299   0.1477769   1.1324767  -0.23138006  0.6308348
+  0.1283367   1.2923496   0.25095084  0.5839554   1.344153    0.44912657
+ -0.24818929  0.43177032  0.28694764 -0.49055547  1.5049736 ]
+
+
+
+
+
+
+action_repeate:: 5693
+joint_obs::  [1.5850116016694005, 1.75134301237618, 1.959225058811285, -2.00593612811093, 1.9165090117582286, -1.6299491232727277, 0.6450851457620366, -0.15382410654590234, 2.341558110879518, 1.4118699012236169, 2.7040335453471864, -0.1390172096650112, -1.5068816561300422, 2.970996715527157, 1.5707373806756761, -0.732908567179109, -1.2780235372829318, -0.355948728321529, 3.0612765939006534, -0.5936504119898809, 0.9898771553304401, -0.1693285690548127, 0.9564255271787481]
+motorCommands::  [-2.399941   -1.4940386  -0.573133   -1.3112437  -1.4443504  -0.05954202
+ -0.7336775   1.2168018   0.45299706  0.03701575 -0.209432    1.0513014
+  0.44534892  0.18071935  0.3278578   0.9309538   0.16049366  0.60238296
+ -0.0578852   0.42661238  1.0102543   0.3023018   1.0794554 ]
+
+
+
+
+
+
+action_repeate:: 5031
+joint_obs::  [-2.3992839590235784, -1.4940372801095012, -0.573133015881342, -1.311243590803198, -1.4443502751662773, -0.059553443645596914, -0.7336692526292307, -0.14033821564231566, 2.336733396349583, 1.384444904721059, 2.7040412197177, -0.14057988685210862, -1.5067630605785824, 2.9688941328357425, 1.5708000667186979, -0.7329017089122392, -1.277562821428236, -0.3568387691481383, 3.057366522803818, -0.32714002084483845, 1.0088186372475538, -0.16915580332387667, 0.9537567477376974]
+motorCommands::  [-0.05751679  2.0252395  -1.6112039  -0.4377101  -1.8529528   0.00835212
+  1.5712987   0.80776185  1.3785229   1.4270064   0.33159277  1.0547637
+  0.4088385   1.2606503  -0.01487277  1.0227096   0.44059172  0.6889567
+ -0.23301974 -0.81357825  1.2029477   0.5822723   1.0630952 ]
+
+
+
+
+
+
+action_repeate:: 4088
+joint_obs::  [-0.057518072408328194, 1.9842608368112216, -1.6112059073845455, -0.43771048895938436, -1.8529572492418955, 0.008351996855257232, 1.5713012287563686, -0.12323675218802221, 2.3354000165932196, 1.3632887823281323, 2.703540270198114, -0.1430970611846656, -1.5050563643124095, 2.968291827440411, 1.570800696261489, -0.7329180965169565, -1.2774974487376194, -0.3543762416829347, 3.0536419645043424, -0.43713008044580154, 0.8638855592168804, -0.16898938691301182, 0.9817366175307984]
+motorCommands::  [-2.91854    -0.26096308 -1.9181398  -1.5042279  -2.414921   -1.1788646
+  1.1398618   0.4716344   1.2022665   1.087952   -0.28738225  0.5528781
+  0.6836496   1.1517714  -0.07788589  1.3343978   1.5011377   1.3067744
+ -0.29924977 -0.39816868  0.8658209  -0.00454457  1.5120308 ]
+
+
+
+
+
+
+action_repeate:: 3049
+joint_obs::  [-2.9157241794217312, -0.26096505546745347, -1.9181398011447552, -1.5042275147898292, -2.4149178987645445, -1.1788574402357086, 1.1398544387139484, -0.11991714371902384, 2.329229119180126, 1.361577049616446, 2.687358485614121, -0.14347366421660412, -1.5040546379462647, 2.965891558120105, 1.5705698549560783, -0.7328951053315005, -1.276327670414482, -0.33492950035134644, 3.0329670496881436, -0.8139526717132156, 0.7446570400181539, -0.20525593013149904, 1.008182378709748]
+motorCommands::  [-2.383019    0.85585475  0.21430366  0.23532513 -1.2659397  -0.02262519
+  2.5163398   0.46562633  1.2382256   0.321316   -0.31567818  1.0408189
+  0.35415116  0.42806724 -0.17991552  0.00342861  0.14745745  1.1070315
+  0.18341063  0.34784502  1.0183554   0.4019993   0.70621157]
+
+
+
+
+
+
+action_repeate:: 3693
+joint_obs::  [-2.3830189206190266, 0.8558562176575881, 0.21068565246085547, 0.23532352916816476, -1.2659394772817323, -0.022622166581072082, 2.516338391011875, -0.12970367987847328, 2.314926627651786, 1.338711290984586, 2.687058286234647, -0.14597445966710204, -1.5040250276786284, 2.9665787952975733, 1.568887839536008, -0.7328364203839541, -1.2762889230438625, -0.33999403507803366, 3.033709291534842, -0.5266479934442176, 0.778124105656513, -0.2053204418218385, 0.9778881659214242]
+motorCommands::  [ 0.20208818 -1.4739949   1.1428326   0.21769646 -0.7687138   1.015958
+  0.4980635   1.2188714   0.91264415  1.2297558   0.14148599  0.30634397
+  0.23127306  0.91317755  0.30586338  0.4767639   0.06297298  1.5447873
+ -0.20945229  0.54139125  0.157252    0.20303883  1.5130963 ]
+
+
+
+
+
+
+action_repeate:: 2904
+joint_obs::  [0.2024457350326045, -1.4742148831415554, 1.1428325663037742, 0.21769587957328146, -0.7687187784159838, 1.0159599061484081, 0.49808442788078816, -0.13642813331578066, 2.280447519655427, 1.3771905202971404, 2.6755738791400137, -0.14546157515179667, -1.5040263016923607, 2.968783759002771, 1.5687959412426193, -0.7328286675429868, -1.276120255724948, -0.3419049057121755, 3.0310535420257025, -1.0158674257515596, 0.6719826883402629, -0.20522586003910248, 0.9998427918949211]
+motorCommands::  [-1.8301287   0.1682269   2.7877696  -1.5647544  -0.95285136  0.6975649
+  2.624175    0.3245773   0.7876513   0.10317937  0.31233492  0.45104644
+  0.45657977  0.098356    0.06173382  0.8821332   0.10152392  0.4125239
+ -0.2912288   0.40646642  0.6384761  -0.09855501  1.0193697 ]
+
+
+
+
+
+
+action_repeate:: 4766
+joint_obs::  [-1.828040412287652, 0.16822779357034148, 2.7877694483747604, -1.5647543149410628, -0.9528486351478571, 0.697561066959894, 2.526106572037154, -0.13391059532317462, 2.2701938565322544, 1.3952533706709722, 2.6686199741058196, -0.1476544404083226, -1.5040238717557937, 2.9695949506054946, 1.5656991092970198, -0.7328281758073425, -1.276112038940046, -0.34653461244210276, 3.0250482439060304, -0.6005589062322106, 0.7459025370953758, -0.24826513962446456, 0.9527170414417605]
+motorCommands::  [ 0.47901714  1.205717    2.6954317  -0.05289805  2.3833103   1.3765157
+ -1.1665003   0.02078759  0.8717205   0.67827827  0.19131355  1.4359589
+  0.17389144  0.90926236  0.00590292  1.3449037   0.37399343  0.22356324
+  0.07582171 -0.41646847  0.8360817  -0.4141557   0.72149694]
+
+
+
+
+
+
+action_repeate:: 1296
+joint_obs::  [0.4790105260286435, 1.2057377122187485, 2.695471925456608, -0.052898068980343035, 2.3833291650672743, 1.3765361742755275, -0.8316693706448377, -0.14449926102033883, 2.2556680996209066, 1.443324927288687, 2.6560848980117178, -0.15259901023045314, -1.496983261782432, 2.9647297636964884, 1.568622147978386, -0.7328274177088363, -1.270831113501823, -0.3332147530124494, 3.0153846485492024, -1.0472850626134576, 0.54136963399134, -0.40700189089839917, 1.0264547346475743]
+motorCommands::  [-0.0228324   0.41502738  2.0010526   0.8539847   2.2787545   0.59490913
+ -2.4900584   1.3650773   0.78579354  1.0237471   0.32182905  1.4036975
+  0.4208919   1.4140662   0.29055774  1.1591058   0.3831845   0.7493956
+ -0.07551771  0.91509336  0.51776475 -0.34311733  0.17056626]
+
+
+
+
+
+
+action_repeate:: 7260
+joint_obs::  [-0.02287322819217091, 0.4150238037578875, 2.001066129606347, 0.8533708343716402, 2.2787881173711337, 0.5949793903587574, -1.7468104945356955, -0.14143934708328743, 2.2464221586362783, 1.4382076903271779, 2.654561604355282, -0.1525439511067416, -1.494317206505592, 2.9613524756398784, 1.5651706117047826, -0.7328271718971672, -1.2654787117141368, -0.2941725437868674, 2.9977013348496855, -1.0472005472351174, 0.5249498847526205, -0.4710473319960258, 1.0302593796899704]
+motorCommands::  [ 0.93732345 -1.1330819   1.848056   -0.57144827 -2.8031275  -0.23960108
+ -0.24226077  1.3901589   1.302068    0.3351342  -0.0836196   1.3038011
+  1.2914412   1.4000342   0.03055052  1.4970844   0.6394714   1.4677273
+  0.3217491  -0.5873298   0.5567667  -0.15730684  1.1287991 ]
+
+
+
+
+
+
+action_repeate:: 5330
+joint_obs::  [0.9373114916866716, -1.1330848544998764, 1.8480659861531477, -0.5714494587843123, -2.8023446282045184, -0.2396699347644859, -0.2422068579976346, -0.16326522837072088, 2.242452014884395, 1.456245171915271, 2.602508593700913, -0.15083347412483591, -1.4943020753508613, 2.9546842686815045, 1.563866970847489, -0.7327740385541546, -1.2551634565722796, -0.21794348584026937, 2.9592930981264263, -0.9382787181014163, 0.5162613139577302, -0.5765055058519033, 0.9996085716202705]
+motorCommands::  [-2.79362416e+00  7.68224061e-01 -1.11552453e+00  1.04776490e+00
+ -1.50358582e+00  1.59735751e+00  1.13894355e+00  4.52039510e-01
+  2.95151979e-01  1.26601565e+00  2.92478621e-01  1.52927788e-03
+  4.24484998e-01  5.09517968e-01 -3.56731378e-02  1.74715757e-01
+  4.50106770e-01  1.41502237e+00  1.95035785e-01 -1.03390686e-01
+  2.00777292e-01 -8.97759805e-04  9.34931755e-01]
+
+
+
+
+
+
+action_repeate:: 7449
+joint_obs::  [-2.7928074515648214, 0.7682250532207097, -1.1155240166269251, 1.0477648968353879, -1.503584758129336, 1.597355330920662, 1.1389427677148818, -0.16374956382964673, 2.2352880315349717, 1.4631450077406407, 2.529310047587986, -0.15163922838815488, -1.494301011307487, 2.9549071866013663, 1.5632525544991152, -0.7327784263343696, -1.2551569288066005, -0.21514811265529507, 2.9502785851689515, -1.0225529256192298, 0.4849424931541777, -0.5744893014579252, 0.9801932445537426]
+motorCommands::  [ 2.4215896   1.9557072   1.3516243  -1.739143   -2.2800658  -0.56058085
+  0.41026983  0.571352    0.13787076  0.71805173 -0.21245576  0.33358526
+  1.5040781   0.3277134   0.1840334   0.5226712   1.0276661   0.9107706
+  0.06835853 -0.7405347   0.6413184  -0.2280094   0.11321108]
+
+
+
+
+
+
+action_repeate:: 5881
+joint_obs::  [2.419979718170565, 1.9557074303639634, 1.3516242337565123, -1.7391430217041137, -2.2800632357790596, -0.5605770225668506, 0.4102669407155086, -0.09003695104023603, 2.2319275496731485, 1.5096488780156794, 2.4795168991396555, 1.6850518858687051, -1.6949840879067484, 3.1899381640015565, 1.3727887180096872, -0.05968527220756174, -2.1232287958412557, -2.116027892617509, 3.7555117449760544, -0.9806246636157774, 0.46153530754532973, -0.6538898165447377, 0.9798077377471496]
+motorCommands::  [ 2.3496962   0.03272599 -0.7642201  -0.9588054   1.8364059  -0.46221948
+ -2.8440614   1.455093    0.31474733  0.89053935 -0.18126355  0.0120868
+  1.4413897   0.7668915  -0.2884898   0.8836113   1.2301568   1.1315678
+  0.2616345  -0.6300564   1.1319381   0.5324287   0.16804902]
+
+
+
+
+
+
+action_repeate:: 6857
+joint_obs::  [2.3497362837932076, 0.03272764678230166, -0.7642192575789206, -0.9588053934150664, 1.836113026442842, -0.46221189001399293, -2.8440639764735316, -0.07582784281450149, 2.231769600382481, 1.50551281931329, 2.463767137752, 1.685049951818868, -1.6936227738033118, 3.183198400678699, 1.3761147832367104, -0.05983129657570914, -2.1231934015277334, -2.1159905070724814, 3.755365936014019, -1.04720007098814, 0.4078811234528388, -0.6781979984179248, 1.007200321308417]
+motorCommands::  [-1.3990064   1.6226786  -2.9478636   1.226372   -2.963877    0.02570911
+ -0.6612541   0.5886022   1.3886521   1.3996321   0.20691045  0.7002315
+  1.4733794   1.0493152  -0.33294588  1.3925651   1.4022135   0.5126154
+ -0.21377984  0.02230051  0.4443529  -0.61216563  0.9732627 ]
+
+
+
+
+
+
+action_repeate:: 7461
+joint_obs::  [0.25745674804599117, 1.6226795136748597, -2.947865088784937, 1.2263715630950724, -2.963714611278484, 0.025723255755753006, -0.6612763736980766, -0.06857403343742913, 2.231010548519545, 1.5246298931781403, 2.420070447090088, 1.685564391040062, -1.6914133457471852, 3.184470764293486, 1.369040658216035, -0.059957745007884956, -2.123740305254889, -2.115824786150731, 3.7568808350187863, -0.8385379078490827, 0.4678666993991782, -0.681277713918383, 0.9459426271453442]
+motorCommands::  [ 0.2849517   0.85788643 -1.7232863   0.02967076  2.2586262   1.886574
+ -0.15988591  0.7693186   0.10222595  0.18752061  0.20441946  0.891838
+  0.7000981   1.3454516  -0.01368873  1.5325406   1.1669656   0.7171502
+  0.24953826  0.641417    0.52696407  0.41624796  1.5702684 ]
+
+
+
+
+
+
+action_repeate:: 4301
+joint_obs::  [0.28495553966432274, 0.8578869815232866, -1.7232783869177122, 0.02967074231728885, 2.258050764967384, 1.8865764777611076, -0.15988929394569695, -0.05852801491813931, 2.2295707472912247, 1.5240350861034448, 2.3999469824843827, 1.685556262802011, -1.6914086457245205, 3.173168000107837, 1.3712211848070741, -0.059954320285574854, -2.123509597156188, -2.112879352187238, 3.7564574487750737, -0.9516793407185901, 0.4340607557989902, -0.6812950364991448, 0.9785812843024986]
+motorCommands::  [ 2.9312763   1.998071    1.2381366   0.2872593  -0.4816879  -1.124098
+  0.30373722  0.20867732  1.161781    1.1259955   0.23059411  1.2371353
+  0.46814406  1.1746149  -0.30855426  0.39117378  1.4920433   0.3581133
+  0.24720402 -0.2945513   0.58485466  0.36262754  1.0144172 ]
+
+
+
+
+
+
+action_repeate:: 3720
+joint_obs::  [2.9312806933613342, 1.9980727579260888, 1.2381466818656315, 0.2872593077845053, -0.48169006439304274, -1.0800855912381824, 0.3037452198217234, -0.004131927061097661, 2.2087076599380144, 1.5622345756302003, 2.367646225154611, 1.6850549000702297, -1.68389267767757, 3.129282016319589, 1.3545738236810587, -0.05996132087959507, -2.123508302682262, -2.1092077341778794, 3.7574170759412766, -0.5156078570473992, 0.567840019046659, -0.6810272201032725, 0.8647554203898329]
+motorCommands::  [ 0.3274458   0.9891512   0.14277741  2.0065484   0.9662555  -1.0053543
+  0.33428022  0.03615363  0.0062153   0.7704702   0.03626624  0.98601395
+  1.3765476   0.18848857 -0.01720496  0.57561094  1.3881575   1.0957199
+ -0.2660729   0.8008867   0.56920904 -0.6313759   0.92483205]
+
+
+
+
+
+
+action_repeate:: 4125
+joint_obs::  [0.33130231211356026, 0.9891511680147795, 0.14277741771420127, 2.0065484140309255, 0.966255457630681, -1.0053543143145618, 0.33428070952901334, 0.0019801725430013827, 2.2084935482734322, 1.5634459716254594, 2.3613558022053076, 1.6848748125920048, -1.6832482397168052, 3.1284421292394846, 1.3538558915636953, -0.05996326725962582, -2.1235079705248423, -2.107637859221565, 3.7570676877428766, -0.6334814587809107, 0.5382898219498027, -0.6809460576069514, 0.886270896552832]
+motorCommands::  [-2.5039258  -1.4681793  -1.0601752  -0.88047844 -1.534509   -1.8487116
+  2.5226824   1.2719412   0.8786151   0.686668    0.11223231  0.54521346
+  1.432943    0.822725    0.31066805  1.0634692   1.3072386   0.02084184
+  0.18396005 -0.4631705   0.0191089   0.1567502   0.07686416]
+
+
+
+
+
+
+action_repeate:: 5615
+joint_obs::  [-2.5039256544849615, -1.4681798475759156, -1.0601749959857356, -0.8799222566713938, -1.5345087846234087, -1.8487107792429966, 2.5226826529380824, 0.008035401639915353, 2.2067291215563283, 1.570799822184633, 2.3548384464259806, 1.6848941103836632, -1.6832472901292321, 3.1313017395511307, 1.3588980474836887, -0.05996541094640592, -2.123496810038929, -2.107663841332001, 3.7567240041171206, -0.8204687480343459, 0.48323104603463957, -0.6810707747371814, 0.9331719770896094]
+motorCommands::  [-0.94700956 -0.6014312   2.86768     0.65338326 -0.6795755   1.0562537
+  1.3165165   1.3032728   0.8423311   1.1227486   0.14702801  0.61476856
+  1.4888601   1.2371215   0.21364057  0.04234532  1.4752815   0.35111338
+ -0.3268368   0.6693125   0.83800197  0.28470218  0.17635915]
+
+
+
+
+
+
+action_repeate:: 2481
+joint_obs::  [-0.9470097394574091, -0.6014321338323335, 2.8676765970357248, 0.6533832509447715, -0.6795738718616628, 1.0562540080319767, 1.3165143176030267, 0.0024088246356902994, 2.1972687734695, 1.5320242751325153, 2.3533760702411017, 1.6849196936286277, -1.6832357494930226, 3.1375434823950963, 1.368291594434975, -0.06004807108652603, -2.123258585393826, -2.107620330731311, 3.754567136939215, -1.045073838255254, 0.3816216825534742, -0.6932622491672531, 1.0052599737565824]
+motorCommands::  [-2.6831746   0.472825    1.2636671   0.12817243 -0.603605   -0.2849858
+  1.4103706   0.70661545  0.16507882  0.01506215 -0.00465529  0.07906108
+  0.6140551   0.5162408   0.31967476  1.0420766   0.21895367  0.3692674
+ -0.23041129  0.1493781   0.06497831 -0.34914473  0.00838782]
+
+
+
+
+
+
+action_repeate:: 2209
+joint_obs::  [-2.6829994279553344, 0.4728214447525711, 1.263689491957853, 0.12817241166742052, -0.6036055933140291, -0.28501682343757373, 1.4103761665783634, 0.004682906756647617, 2.1952620786054173, 1.5289066320936022, 2.353229663378195, 1.6848818979496116, -1.6832337927066738, 3.1371520593030446, 1.3677204618974563, -0.06004683131890655, -2.123242168668902, -2.107073744119083, 3.754470281322685, -1.0395973438154524, 0.3847138051622488, -0.6932799158334778, 1.0029541967168265]
+motorCommands::  [-2.4489934e+00 -2.4172059e-01  1.0385151e+00 -1.4181184e+00
+ -1.0156324e+00  1.0328498e+00 -1.4811238e+00  1.6035242e-01
+  1.3840421e+00  9.6408212e-01  3.1639349e-02  8.5428292e-01
+  6.0850668e-01  1.1092545e+00  1.0596285e-02  6.9511688e-01
+  8.6559989e-02  1.0818062e+00  6.2327186e-04 -5.8007252e-01
+  4.1615590e-02 -4.7243387e-01  5.0243992e-01]
+
+
+
+
+
+
+action_repeate:: 4472
+joint_obs::  [-2.449002610358406, -0.24171996365119316, 1.0385162026505776, -1.4159250447642797, -1.0156308275640442, 1.032856841353287, -0.13975709636330855, 0.015994525935274048, 2.1950148268356195, 1.5278867511555032, 2.3472189177656686, 1.684900920291839, -1.682535271979543, 3.1304333695301474, 1.3624910477915153, -0.060055652169657046, -2.12326551973112, -2.1067704109083705, 3.7542962293013677, -1.047200002715528, 0.377790428106379, -0.694371400897574, 1.0061666178026656]
+motorCommands::  [ 0.6815024   0.3843052   2.5581973  -0.65872157  0.61159617 -0.8472066
+ -1.896977    1.2832069   0.08581682  1.4728539  -0.1593498   1.1492645
+  1.0236385   1.5213001  -0.23893727  0.18635197  0.19517119  0.80404013
+ -0.11392918 -0.08940285  0.10806714  0.5954012   1.0143186 ]
+
+
+
+
+
+
+action_repeate:: 4009
+joint_obs::  [0.6804151045988536, 0.3843041903323505, 2.558196506977248, -0.6587215939387314, 0.6115976784076725, -0.8472050564589667, -1.8969772115030767, 0.01657669879479277, 2.181879390012896, 1.5295730082985297, 2.3419893342443974, 1.6846499572221665, -1.6823598023579382, 3.126448663302771, 1.3582687746298558, -0.06010711901820945, -2.1232478314793055, -2.104596366565537, 3.7538644528440503, -1.0204536825669377, 0.3685845370719134, -0.698120481581186, 1.0005762150426558]
+motorCommands::  [ 0.9319337   0.9166855   1.661753   -0.41621345 -0.92209566  1.959
+  1.7139487   0.5812869   0.738457    1.045186    0.04633509  0.3363181
+  0.66124773  1.0525999   0.20928292  1.0206618   0.56713456  1.0177313
+ -0.26904237 -0.50590324  0.61565     0.63288826  1.1678689 ]
+
+
+
+
+
+
+action_repeate:: 5053
+joint_obs::  [0.9319330566533377, 0.9166855679629456, 1.6617521781940838, -0.416213432176622, -0.9220959769508266, 1.9580435468031503, 0.9077529541804469, 0.012414970925829646, 2.166667716064999, 1.5354750444191783, 2.339418682693836, 1.6844221396853807, -1.6823593089822704, 3.117114676300503, 1.3538659497362264, -0.060107021587991416, -2.1232352076579675, -2.1016571463509295, 3.7535586910325014, -0.9542360178266687, 0.4024427155831748, -0.6981213955604069, 0.975623028385851]
+motorCommands::  [-2.6046512  -1.2442662  -0.13638683 -1.5512233   2.4147043   1.7134535
+ -1.2149452   1.0931052   0.09002141  0.8393326  -0.0432849   1.4466361
+  0.54189104  1.5165937  -0.01231176  1.2985109   0.76612055  1.1594923
+  0.18966345  0.08242379  0.77811265 -0.24044609  0.87129176]
+
+
+
+
+
+
+action_repeate:: 3766
+joint_obs::  [-2.6043926427924613, -1.2442661552139151, -0.13638682292328733, -1.551223288155486, 2.4147043467373606, 1.7134535182663475, -1.2149450357654914, 0.012011789572346221, 2.1661521064982203, 1.5322732696777137, 2.339411338361742, 1.6844231793081912, -1.682358156910813, 3.1165767451016193, 1.3533278092677155, -0.060106139672460555, -2.1232350697534508, -2.1012942274431152, 3.753513646728349, -0.9391861696328063, 0.40876260922080193, -0.6980979907005919, 0.9704169574444114]
+motorCommands::  [-1.1227907  -1.076525   -2.7703834   0.0708007   0.8296374   1.7775066
+  0.69933903  0.87492764  0.98017687  0.7033644   0.09861118  0.46508843
+  1.4440094   1.2789371  -0.11166336  0.559314    0.61572963  1.2053256
+  0.31255376 -0.411599    0.41689512  0.220394    0.6768388 ]
+
+
+
+
+
+
+action_repeate:: 3983
+joint_obs::  [-1.1227874036519485, -1.0765388524582193, -2.770416072367373, 0.07080066337889887, 0.8296315096754423, 1.777516390374136, 0.6993548414148254, 0.017076158428129092, 2.1581255485182482, 1.5179343219242518, 2.3377314860324794, 1.6844037718586669, -1.682357936659639, 3.1128199425176617, 1.3450216230073044, -0.06010037974414504, -2.123234906701062, -2.096345934336067, 3.7535682324922264, -0.7882298912329814, 0.46311963261505795, -0.6978905987671266, 0.92255025021481]
+motorCommands::  [-2.2128663   1.4405771   0.01562686 -1.8275149  -0.96367794  0.85273355
+ -2.080246    0.37314576  1.2750149   0.58641857  0.21830599  1.5703055
+  0.30772334  0.6748909  -0.12915811  0.07959031  0.12935606  1.5119483
+ -0.13594474  0.92695475  0.6036423  -0.30111417  0.6331379 ]
+
+
+
+
+
+
+action_repeate:: 4063
+joint_obs::  [-2.2128646027214343, 1.2053636108020638, -0.5320238737309473, -1.8275153468295557, -0.9637100162880103, 0.8527028810223161, -2.08020109384815, 0.020810611787389657, 2.1484670225099936, 1.4939993140335353, 2.3343036210242256, 1.6878004881993172, -1.682468410166728, 3.0953489900083424, 1.3406579048399554, -0.059981228574463565, -2.1253309276830654, -2.0925695360247456, 3.755647618624854, 0.06333902985805584, 0.5031028177851166, -0.6483827107844539, 0.8072361131467876]
+motorCommands::  [ 0.63085246  0.6318452  -1.4154077  -0.13323404 -1.2183276   0.64140606
+ -0.12151777  1.4174614   0.60846823  0.46446323  0.03446331  0.26046285
+  0.34563586  0.49660918  0.15984614  0.4970319   1.522632    1.485405
+ -0.17597918 -1.0385616   0.1018309  -0.67852396  1.2552276 ]
+
+
+
+
+
+
+action_repeate:: 2723
+joint_obs::  [0.6295157439676186, 0.6318447248148, -1.4154129312239774, -0.1332340400439528, -1.2183354275985796, 0.6414011286461266, -0.12150772950242207, 0.0332448507903075, 2.149239564488096, 1.5112831280897197, 2.3292241181788618, 1.6875256156359661, -1.682467060980697, 3.0952552152574175, 1.3430486878100865, -0.05998324729392947, -2.1253292295037567, -2.090913268787091, 3.7554596397385134, -0.156146976858746, 0.4474432887694681, -0.6483774159484174, 0.859764783731141]
+motorCommands::  [-1.2764626   1.4864298   0.14989394  0.59505385  0.5896327   1.7931865
+ -0.44625175  0.56608045  0.3944613   0.68985915 -0.01768681  1.4848794
+  0.47791958  1.0153619  -0.04946722  0.5336622   1.4718379   1.0475106
+  0.21498284 -0.84024996  0.6505277  -0.14738195  0.5266566 ]
+
+
+
+
+
+
+action_repeate:: 4753
+joint_obs::  [-1.2761607736421903, 1.4864325100787485, 0.14989143305293898, 0.5950538333419916, 0.5896320387194608, 1.7931856917908855, -0.4462502216395177, 0.030124596016830336, 2.138815013766806, 1.521154450723456, 2.3256443459117335, 1.687532183222894, -1.6824663129001929, 3.087145571216779, 1.3420061216543488, -0.05998306154997171, -2.1252740474010214, -2.090637246926494, 3.754920956765181, -0.08333756335068969, 0.46684435496393517, -0.6484540495105348, 0.8403912737618364]XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":1"
+      after 64063 requests (64063 known processed) with 0 events remaining.
+ally loaded using dlopen/dlsym OK!
+Creating context
+Created GL 3.3 context
+Direct GLX rendering context obtained
+Making context current
+GL_VENDOR=NVIDIA Corporation
+GL_RENDERER=Quadro P400/PCIe/SSE2
+GL_VERSION=3.3.0 NVIDIA 460.80
+GL_SHADING_LANGUAGE_VERSION=3.30 NVIDIA via Cg compiler
+pthread_getconcurrency()=0
+Version = 3.3.0 NVIDIA 460.80
+Vendor = NVIDIA Corporation
+Renderer = Quadro P400/PCIe/SSE2
+b3Printf: Selected demo: Physics Server
+startThreads creating 1 threads.
+starting thread 0
+started thread 0 
+MotionThreadFunc thread started
+ven = NVIDIA Corporation
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+ven = NVIDIA Corporation
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+
+b3Printf: expected a world element, continuing without it.
+b3Printf: b3Warning[src/BulletInverseDynamics/MultiBodyTree.cpp,268]:
+
+b3Printf: axis of motion not a unit axis ([0.000000 0.766044 -0.642788]), will use normalized vector
+
+b3Printf: b3Warning[src/BulletInverseDynamics/MultiBodyTree.cpp,268]:
+
+b3Printf: axis of motion not a unit axis ([0.000000 0.766044 -0.642788]), will use normalized vector
+
+b3Printf: b3Warning[src/BulletInverseDynamics/MultiBodyTree.cpp,268]:
+
+b3Printf: axis of motion not a unit axis ([0.000000 0.766044 -0.642788]), will use normalized vector
+
+b3Printf: b3Warning[src/BulletInverseDynamics/MultiBodyTree.cpp,268]:
+
+b3Printf: axis of motion not a unit axis ([0.000000 0.000000 0.541675]), will use normalized vector
+
+b3Printf: b3Warning[src/BulletInverseDynamics/MultiBodyTree.cpp,268]:
+
+b3Printf: axis of motion not a unit axis ([-0.707107 -0.454519 -0.541675]), will use normalized vector
+
+b3Printf: b3Warning[src/BulletInverseDynamics/MultiBodyTree.cpp,268]:
+
+b3Printf: axis of motion not a unit axis ([0.000000 -0.766044 0.642788]), will use normalized vector
+
+b3Printf: b3Warning[src/BulletInverseDynamics/MultiBodyTree.cpp,268]:
+
+b3Printf: axis of motion not a unit axis ([0.000000 -0.766044 0.642788]), will use normalized vector
+

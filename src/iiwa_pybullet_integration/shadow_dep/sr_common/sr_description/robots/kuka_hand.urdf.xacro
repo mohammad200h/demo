@@ -1,0 +1,32 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="kuka_and_hand">
+  <xacro:include filename="$(find sr_description)/materials.urdf.xacro" />
+  <xacro:include filename="$(find sr_description)/hand/xacro/full_hand.urdf.xacro" />
+  <xacro:include filename="$(find sr_description)/other/xacro/gazebo/gazebo.urdf.xacro" />
+ 
+  <joint name="arm_link" type="fixed">
+    <parent link="iiwa_link_ee" />
+    <child link="rh_forearm" />
+    <origin xyz="0 0 0" rpy="0 0 ${2.35619449}" />
+  </joint>
+  <xacro:shadowhand muscletrans="false" muscle="false" bio="false" bt_sp="false"
+  ubi="false" eli="false" reflect="1.0" prefix="rh_" lf="true" />
+
+   <!-- Import Rviz colors -->
+  <xacro:include filename="$(find iiwa_fri_description)/urdf/materials.xacro" />
+  <!--Import the lbr iiwa macro -->
+  <xacro:include filename="$(find iiwa_fri_description)/urdf/iiwa7.xacro"/>
+  
+  <xacro:arg name="hardware_interface" default="PositionJointInterface"/>
+  <xacro:arg name="robot_name" default="iiwa"/>
+  <xacro:arg name="origin_xyz" default="0 0 1"/>
+  <xacro:arg name="origin_rpy" default="0 0 0"/>
+  
+  <!-- Fix to world just for testing -->
+  <link name="world"/>
+  
+  <!--iiwa-->
+  <xacro:iiwa7 hardware_interface="$(arg hardware_interface)" robot_name="$(arg robot_name)" parent="world">
+    <origin xyz="$(arg origin_xyz)" rpy="$(arg origin_rpy)" />
+  </xacro:iiwa7>
+  
+</robot>

@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  hand_rl_ws:
+    build:
+      context: ./../../
+      dockerfile: Docker_Swarm/DockerFile_TF_Swarm/Dockerfile
+      args:
+        UID: 1006
+        GID: 1006
+        USER: mamad 
+        
+    environment:
+      - CORES=8
+      - EXP_LIST=['exp1_noAW_state','exp2_noAW_state']
+      - EXP_LIST_REPEAT=[4,4]
+      - DEVELOPMENT=False
+      - PASS=ros 
+    volumes:
+      - ./Expirements:/home/ros/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/Expirements
+      - ./ExpirementRecord:/home/ros/hand_RL_ws/src/iiwa_pybullet_integration/Training/kuka_PPO_Algorithem7/ExpirementRecord
+    
+    entrypoint: python3
+    command: run_exp.py
+
+
+volumes:
+  Expirements:
+      external: False
+  ExpirementRecord:
+      external: False
+

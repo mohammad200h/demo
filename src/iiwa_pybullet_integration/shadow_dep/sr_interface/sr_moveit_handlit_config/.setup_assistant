@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: sr_description
+    relative_path: hand/xacro/handlit_left.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/hand_iiwa.srdf
+  CONFIG:
+    author_name: Mohammad Hamid
+    author_email: mohammad.hamid.16@ucl.ac.uk
+    generated_timestamp: 1545065986

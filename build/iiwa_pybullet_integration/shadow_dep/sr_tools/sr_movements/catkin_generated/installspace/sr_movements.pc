@@ -1,0 +1,8 @@
+prefix=/home/mamad/Demo/demo/install
+
+Name: sr_movements
+Description: Description of sr_movements
+Version: 1.4.0
+Cflags: -I${prefix}/include -I/usr/include
+Libs: -L${prefix}/lib -lsr_movement /usr/lib/libMagick++.so
+Requires: control_msgs sr_robot_msgs std_msgs sensor_msgs sr_utilities roscpp sr_hand
