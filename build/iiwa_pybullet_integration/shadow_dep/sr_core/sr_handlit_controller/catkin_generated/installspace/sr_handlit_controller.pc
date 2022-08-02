@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/install
-
-Name: sr_handlit_controller
-Description: Description of sr_handlit_controller
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/devel
-
-Name: gazebo2rviz
-Description: Description of gazebo2rviz
-Version: 0.1.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: rospy pysdf python-rospkg

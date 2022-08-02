@@ -1,6 +1,0 @@
-# CMake generated Testfile for 
-# Source directory: /home/mamad/Demo/demo/src/iiwa_pybullet_integration/shadow_dep/common_resources/sr_description_common
-# Build directory: /home/mamad/Demo/demo/build/iiwa_pybullet_integration/shadow_dep/common_resources/sr_description_common
-# 
-# This file includes the relevant testing commands required for 
-# testing this directory and lists subdirectories to be tested as well.

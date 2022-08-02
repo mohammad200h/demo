@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/devel
-
-Name: sr_3dmouse
-Description: Description of sr_3dmouse
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: rospy std_msgs

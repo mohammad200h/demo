@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/install
-
-Name: fri_client_sdk
-Description: Description of fri_client_sdk
-Version: 1.11.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lfri_client_sdk
-Requires: 

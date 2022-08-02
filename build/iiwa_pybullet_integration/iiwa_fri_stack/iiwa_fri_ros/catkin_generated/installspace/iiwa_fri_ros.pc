@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/install
-
-Name: iiwa_fri_ros
-Description: Description of iiwa_fri_ros
-Version: 0.0.1
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -liiwa_fri_ros
-Requires: roscpp

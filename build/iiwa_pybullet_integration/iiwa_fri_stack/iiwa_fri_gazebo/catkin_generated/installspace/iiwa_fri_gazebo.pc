@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/install
-
-Name: iiwa_fri_gazebo
-Description: Description of iiwa_fri_gazebo
-Version: 0.0.1
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

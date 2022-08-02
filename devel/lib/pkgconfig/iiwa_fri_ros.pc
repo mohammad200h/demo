@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/devel
-
-Name: iiwa_fri_ros
-Description: Description of iiwa_fri_ros
-Version: 0.0.1
-Cflags: -I/home/mamad/Demo/demo/src/iiwa_pybullet_integration/iiwa_fri_stack/iiwa_fri_ros/include
-Libs: -L${prefix}/lib -liiwa_fri_ros
-Requires: roscpp

@@ -42,6 +42,7 @@ RENDER_HEIGHT = 720
 RENDER_WIDTH = 960
 
 
+
 class PerformanceMetricVisulization():
   def __init__(self):
     self.render = True
@@ -155,8 +156,6 @@ class PerformanceMetricVisulization():
     if self.render ==True:
       plt.show()
  
-
-  
 class PerformanceMetric():
   def __init__(self,obs_object,record_performance=False):
 

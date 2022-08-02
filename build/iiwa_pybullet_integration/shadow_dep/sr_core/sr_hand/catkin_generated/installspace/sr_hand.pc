@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/install
-
-Name: sr_hand
-Description: Description of sr_hand
-Version: 1.4.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lHandCommander -lSrVirtual
-Requires: roslib roscpp rospy std_msgs std_srvs sensor_msgs sr_robot_msgs control_msgs controller_manager_msgs sr_utilities diagnostic_msgs dynamic_reconfigure self_test urdf gazebo_msgs ros_ethercat_model position_controllers

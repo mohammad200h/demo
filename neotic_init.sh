@@ -6,13 +6,13 @@ echo "downloading package compatiable with kinetic...."
 echo "downloading bioIK...."
 wget https://www.dropbox.com/s/c02v10khqieaqic/bio_ik.zip?dl=0
 echo "downloading iiwa_fri_stack...."
-wget https://www.dropbox.com/s/c678chrug10x1z6/iiwa_fri_stack.zip?dl=0
+wget https://www.dropbox.com/s/ffuc3vgzivekogn/iiwa_fri_stack.zip?dl=0
 echo "downloading shadow_dep...."
 wget https://www.dropbox.com/s/w09cvoqgx5ly5qy/shadow_dep.zip?dl=0
 echo "downloading AW2...."
 wget https://www.dropbox.com/s/3jfd5jep0ej3uhf/AW2.zip?dl=0
 echo "downloading pybulletIK...."
-wget https://www.dropbox.com/s/0hfualwnr9v84ar/pybullet_ik.zip?dl=0
+wget https://www.dropbox.com/s/6qmr79heplc06gv/pybullet_ik.zip?dl=0
 
 
 echo "renaming and moving downloaded files...."

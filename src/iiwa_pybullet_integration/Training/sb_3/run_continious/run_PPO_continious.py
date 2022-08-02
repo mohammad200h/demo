@@ -30,7 +30,7 @@ https://stable-baselines.readthedocs.io/en/master/guide/examples.html#pybullet-n
 
 """
 
-EXPIREMENT_FOLDER = "exp1_AAR_1"
+EXPIREMENT_FOLDER = "exp1_state_1"
 
 
 

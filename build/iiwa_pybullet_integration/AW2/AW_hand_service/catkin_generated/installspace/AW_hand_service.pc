@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/install
-
-Name: AW_hand_service
-Description: Description of AW_hand_service
-Version: 0.5.7
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: moveit_core moveit_ros_planning_interface interactive_markers bio_ik cw3_helper tf pcl_ros roscpp sensor_msgs message_runtime std_msgs

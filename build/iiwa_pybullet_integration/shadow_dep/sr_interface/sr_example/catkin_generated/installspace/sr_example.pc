@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/install
-
-Name: sr_example
-Description: Description of sr_example
-Version: 1.4.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp rospy sr_robot_msgs sensor_msgs std_msgs control_msgs

@@ -5,7 +5,10 @@ import yaml
 import kuka_handlit_multiprocess
 import os
 #https://stable-baselines3.readthedocs.io/en/master/guide/save_format.html
-EXPIREMENT_FOLDER = "exp7_state_5"
+EXPIREMENT_FOLDER = "exp1_state_3"
+
+
+
 
 def read_exp_folder_setBy_env_variable():
     OLD_EXP_FOLDER = EXPIREMENT_FOLDER

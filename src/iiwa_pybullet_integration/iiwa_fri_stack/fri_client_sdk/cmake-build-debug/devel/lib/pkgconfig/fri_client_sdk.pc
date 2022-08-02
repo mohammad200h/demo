@@ -1,8 +1,0 @@
-prefix=/home/localadmin/catkin_ws/src/iiwa_fri_stack/fri_client_sdk/cmake-build-debug/devel
-
-Name: fri_client_sdk
-Description: Description of fri_client_sdk
-Version: 1.11.0
-Cflags: -I/home/localadmin/catkin_ws/src/iiwa_fri_stack/fri_client_sdk/include
-Libs: -L/home/localadmin/catkin_ws/src/iiwa_fri_stack/fri_client_sdk/cmake-build-debug/devel/lib -lfri_client_sdk
-Requires: 

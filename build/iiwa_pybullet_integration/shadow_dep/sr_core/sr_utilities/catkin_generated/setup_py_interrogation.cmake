@@ -1,7 +1,0 @@
-set(sr_utilities_SETUP_PY_SETUP_MODULE "distutils.core")
-set(sr_utilities_SETUP_PY_VERSION "1.4.0")
-set(sr_utilities_SETUP_PY_SCRIPTS "")
-set(sr_utilities_SETUP_PY_PACKAGES "sr_utilities")
-set(sr_utilities_SETUP_PY_PACKAGE_DIRS "scripts/sr_utilities")
-set(sr_utilities_SETUP_PY_MODULES "")
-set(sr_utilities_SETUP_PY_MODULE_DIRS "")

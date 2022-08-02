@@ -1,4 +1,4 @@
-f
+
 #installing vscode
 sudo dpkg -i code_1.36.1-1562627527_amd64.deb
 echo "y"|sudo apt-get -f install
@@ -37,7 +37,7 @@ echo "y" |sudo apt-get install libnlopt-dev
 
 sudo apt-get install -y swig
 
-sudo pip3 install --upgrade pip
+sudo pip3 install --upgrade -y pip
 sudo pip3 install opencv-python
 
 sudo pip3 install rospkg catkin_pkg
@@ -58,7 +58,7 @@ sudo apt-get install -y libstdc++6
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 sudo apt-get install -y gcc-4.9
-sudo apt-get upgrade libstdc++6
+sudo apt-get upgrade -y libstdc++6
 
 
 echo "Y"|sudo apt-get install git build-essential cmake python3-pip checkinstall
@@ -95,3 +95,5 @@ sudo python -m pip install pandas
 sudo python -m pip install tables
 
 sudo apt-get install -y libproj-dev
+
+sudo apt-get install -y python3.6-tk

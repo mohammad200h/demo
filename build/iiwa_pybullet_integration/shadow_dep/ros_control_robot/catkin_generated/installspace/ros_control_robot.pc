@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/install
-
-Name: ros_control_robot
-Description: Description of ros_control_robot
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp combined_robot_hw std_msgs controller_manager ros_ethercat_model realtime_tools diagnostic_updater diagnostic_msgs pluginlib

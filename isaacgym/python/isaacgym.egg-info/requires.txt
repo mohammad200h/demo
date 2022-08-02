@@ -1,0 +1,10 @@
+gym>=0.17.1
+imageio
+ninja
+numpy>=1.16.4
+pillow
+pyyaml>=5.3.1
+rl_pytorch@ file://localhost/home/mamad/hand_RL_ws/isaacgym/python/rlgpu/rl-pytorch
+scipy>=1.5.0
+torch>=1.8.0
+torchvision>=0.9.0

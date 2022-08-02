@@ -1,5 +1,0 @@
-----------------Converting to urdf------------------
-rosrun xacro xacro --inorder -o handlit.urdf handlit.xacro
------------------conveting from urdf to graspit--------------
-
-

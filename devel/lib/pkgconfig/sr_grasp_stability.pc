@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/devel
-
-Name: sr_grasp_stability
-Description: Description of sr_grasp_stability
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

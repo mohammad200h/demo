@@ -1,7 +1,0 @@
-set(sr_tactile_sensors_SETUP_PY_SETUP_MODULE "distutils.core")
-set(sr_tactile_sensors_SETUP_PY_VERSION "1.4.0")
-set(sr_tactile_sensors_SETUP_PY_SCRIPTS "")
-set(sr_tactile_sensors_SETUP_PY_PACKAGES "sr_tactile_sensors")
-set(sr_tactile_sensors_SETUP_PY_PACKAGE_DIRS "scripts/sr_tactile_sensors")
-set(sr_tactile_sensors_SETUP_PY_MODULES "")
-set(sr_tactile_sensors_SETUP_PY_MODULE_DIRS "")

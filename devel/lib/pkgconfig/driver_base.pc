@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/devel
-
-Name: driver_base
-Description: Description of driver_base
-Version: 1.6.8
-Cflags: -I/home/mamad/Demo/demo/devel/include -I/home/mamad/Demo/demo/src/iiwa_pybullet_integration/shadow_dep/driver_common/driver_base/include -I/usr/include
-Libs: -L${prefix}/lib 
-Requires: message_runtime std_msgs

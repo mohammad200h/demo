@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/devel
-
-Name: sr_tactile_sensor_controller
-Description: Description of sr_tactile_sensor_controller
-Version: 0.0.1
-Cflags: -I/home/mamad/Demo/demo/src/iiwa_pybullet_integration/shadow_dep/shadow_robot_ethercat/sr_tactile_sensor_controller/include
-Libs: -L${prefix}/lib -lsr_tactile_sensor_controller
-Requires: controller_interface sr_hardware_interface pluginlib sr_robot_msgs realtime_tools ros_ethercat_model sr_robot_lib

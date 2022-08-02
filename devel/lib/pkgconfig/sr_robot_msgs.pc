@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/devel
-
-Name: sr_robot_msgs
-Description: Description of sr_robot_msgs
-Version: 1.4.0
-Cflags: -I/home/mamad/Demo/demo/devel/include
-Libs: -L${prefix}/lib 
-Requires: roslib message_runtime std_msgs sensor_msgs geometry_msgs actionlib_msgs moveit_msgs

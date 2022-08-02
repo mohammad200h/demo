@@ -1,8 +1,0 @@
-prefix=/home/mamad/Demo/demo/install
-
-Name: sr_edc_controller_configuration
-Description: Description of sr_edc_controller_configuration
-Version: 1.4.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

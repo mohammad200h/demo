@@ -1,4 +1,7 @@
-FROM nvidia/cudagl:9.2-devel-ubuntu16.04
+FROM nvidia/cudagl:11.2.0-devel-ubuntu20.04
+#https://github.com/phusion/baseimage-docker/issues/58
+#Telling consoul to shut the fuck up!
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 #****************Setting up user *********************
 ARG UNAME=ros
 ARG PASS=ros
@@ -11,101 +14,73 @@ RUN sudo useradd -m -u $UID -g $GID -p $(openssl passwd -1 $PASS) -o -s  /bin/ba
 RUN usermod -aG sudo $UNAME
 USER $UNAME 
 WORKDIR home/$UNAME/ 
+RUN echo "asssss"
 
-#********************Installing Extra packaged**********************
-RUN echo $PASS | sudo -S echo "fuck me!"
+#*******************************
+RUN echo $PASS | sudo -S apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/3bf863cc.pub
 RUN echo $PASS | sudo -S apt-get update
-RUN echo $PASS | sudo -S apt-get install -y software-properties-common
-#gedit
-RUN echo "Y" |sudo -S apt-get install gedit
-#python2.7
-RUN echo "gedit"&& echo $PASS | sudo -S apt-get update
-RUN echo "gedit"&& echo "Y" | sudo -S apt upgrade
-RUN echo "python"&& echo "Y" | sudo -S apt install python2.7 python-pip
+# RUN printf '%s\n%s\n%s\n%s\n' ${PASS} 'y' '8' '27'| sudo -S apt-get install software-properties-common
 
-#installing terminator
-    #"\u000A" is like pressing the Enter key
-RUN echo $PASS | sudo -S apt-get install -y software-properties-common
-RUN echo "\u000A" | sudo -S add-apt-repository ppa:gnome-terminator
-RUN echo $PASS | sudo -S apt-get update
-RUN echo "Y" | sudo -S apt-get install terminator
-#******************** Installing ros kinetic************************
-RUN echo $PASS | sudo -S echo "fuck mee!"
-RUN echo $PASS | sudo -S apt-get update
-#Setup your sources.list
-RUN echo $PASS | sudo -S apt-get -y install curl
-RUN echo $PASS | sudo -S sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-#Set up your keys
-RUN echo $PASS | sudo -S  curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-#Installation
-RUN echo $PASS | sudo -S apt-get update
-    #Desktop-Full Install: (Recommended) : ROS, rqt, rviz, robot-generic libraries, 2D/3D simulators, navigation and 2D/3D perception 
-    RUN echo "Y" | sudo -S  apt-get install ros-kinetic-desktop-full
-
-#Initialize rosdep
-RUN echo $PASS | sudo -S rosdep init
-RUN rosdep update
-#Environment setup 
-RUN echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
-#source can not be used in bash so instead of "source ~/.bashrc " use ". ~/.bashrc "
-RUN . ~/.bashrc 
-RUN echo $PASS | sudo -S chmod +x /opt/ros/kinetic/setup.bash
-RUN bash /opt/ros/kinetic/setup.bash
-#Dependencies for building packages
-RUN  echo "Y" | sudo -S  apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
-
-#************************************setting python version**************************
-RUN echo $PASS| sudo -S echo "fuck mee!"
-RUN echo "\u000A" |sudo -s add-apt-repository ppa:fkrull/deadsnakes
-RUN $PASS|sudo -s apt-get update
-RUN echo "y" | sudo apt-get install python3.6
-RUN echo "y" | sudo apt-get install python3-pip
-
-RUN echo $PASS| sudo -S echo "fuck me33!"
-RUN $PASS|sudo -s apt-get update
-RUN echo $PASS|sudo -S update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
-RUN echo $PASS|sudo -S apt-get install -y python3 python3.6-dev
+# RUN echo $PASS |  sudo -S apt-get install -y software-properties-common
 #***********************************Installing TF*************************
-RUN echo $PASS| sudo -S echo "fuck me!"
-RUN $PASS|sudo -s apt-get update
-COPY cuda9.2 /tmp
 
-COPY cuda9.2/cuda/lib64/* /usr/local/cuda/lib64/
+RUN echo $PASS|sudo -S apt-get update
+COPY cuda11.2 /tmp
 
-COPY cuda9.2/cuda/include/* /usr/local/cuda/include/
+COPY cuda11.2/cuda/lib64/* /usr/local/cuda/lib64/
+
+COPY cuda11.2/cuda/include/* /usr/local/cuda/include/
 
 
-RUN echo $PASS | sudo -S echo "fuck meèee!"
-RUN echo $PASS|sudo -s dpkg -i /tmp/libcudnn7_7.6.5.32-1+cuda9.2_amd64.deb
-RUN echo $PASS|sudo -s dpkg -i /tmp/libcudnn7-dev_7.6.5.32-1+cuda9.2_amd64.deb
 
-RUN echo $PASS | sudo -S echo "fuck me!"
-RUN echo "y" |sudo -S apt install cuda-toolkit-9-0
-RUN echo $PASS |sudo -S apt install -y cuda-toolkit-10-0
+RUN echo $PASS|sudo -S dpkg -i /tmp/libcudnn8_8.0.5.39-1+cuda11.1_amd64.deb
+RUN echo $PASS|sudo -S dpkg -i /tmp/libcudnn8-dev_8.0.5.39-1+cuda11.1_amd64.deb
+
+RUN echo $PASS|sudo -S apt-get update
+
+RUN printf '%s\n%s\n' ${PASS} 'y' |sudo -S apt-get install python3-pip
 
 RUN pip3 install --upgrade pip==20.2.4
 
 
-RUN echo $PASS | sudo -S echo "fuck me!"
-RUN $PASS|sudo -S apt-get update
 
-
-RUN $PASS|sudo -S pip3 install tensorflow-gpu==1.14.0
-
-
-RUN echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64/" >> ~/.bashrc
-RUN echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.0/lib64/" >> ~/.bashrc
+#********************Installing pytorch***************
+RUN echo $PASS | sudo -S sudo pip3  install torch torchvision
 
 #*****************************************************
-RUN echo $PASS | sudo -S echo "fuck mee!"
 
-RUN echo "y" | sudo apt-get install python3 python-dev python3-dev \
+RUN echo $PASS| sudo -S apt-get install dialog apt-utils -y
+
+RUN printf '%s\n%s\n' ${PASS} '8' | sudo -S apt-get install -y python3 python-dev python3-dev \
      build-essential libssl-dev libffi-dev \
      libxml2-dev libxslt1-dev zlib1g-dev \
      python3-pip
 
-RUN echo $PASS| sudo -s pip3 install pybullet
-RUN echo $PASS| sudo -s pip install pybullet
+RUN echo $PASS| sudo -S pip3 install pybullet
 
-#**********************************************************************************
+
+#*************************terminator***************
+
+RUN echo $PASS | sudo -S apt-get update
+
+RUN printf '%s\n%s\n' ${PASS} 'y'|sudo -S apt-get install terminator
+#******************** Installing ros neotic************************
+
+RUN echo $PASS | sudo -S apt-get update
+RUN echo $PASS | sudo -S sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+RUN echo $PASS | sudo -S apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+RUN echo $PASS | sudo -S apt update
+RUN echo $PASS | sudo -S apt install -y ros-noetic-desktop-full
+
+RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+RUN bash /opt/ros/noetic/setup.bash
+RUN echo $PASS | sudo -S apt install -y python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+RUN echo $PASS | sudo -S apt install -y python3-rosdep
+RUN echo $PASS | sudo -S rosdep init
+RUN echo $PASS | sudo -S rosdep update
+RUN echo $PASS | sudo -S apt-get install -y python3-catkin-pkg-modules
+RUN echo $PASS | sudo -S apt-get install -y python3-rospkg-modules
+RUN echo $PASS | sudo -S apt-get install -y python3-rospy
+RUN echo $PASS | sudo -S apt install -y ros-noetic-moveit
+#***********************************
 CMD /bin/bash

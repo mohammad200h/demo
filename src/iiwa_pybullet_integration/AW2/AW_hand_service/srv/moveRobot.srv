@@ -1,7 +1,0 @@
-float64 obj_x
-float64 obj_y
-float64 obj_z
----
-bool plan_executed
-sensor_msgs/JointState RobotJoints
-
